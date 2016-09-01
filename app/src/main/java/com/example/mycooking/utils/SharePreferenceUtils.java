@@ -44,7 +44,7 @@ public class SharePreferenceUtils {
         }
         return mSharedPreferences.getString(key, defaultValue);
     }
-    public static void setInt(Context ctx,String key,int value){
+    public static void putInt(Context ctx,String key,int value){
         if (mSharedPreferences == null) {
             mSharedPreferences = ctx.getSharedPreferences("config",
                     Context.MODE_PRIVATE);
