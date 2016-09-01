@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".activity.MainActivity">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="内容"
+        android:textSize="20sp"
+        android:background="#fff"
+        android:id="@+id/content"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </TextView>
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:gravity="center"
+        android:background="@drawable/bottom_tab_bg"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            style="@style/RB_Style"
+            android:drawableTop="@drawable/tab_home_selector"
+            android:text="推荐"
+            android:id="@+id/rb_fragmentcontent_home"/>
+        <RadioButton
+            style="@style/RB_Style"
+            android:drawableTop="@drawable/tab_news_selector"
+            android:text="发现"
+            android:id="@+id/rb_fragmentcontent_news"/>
+        <RadioButton
+            style="@style/RB_Style"
+            android:drawableTop="@drawable/tab_smart_selector"
+            android:text="商城"
+            android:id="@+id/rb_fragmentcontent_smart"/>
+        <RadioButton
+            style="@style/RB_Style"
+            android:drawableTop="@drawable/tab_gov_selector"
+            android:text="食话"
+            android:id="@+id/rb_fragmentcontent_gov"/>
+        <RadioButton
+            style="@style/RB_Style"
+            android:drawableTop="@drawable/tab_settingselector"
+            android:text="我的"
+            android:id="@+id/rb_fragmentcontent_setting"/>
+
+    </RadioGroup>
+</LinearLayout>
+
+</FrameLayout>
