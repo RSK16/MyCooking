@@ -9,7 +9,7 @@ tools:context=".activity.MainActivity">
     android:layout_height="match_parent">
 
     <TextView
-        android:text="内容"
+        android:text="内容1"
         android:textSize="20sp"
         android:background="#fff"
         android:id="@+id/content"
