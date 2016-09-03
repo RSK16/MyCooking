@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_location.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_location.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\custom_tab_indicator.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_device_alarms.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_device_alarms.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_calendar.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_camera.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_camera.xml"
+    }
+]
