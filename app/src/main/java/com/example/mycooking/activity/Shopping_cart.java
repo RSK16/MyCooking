@@ -1,23 +1,15 @@
 package com.example.mycooking.activity;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.RadioGroup;
 
 import com.example.mycooking.R;
 
-
-public class MainActivity extends Activity {
-
-    private RadioGroup rg_group;
+public class Shopping_cart extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_shopping_cart);
     }
-
-
 }

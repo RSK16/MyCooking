@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mycooking.activity.Shopping_cart">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:layout_height="10dp"
+            android:layout_width="10dp"
+            android:layout_weight="0"
+            android:background="@mipmap/arrow_right2"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="购物车"
+            android:gravity="center"/>
+        <View
+            android:layout_height="5dp"
+            android:layout_width="match_parent"
+            android:background="@color/ripple_material_dark"/>
+    </LinearLayout>
+
+</LinearLayout>
