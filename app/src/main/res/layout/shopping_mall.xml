@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:background="@mipmap/my_order_icon"
+            android:id="@+id/my_order_icon" />
+        <EditText
+            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:completionThreshold="1"
+            android:id="@+id/actv"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/topsearch_icon"
+            android:hint="搜索"/>
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:id="@+id/shopping_cart"
+            android:background="@mipmap/shopcart_home"/>
+        <ImageButton
+            android:layout_marginRight="10dp"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:id="@+id/news_notification"
+            android:background="@mipmap/tj_msg"/>
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>
