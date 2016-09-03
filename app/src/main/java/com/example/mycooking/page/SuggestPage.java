@@ -1,0 +1,125 @@
+package com.example.mycooking.page;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import com.example.mycooking.R;
+import com.example.mycooking.activity.MenuRankActivity;
+import com.example.mycooking.activity.MenuSortActivity;
+import com.example.mycooking.page.BasePage;
+import com.viewpagerindicator.CirclePageIndicator;
+
+/**
+ * Created by liaozhihua on 2016/9/3.
+ */
+public class SuggestPage extends BasePage {
+
+    private static final String TAG = "SuggestPage";
+    public View suggestPageView;
+    private ScrollView scrollView_suggestpage;
+
+    public SuggestPage(Activity activity) {
+        super(activity);
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public View initView() {
+
+        //测试
+        /*TextView textView = new TextView(mActivity);
+        textView.setText("推荐");
+        return textView;*/
+
+        suggestPageView = View.inflate(mActivity, R.layout.suggest_page_view, null);
+        scrollView_suggestpage = (ScrollView) suggestPageView.findViewById(R.id.scrollView_suggestpage);
+        Button bt_suggestpage_totop = (Button) suggestPageView.findViewById(R.id.bt_suggestpage_totop);
+        Button bt_suggestpage_sort = (Button) suggestPageView.findViewById(R.id.bt_suggestpage_sort);
+        Button bt_suggestpage_Rank = (Button) suggestPageView.findViewById(R.id.bt_suggestpage_Rank);
+
+        CirclePageIndicator indicator_suggestmeal = (CirclePageIndicator) suggestPageView.findViewById(R.id.indicator_suggestmeal);
+        ViewPager vp_suggestPage_meal = (ViewPager) suggestPageView.findViewById(R.id.vp_suggestPage_meal);
+        vp_suggestPage_meal.setAdapter(new MysuggestmealPagerAdapter());
+
+        indicator_suggestmeal.setViewPager(vp_suggestPage_meal);
+        Log.i(TAG,indicator_suggestmeal.toString());
+
+        bt_suggestpage_totop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scrollView_suggestpage.scrollTo(0,0); //回到顶部
+            }
+        });
+
+        //菜谱分类
+        bt_suggestpage_sort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, MenuSortActivity.class);
+                mActivity.startActivity(intent);
+            }
+        });
+        //排行榜
+        bt_suggestpage_Rank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, MenuRankActivity.class);
+                mActivity.startActivity(intent);
+            }
+        });
+
+        return suggestPageView;
+    }
+
+    class MysuggestmealPagerAdapter extends PagerAdapter {
+
+        String[] whichMeal = new String[]{"早餐","午餐","下午茶","晚餐","夜宵"};
+
+        String[] mealInfo = new String[]{"早餐早餐早餐","午餐午餐午餐","下午茶下午茶下午茶","晚餐晚餐晚餐","夜宵夜宵夜宵"};
+        @Override
+        public int getCount() {
+            return 5;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            return view==object;
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+
+            View page = View.inflate(mActivity, R.layout.viewpager_meal, null);
+            TextView tv_vpMeal_meal = (TextView) page.findViewById(R.id.tv_vpMeal_meal);
+            TextView tv_vpMeal_info = (TextView) page.findViewById(R.id.tv_vpMeal_info);
+
+            tv_vpMeal_meal.setText(whichMeal[position]);
+            tv_vpMeal_info.setText(mealInfo[position]);
+            //将view放入容器中
+            container.addView(page);
+            //将object返回
+            return page;//super.instantiateItem(container, position);
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+
+
+            container.removeView((View) object);
+
+        }
+    }
+}

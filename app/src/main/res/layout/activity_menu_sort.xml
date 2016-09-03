@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context="com.example.mycooking.activity.MenuSortActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="菜谱分类页面"/>
+
+    <com.example.mycooking.view.HideAndShowTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:lines="2"
+        android:text="茶树是一种小型树，起源于澳大利亚的新南威尔士，与丝柏相似，叶片针状，头状花序没有花柄、黄色或略带紫色。
+              它可以长到7m高，在湿地生长旺盛，
+            现在已有大面积栽培。这种精油只有澳大利亚生产，当地的土著居民用它治病已有很长时间了。在二战期间，精油加工者和原材料供应者可以免服兵役，
+             直到贮备有足够的茶树精油。每个士兵和水手都配给一些精油，随身带着，用于治疗热带感染和发炎的伤口。"/>
+</LinearLayout>
