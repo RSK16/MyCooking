@@ -21,7 +21,7 @@ import java.util.List;
 
 
 public class MainActivity extends Activity {
-
+//ghjg
     private RadioGroup rg_group;
     private NoScrollViewPager vp_main_shoppingmall;
     List<BasePage> pageList = new ArrayList<>();
