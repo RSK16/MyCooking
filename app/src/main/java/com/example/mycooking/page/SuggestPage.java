@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import com.example.mycooking.R;
 import com.example.mycooking.activity.MenuRankActivity;
 import com.example.mycooking.activity.MenuSortActivity;
 import com.example.mycooking.page.BasePage;
+import com.example.mycooking.view.RefreshScLinearLayout;
 import com.viewpagerindicator.CirclePageIndicator;
 
 /**
@@ -45,8 +47,34 @@ public class SuggestPage extends BasePage {
         return textView;*/
 
         suggestPageView = View.inflate(mActivity, R.layout.suggest_page_view, null);
-        scrollView_suggestpage = (ScrollView) suggestPageView.findViewById(R.id.scrollView_suggestpage);
-        Button bt_suggestpage_totop = (Button) suggestPageView.findViewById(R.id.bt_suggestpage_totop);
+
+        ImageButton bt_suggestpage_totop = (ImageButton) suggestPageView.findViewById(R.id.bt_suggestpage_totop);
+        bt_suggestpage_totop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RefreshScLinearLayout.fun(); //回到顶部
+            }
+        });
+
+        RefreshScLinearLayout ll_refreshactivity_refresh = (RefreshScLinearLayout) suggestPageView.findViewById(R.id.ll_refreshactivity_refresh);
+
+        ll_refreshactivity_refresh.setRefreshListener(new RefreshScLinearLayout.RefreshListener() {
+            public static final String TAG = "RefreshCallBack";
+
+            @Override
+            public void doInBackground() {
+
+                Log.i(TAG,"doInBackground");
+            }
+
+            @Override
+            public void complete() {
+
+                Log.i(TAG,"complete");
+            }
+        });
+
+        /*scrollView_suggestpage = (ScrollView) suggestPageView.findViewById(R.id.scrollView_suggestpage);
         Button bt_suggestpage_sort = (Button) suggestPageView.findViewById(R.id.bt_suggestpage_sort);
         Button bt_suggestpage_Rank = (Button) suggestPageView.findViewById(R.id.bt_suggestpage_Rank);
 
@@ -57,12 +85,6 @@ public class SuggestPage extends BasePage {
         indicator_suggestmeal.setViewPager(vp_suggestPage_meal);
         Log.i(TAG,indicator_suggestmeal.toString());
 
-        bt_suggestpage_totop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scrollView_suggestpage.scrollTo(0,0); //回到顶部
-            }
-        });
 
         //菜谱分类
         bt_suggestpage_sort.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +101,7 @@ public class SuggestPage extends BasePage {
                 Intent intent = new Intent(mActivity, MenuRankActivity.class);
                 mActivity.startActivity(intent);
             }
-        });
+        });*/
 
         return suggestPageView;
     }
