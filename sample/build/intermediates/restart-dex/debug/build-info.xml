@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86_64,x86"
+    api-level="21"
+    density="hdpi"
+    format="7"
+    timestamp="14230355677333" >
+
+    <task
+        name="javac"
+        duration="483" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="2026" />
+    <task
+        name="verifier"
+        duration="119" />
+
+    <artifact
+        location="F:\meishiApp\MyCooking\sample\build\outputs\apk\sample-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="14230355677333" >
+        <artifact
+            location="F:\meishiApp\MyCooking\sample\build\outputs\apk\sample-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

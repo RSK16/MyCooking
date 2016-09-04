@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.mycooking.R;
 import com.example.mycooking.page.BasePage;
 
 /**
@@ -21,8 +22,8 @@ public class WodePage extends BasePage {
 
     @Override
     public View initView() {
-        TextView textView = new TextView(mActivity);
-        textView.setText("我的");
-        return textView;
+        View mine = View.inflate(mActivity, R.layout.mine_activity,null);
+
+        return mine;
     }
 }
