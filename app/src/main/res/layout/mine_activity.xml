@@ -7,12 +7,10 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
 
-
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#fff">
+        android:background="#fff"
+        android:orientation="vertical">
 
 
         <LinearLayout
@@ -46,7 +44,7 @@
                         android:paddingLeft="15dp"
                         android:text="登录 / 注册"
                         android:textColor="#fff"
-                        android:textSize="25sp" />
+                        android:textSize="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -54,7 +52,7 @@
                         android:padding="15dp"
                         android:text="登录可享受好多特权哦"
                         android:textColor="#fff"
-                        android:textSize="15sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -67,7 +65,7 @@
                 android:padding="5dp"
                 android:text="美食杰DNA   0条"
                 android:textColor="#fff"
-                android:textSize="15sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -130,80 +128,87 @@
                 android:layout_marginTop="15dp"
                 android:padding="5dp"
                 android:text="荣誉勋章"
-                android:textColor="#000" />
+                android:textColor="#b31c1c1c"/>
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:scrollbarAlwaysDrawVerticalTrack="false">
 
-                android:layout_margin="5dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
 
-                <ImageButton
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:background="@null"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wode_hornor1" />
-
-                <ImageButton
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
                     android:layout_margin="5dp"
-                    android:background="@null"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wode_hornor2" />
 
-                <ImageButton
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wode_hornor3" />
+                    <ImageButton
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wode_hornor1" />
 
-                <ImageButton
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wode_hornor4" />
+                    <ImageButton
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wode_hornor2" />
 
-                <ImageButton
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wode_hornor5" />
+                    <ImageButton
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wode_hornor3" />
 
-                <ImageButton
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wode_hornor6" />
+                    <ImageButton
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wode_hornor4" />
 
-                <ImageButton
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wode_hornor7" />
+                    <ImageButton
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wode_hornor5" />
 
-                <ImageButton
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wode_hornor8" />
+                    <ImageButton
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wode_hornor6" />
+
+                    <ImageButton
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wode_hornor7" />
+
+                    <ImageButton
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wode_hornor8" />
 
 
-            </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
 
         </LinearLayout>
 
@@ -213,42 +218,44 @@
             android:background="#EEE9E9" />
 
         //积分商城
+
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
+
             <ImageView
+                android:id="@+id/wd_jfmall"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/wd_jfmall"
-                android:id="@+id/wd_jfmall"/>
+                android:background="@drawable/wd_jfmall" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="积分商城"
-                android:textSize="25dp"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/wd_jfmall"
-                android:layout_centerVertical="true"/>
+                android:text="积分商城"
+                android:textSize="15dp"
+                android:textColor="#b31c1c1c"/>
 
             <ImageView
+                android:id="@+id/iv_mine_jfmall_arrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cook_share_dialog_arr"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:id="@+id/iv_mine_jfmall_arrow"
-                />
+                android:src="@drawable/cook_share_dialog_arr" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_mine_jfmall_arrow"
+                android:paddingRight="10dp"
                 android:text="免费兑换"
                 android:textColor="#f00"
-                android:textSize="20dp"
-                android:layout_toLeftOf="@+id/iv_mine_jfmall_arrow"
-                android:layout_centerVertical="true"
-                android:paddingRight="10dp"
-                />
+                android:textSize="11dp" />
         </RelativeLayout>
 
         <TextView
@@ -261,27 +268,28 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <ImageView
+                android:id="@+id/iv_mine_wd_msg"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/wd_msg"
-                android:id="@+id/iv_mine_wd_msg"/>
+                android:background="@drawable/wd_msg" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="消息通知"
-                android:textSize="25dp"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_mine_wd_msg"
-                android:layout_centerVertical="true"/>
+                android:text="消息通知"
+                android:textSize="15dp"
+                android:textColor="#b31c1c1c"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cook_share_dialog_arr"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                />
+                android:src="@drawable/cook_share_dialog_arr" />
 
         </RelativeLayout>
 
@@ -291,86 +299,92 @@
             android:background="#EEE9E9" />
 
         /我的发布
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <ImageView
+                android:id="@+id/iv_mine_wd_publish"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/wd_publish"
-                android:id="@+id/iv_mine_wd_publish"/>
+                android:background="@drawable/wd_publish" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我的发布"
-                android:textSize="25dp"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_mine_wd_publish"
-                android:layout_centerVertical="true"/>
+                android:text="我的发布"
+                android:textSize="15dp"
+                android:textColor="#b31c1c1c"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cook_share_dialog_arr"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                />
+                android:src="@drawable/cook_share_dialog_arr" />
 
         </RelativeLayout>
 
         //我的收藏
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <ImageView
+                android:id="@+id/iv_mine_wd_mycollect"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/wd_mycollect"
-                android:id="@+id/iv_mine_wd_mycollect"/>
+                android:background="@drawable/wd_mycollect" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我的收藏"
-                android:textSize="25dp"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_mine_wd_mycollect"
-                android:layout_centerVertical="true"/>
+                android:text="我的收藏"
+                android:textSize="15dp"
+                android:textColor="#b31c1c1c"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cook_share_dialog_arr"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                />
+                android:src="@drawable/cook_share_dialog_arr" />
 
         </RelativeLayout>
 
         //设置
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <ImageView
+                android:id="@+id/iv_mine_wd_settings"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/wd_settings"
-                android:id="@+id/iv_mine_wd_settings"/>
+                android:background="@drawable/wd_settings" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我的设置"
-                android:textSize="25dp"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_mine_wd_settings"
-                android:layout_centerVertical="true"/>
+                android:text="我的设置"
+                android:textSize="15dp"
+                android:textColor="#b31c1c1c"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cook_share_dialog_arr"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                />
+                android:src="@drawable/cook_share_dialog_arr" />
 
         </RelativeLayout>
     </LinearLayout>
