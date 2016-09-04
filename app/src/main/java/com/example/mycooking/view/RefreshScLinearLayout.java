@@ -124,8 +124,7 @@ public class RefreshScLinearLayout extends LinearLayout {
         Log.i(TAG,indicator_suggestmeal.toString());
 
 
-
-        //菜谱分类
+        //菜谱分类页面
         bt_suggestpage_sort.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,8 +132,8 @@ public class RefreshScLinearLayout extends LinearLayout {
                 context.startActivity(intent);
             }
         });
-        //排行榜
 
+        //排行榜页面
         Log.i(TAG, bt_suggestpage_rank.toString());
         bt_suggestpage_rank.setOnClickListener(new OnClickListener() {
             @Override

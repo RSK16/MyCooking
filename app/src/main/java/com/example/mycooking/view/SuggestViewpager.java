@@ -30,6 +30,7 @@ public class SuggestViewpager extends ViewPager {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
 
+        //解决ScrollView和Viewpager 滑动事件冲突
         switch (ev.getAction()){
             case MotionEvent.ACTION_DOWN:
 
