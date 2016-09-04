@@ -16,7 +16,6 @@
         android:id="@+id/rg_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
         android:background="#f5f5f5"
         android:gravity="center"
         android:orientation="horizontal">
