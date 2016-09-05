@@ -3,7 +3,6 @@ package com.example.mycooking.view;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 
 /**
@@ -34,7 +33,7 @@ public class SuggestViewpager extends ViewPager {
         switch (ev.getAction()){
             case MotionEvent.ACTION_DOWN:
 
-                Log.i(TAG,"DOWN");
+                //Log.i(TAG,"DOWN");
 
                 startx = ev.getRawX();
                 starty = ev.getRawY();
@@ -43,7 +42,7 @@ public class SuggestViewpager extends ViewPager {
 
             case MotionEvent.ACTION_MOVE:
 
-                Log.i(TAG,"MOVE");
+                //Log.i(TAG,"MOVE");
 
                 endx = ev.getRawX();
                 endy = ev.getRawY();
@@ -64,9 +63,10 @@ public class SuggestViewpager extends ViewPager {
 
             case MotionEvent.ACTION_UP:
 
-                Log.i(TAG,"UP");
+                //Log.i(TAG,"UP");
 
-               /* startx = 0;
+               /*
+               startx = 0;
                 starty = 0;*/
                 break;
         }

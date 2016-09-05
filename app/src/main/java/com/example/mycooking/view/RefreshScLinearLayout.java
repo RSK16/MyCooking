@@ -6,7 +6,6 @@ import android.os.AsyncTask;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -26,8 +25,8 @@ import com.example.mycooking.activity.BreakfastActivity;
 import com.example.mycooking.activity.MenuRankActivity;
 import com.example.mycooking.activity.MenuSortActivity;
 import com.viewpagerindicator.CirclePageIndicator;
+import java.util.Calendar;
 
-import java.util.Date;
 
 /**
  * Created by Administrator on 2016/9/2.
@@ -113,9 +112,9 @@ public class RefreshScLinearLayout extends LinearLayout {
 
     private void scButtonClickFunction(final Context context) {
 
-        Log.i(TAG,"ButtonClick");
+        //Log.i(TAG,"ButtonClick");
         bt_suggestpage_sort = (ImageButton) scChildView.findViewById(R.id.bt_suggestpage_sort);
-        Log.i(TAG,bt_suggestpage_sort.toString());
+        //Log.i(TAG,bt_suggestpage_sort.toString());
         bt_suggestpage_breakfest = (ImageButton) scChildView.findViewById(R.id.bt_suggestpage_breakfest);
         bt_suggestpage_rank = (Button) scChildView.findViewById(R.id.bt_suggestpage_Rank);
 
@@ -125,7 +124,7 @@ public class RefreshScLinearLayout extends LinearLayout {
         vp_suggestPage_meal.setAdapter(new MysuggestmealPagerAdapter());
 
         indicator_suggestmeal.setViewPager(vp_suggestPage_meal);
-        Log.i(TAG,indicator_suggestmeal.toString());
+        //Log.i(TAG,indicator_suggestmeal.toString());
 
 
         //菜谱分类页面
@@ -145,8 +144,9 @@ public class RefreshScLinearLayout extends LinearLayout {
             }
         });
 
+
         //排行榜页面
-        Log.i(TAG, bt_suggestpage_rank.toString());
+        //Log.i(TAG, bt_suggestpage_rank.toString());
         bt_suggestpage_rank.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -247,7 +247,7 @@ public class RefreshScLinearLayout extends LinearLayout {
                         startX = event.getRawX();
                         startY = event.getRawY();
 
-                        Log.i(TAG,"down"+":"+startX+"--"+startY);
+                        //Log.i(TAG,"down"+":"+startX+"--"+startY);
 
                         break;
                     case MotionEvent.ACTION_MOVE:
@@ -422,7 +422,34 @@ public class RefreshScLinearLayout extends LinearLayout {
     //刷新完毕，让header隐藏起来
     public void onRefreshComplete() {
         current_State = DONE;
-        tv_refreshheader_lastupdate.setText("最近更新:" + new Date().toLocaleString());
+        /*tv_refreshheader_lastupdate.setText("最近更新:" + new Date().toLocaleString());
+        changeHeaderViewByState();*/
+
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH) + 1;
+        int day = calendar.get(Calendar.DATE);
+        int hour = calendar.get(Calendar.HOUR_OF_DAY)+8;
+        int minute = calendar.get(Calendar.MINUTE);
+        int second = calendar.get(Calendar.SECOND);
+
+        String minute1=minute+"";
+        String second1 = second+"";
+        String hour1=hour+"";
+        if(hour>=24){
+            hour -= 24;
+        }
+        if (hour<10){
+            hour1="0"+hour1;
+        }
+        if (minute<10){
+            minute1 = "0"+minute1;
+        }
+        if (second<10){
+            second1 = "0"+second1;
+        }
+        String timenow = year+"年"+month+"月"+day+"日"+hour1+":"+minute1+":"+second1;
+        tv_refreshheader_lastupdate.setText("最近更新:" + timenow);
         changeHeaderViewByState();
     }
 
