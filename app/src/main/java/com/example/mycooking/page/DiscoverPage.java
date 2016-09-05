@@ -131,7 +131,10 @@ public class DiscoverPage extends BasePage {
              View inflate = View.inflate(mActivity, R.layout.discover_video_detail, null);
              TextView tv_discover_video_detail = (TextView) inflate.findViewById(R.id.tv_discover_video_detail);
              ImageView iv_discover_video_detail = (ImageView) inflate.findViewById(R.id.iv_discover_video_detail);
-             final String vurl = videoListBeen.get(position).getVurl();
+//             final String vurl = videoListBeen.get(position).getVurl();
+
+             final String vurl = " http://baidu.fun.tv/watch/2265281323655952750.html?page=videoMultiNeed";
+
              String name = videoListBeen.get(position).getName();
              tv_discover_video_detail.setText(name);
                 tv_discover_video_detail.setOnClickListener(new View.OnClickListener() {
