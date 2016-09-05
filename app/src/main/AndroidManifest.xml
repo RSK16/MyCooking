@@ -39,8 +39,17 @@
         <activity android:name=".activity.Shopping_NewNotifaction" />
         <activity android:name=".activity.Shopping_cart" />
         <activity android:name=".activity.MenuRankActivity" />
-        <activity android:name=".activity.MenuSortActivity"></activity>
-        <activity android:name=".activity.BBVideoPlayer"></activity>
+        <activity android:name=".activity.MenuSortActivity" />
+        <activity android:name=".activity.BBVideoPlayer" />
+        <activity
+            android:name=".activity.shangchuangcaipu.LoadOneActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.shangchuangcaipu.LoadTwoActivity" />
+        <activity android:name=".activity.shangchuangcaipu.GongyiActivity" />
+        <activity android:name=".activity.shangchuangcaipu.KouweiActivity" />
+        <activity android:name=".activity.shangchuangcaipu.NanduActivity" />
+        <activity android:name=".activity.shangchuangcaipu.NumberActivity" />
+        <activity android:name=".activity.shangchuangcaipu.Timeactivity"></activity>
     </application>
 
 </manifest>

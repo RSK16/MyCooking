@@ -1,0 +1,15 @@
+package com.example.mycooking.activity.shangchuangcaipu;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+import com.example.mycooking.R;
+
+public class LoadTwoActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_load_two);
+    }
+}
