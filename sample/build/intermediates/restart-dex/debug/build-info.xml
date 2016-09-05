@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86_64"
+    api-level="21"
+    density="hdpi"
+    format="7"
+    timestamp="11161487496366" >
+
+    <task
+        name="javac"
+        duration="857" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="1425" />
+    <task
+        name="verifier"
+        duration="249" />
+
+    <artifact
+        location="D:\ShoppingMall\MyCooking\sample\build\outputs\apk\sample-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="11161487496366" >
+        <artifact
+            location="D:\ShoppingMall\MyCooking\sample\build\outputs\apk\sample-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

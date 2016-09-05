@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--下拉刷新header内容-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_contentlayout">
+        <!--箭头、进度条-->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:layout_alignParentLeft="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/common_listview_headview_red_arrow"
+                android:id="@+id/iv_refreshheader_arrow"/>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:id="@+id/pb_refreshheader_loading"/>
+        </FrameLayout>
+
+        <!--提示 最近更新-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上次更新时间:"
+                android:textSize="20dp"
+                android:id="@+id/tv_refreshheader_tips"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一小时之前"
+                android:id="@+id/tv_refreshheader_lastupdate"
+                android:textColor="#66000000"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
