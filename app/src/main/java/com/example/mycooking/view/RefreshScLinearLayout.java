@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -21,6 +22,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
+import com.example.mycooking.activity.BreakfestActivity;
 import com.example.mycooking.activity.MenuRankActivity;
 import com.example.mycooking.activity.MenuSortActivity;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -60,8 +62,9 @@ public class RefreshScLinearLayout extends LinearLayout {
     private TextView textView;
     private LayoutInflater layoutInflater;
     private View scChildView;
-    private Button bt_suggestpage_sort;
+    private ImageButton bt_suggestpage_sort;
     private Button bt_suggestpage_rank;
+    private ImageButton bt_suggestpage_breakfest;
 
 
     public RefreshScLinearLayout(Context context) {
@@ -111,8 +114,9 @@ public class RefreshScLinearLayout extends LinearLayout {
     private void scButtonClickFunction(final Context context) {
 
         Log.i(TAG,"ButtonClick");
-        bt_suggestpage_sort = (Button) scChildView.findViewById(R.id.bt_suggestpage_sort);
+        bt_suggestpage_sort = (ImageButton) scChildView.findViewById(R.id.bt_suggestpage_sort);
         Log.i(TAG,bt_suggestpage_sort.toString());
+        bt_suggestpage_breakfest = (ImageButton) scChildView.findViewById(R.id.bt_suggestpage_breakfest);
         bt_suggestpage_rank = (Button) scChildView.findViewById(R.id.bt_suggestpage_Rank);
 
 
@@ -130,6 +134,14 @@ public class RefreshScLinearLayout extends LinearLayout {
             public void onClick(View v) {
                 Intent intent = new Intent(context, MenuSortActivity.class);
                 context.startActivity(intent);
+            }
+        });
+
+        //早餐页面
+        bt_suggestpage_breakfest.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context,BreakfestActivity.class));
             }
         });
 

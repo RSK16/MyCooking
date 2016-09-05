@@ -3,6 +3,8 @@ package com.example.mycooking.utils;
 import android.content.Context;
 import android.content.res.AssetManager;
 
+import com.google.gson.Gson;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -38,4 +40,6 @@ public class CopyJsonUtils {
             e.printStackTrace();
         }
     }
+
+
 }

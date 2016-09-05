@@ -23,7 +23,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity android:name=".activity.Shopping_NewNotifaction" />
         <activity android:name=".activity.Shopping_cart" />
         <activity android:name=".activity.MenuRankActivity" />
@@ -35,6 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.BreakfestActivity"></activity>
     </application>
 
 </manifest>
