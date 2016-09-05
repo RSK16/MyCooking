@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pic_welcome_1"
+    android:background="@mipmap/pic_welcome_1"
     tools:context="com.example.mycooking.activity.SplashActivity">
 
 </RelativeLayout>
