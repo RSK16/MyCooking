@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <TextView
+        android:id="@+id/tv_add_zhuliao2"
+        android:background="@drawable/tv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="添加主料"/>
+    <TextView
+        android:id="@+id/tv_add_liaonum2"
+        android:background="@drawable/tv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="添加用量"/>
+</LinearLayout>

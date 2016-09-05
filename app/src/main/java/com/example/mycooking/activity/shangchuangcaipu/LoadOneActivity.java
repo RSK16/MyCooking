@@ -127,21 +127,29 @@ public class LoadOneActivity extends Activity {
      * 下一步
      */
     private void donext() {
-        if (tv_gongyi.getText().toString().equals("")) {
-            Toast.makeText(LoadOneActivity.this, "工艺不能为空", Toast.LENGTH_SHORT).show();
-        } else if (tv_kouwei.getText().toString().equals("")) {
-            Toast.makeText(LoadOneActivity.this, "口味不能为空", Toast.LENGTH_SHORT).show();
-        }else if (tv_nandu.getText().toString().equals("")) {
-            Toast.makeText(LoadOneActivity.this, "难度不能为空", Toast.LENGTH_SHORT).show();
-        }else if (tv_dotime.getText().toString().equals("")) {
-            Toast.makeText(LoadOneActivity.this, "时间不能为空", Toast.LENGTH_SHORT).show();
-        } else if (tv_number.getText().toString().equals("")) {
-            Toast.makeText(LoadOneActivity.this, "食用人数不能为空", Toast.LENGTH_SHORT).show();
-        }else if (et_name.getText().toString().equals("")) {
+//        if (tv_gongyi.getText().toString().equals("")) {
+//            Toast.makeText(LoadOneActivity.this, "工艺不能为空", Toast.LENGTH_SHORT).show();
+//        } else if (tv_kouwei.getText().toString().equals("")) {
+//            Toast.makeText(LoadOneActivity.this, "口味不能为空", Toast.LENGTH_SHORT).show();
+//        }else if (tv_nandu.getText().toString().equals("")) {
+//            Toast.makeText(LoadOneActivity.this, "难度不能为空", Toast.LENGTH_SHORT).show();
+//        }else if (tv_dotime.getText().toString().equals("")) {
+//            Toast.makeText(LoadOneActivity.this, "时间不能为空", Toast.LENGTH_SHORT).show();
+//        } else if (tv_number.getText().toString().equals("")) {
+//            Toast.makeText(LoadOneActivity.this, "食用人数不能为空", Toast.LENGTH_SHORT).show();
+//        }else if (et_name.getText().toString().equals("")) {
+//            Toast.makeText(LoadOneActivity.this, "标题不能为空", Toast.LENGTH_SHORT).show();
+//        } else {
+//            Intent intent = new Intent(this, LoadTwoActivity.class);
+//            recipe.setTitle(tittle);
+//            intent.putExtra("recipe", recipe);
+//            startActivity(intent);
+//        }
+        if (et_name.getText().toString().equals("")) {
             Toast.makeText(LoadOneActivity.this, "标题不能为空", Toast.LENGTH_SHORT).show();
         } else {
-            Intent intent = new Intent(this, LoadTwoActivity.class);
             recipe.setTitle(tittle);
+            Intent intent = new Intent(this, LoadTwoActivity.class);
             intent.putExtra("recipe", recipe);
             startActivity(intent);
         }

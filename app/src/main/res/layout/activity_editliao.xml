@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mycooking.activity.shangchuangcaipu.EditliaoActivity">
+    <RelativeLayout
+        android:layout_weight="0"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <ImageButton
+            android:id="@+id/pre"
+            android:onClick="done"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:src="@drawable/btn_closed_red"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="添加主料"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/yes"
+            android:onClick="done"
+            android:text="确定"
+            android:textSize="20sp"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:id="@+id/ll_editzhuliao"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <EditText
+            android:id="@+id/et_liao_name"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:background="@drawable/tv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="名称"/>
+        <EditText
+            android:id="@+id/et_liao_num"
+            android:paddingLeft="5dp"
+            android:background="@drawable/tv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="用量"/>
+    </LinearLayout>
+</LinearLayout>
