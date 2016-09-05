@@ -91,7 +91,7 @@ public class MenuSortActivity extends AppCompatActivity {
         finish();
     }
 
-    public  void parseJsonFromLocal(Context context, String jsonfileName) {
+    public void parseJsonFromLocal(Context context, String jsonfileName) {
 
         //将本地的json文件 解析放入Categories  java bean 中
         File file = new File("/data/data/" + context.getPackageName() + "/" + jsonfileName);
@@ -100,11 +100,12 @@ public class MenuSortActivity extends AppCompatActivity {
             InputStreamReader reader = new InputStreamReader(fis);
             BufferedReader bufferedReader = new BufferedReader(reader);
             StringBuilder stringBuilder = new StringBuilder();
-            String json="";
-            while ((json = bufferedReader.readLine())!=null){
-                stringBuilder.append(json);
+            String line="";
+            while ((line = bufferedReader.readLine())!=null){
+                stringBuilder.append(line);
             }
-            //Log.i(TAG,stringBuilder.toString());
+
+            Log.i(TAG,stringBuilder.toString());
 
             Gson gson = new Gson();
             categories = gson.fromJson(stringBuilder.toString(), Categories.class);
