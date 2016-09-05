@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.URLUtil;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -38,6 +39,7 @@ public class BBVideoPlayer extends AppCompatActivity {
     private int curPosition = 0;
     private long mediaLength = 0;
     private long readSize = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,7 @@ public class BBVideoPlayer extends AppCompatActivity {
         init();
         playvideo();
     }
+
     private void findViews() {
 
         this.mVideoView = (VideoView) findViewById(R.id.bbvideoview);
@@ -123,7 +126,7 @@ public class BBVideoPlayer extends AppCompatActivity {
     }
 
     private void playvideo() {
-        if (!URLUtil.isNetworkUrl(this.remoteUrl)) {
+        if (!URLUtil.isNetworkUrl(this.remoteUrl)) {//我去掉了  ！
             mVideoView.setVideoPath(this.remoteUrl);
             mVideoView.start();
             return;
@@ -142,6 +145,8 @@ public class BBVideoPlayer extends AppCompatActivity {
                     URL url = new URL(remoteUrl);
                     HttpURLConnection httpConnection = (HttpURLConnection) url
                             .openConnection();
+                    httpConnection.setConnectTimeout(5000);
+                    httpConnection.setReadTimeout(5000);
 
                     if (localUrl == null) {
                         localUrl = Environment.getExternalStorageDirectory()
@@ -165,7 +170,9 @@ public class BBVideoPlayer extends AppCompatActivity {
                     httpConnection.setRequestProperty("User-Agent", "NetFox");
                     httpConnection.setRequestProperty("RANGE", "bytes="
                             + readSize + "-");
-
+                    httpConnection.connect();
+                    int responseCode = httpConnection.getResponseCode();
+                    Log.i("啊是经过时间", "run: " + responseCode);
                     is = httpConnection.getInputStream();
 
                     mediaLength = httpConnection.getContentLength();

@@ -71,7 +71,7 @@ public class LocalCacheUtils {
 			if (!parent.exists()) {
 				parent.mkdirs();
 			}
-
+//压缩图片
 			bitmap.compress(CompressFormat.JPEG, 100,
 					new FileOutputStream(file));
 

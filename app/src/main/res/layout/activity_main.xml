@@ -33,12 +33,6 @@
             android:text="发现" />
 
         <RadioButton
-            android:id="@+id/rb_main_shopping"
-            style="@style/RB_Style"
-            android:drawableTop="@drawable/tab_shop_selector"
-            android:text="商城" />
-
-        <RadioButton
             android:id="@+id/rb_main_topic"
             style="@style/RB_Style"
             android:drawableTop="@drawable/tab_topic_selector"
