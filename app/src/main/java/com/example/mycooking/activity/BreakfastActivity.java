@@ -1,7 +1,7 @@
-package com.example.mycooking.reconmentbreaktfast;
+package com.example.mycooking.activity;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import com.example.mycooking.R;
 

@@ -8,10 +8,10 @@
     <!--  展示栏&-->
     <RelativeLayout
       android:layout_width="match_parent"
-      android:layout_height="650dp">
+      android:layout_height="620dp">
       <com.example.mycooking.view.SuggestViewpager
           android:layout_width="match_parent"
-          android:layout_height="630dp"
+          android:layout_height="610dp"
           android:id="@+id/vp_suggestPage_meal">
       </com.example.mycooking.view.SuggestViewpager>
       <com.viewpagerindicator.CirclePageIndicator
@@ -42,7 +42,7 @@
             android:gravity="center">
             <ImageButton
                 android:layout_width="50dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:src="@drawable/cate_fenlei_5"
                 android:background="#fff"
                 android:layout_marginBottom="5dp"
@@ -50,6 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#f00"
                 android:text="菜谱分类"/>
         </LinearLayout>
 
@@ -69,6 +70,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#f00"
                 android:text="早餐"/>
         </LinearLayout>
     </LinearLayout>

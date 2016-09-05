@@ -22,7 +22,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
-import com.example.mycooking.activity.BreakfestActivity;
+import com.example.mycooking.activity.BreakfastActivity;
 import com.example.mycooking.activity.MenuRankActivity;
 import com.example.mycooking.activity.MenuSortActivity;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -141,7 +141,7 @@ public class RefreshScLinearLayout extends LinearLayout {
         bt_suggestpage_breakfest.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context,BreakfestActivity.class));
+                context.startActivity(new Intent(context,BreakfastActivity.class));
             }
         });
 
@@ -156,7 +156,7 @@ public class RefreshScLinearLayout extends LinearLayout {
         });
     }
 
-    public void initHeaderView(Context context){
+    public void initHeaderView(){
         //---------------------refreshHeader
         refreshheader = layoutInflater.inflate(R.layout.refreshheader, null);
         //由于在onCreate()中拿不到refreshheader的高度，所以需要手动计算
@@ -171,8 +171,7 @@ public class RefreshScLinearLayout extends LinearLayout {
         //-------------------------给refreshHeader设置下拉刷新动画
         pb_refreshheader_loading = (ProgressBar) refreshheader.findViewById(R.id.pb_refreshheader_loading);
         iv_refreshheader_arrow = (ImageView) refreshheader.findViewById(R.id.iv_refreshheader_arrow);
-        //iv_refreshheader_arrow.setMinimumHeight(50);
-        // iv_refreshheader_arrow.setMinimumWidth(50);
+
         tv_refreshheader_tips = (TextView) refreshheader.findViewById(R.id.tv_refreshheader_tips);
         tv_refreshheader_lastupdate = (TextView)refreshheader.findViewById(R.id.tv_refreshheader_lastupdate);
 
@@ -187,7 +186,7 @@ public class RefreshScLinearLayout extends LinearLayout {
         //初始化scrollView的布局
         initScrollView(ctx);
 
-        initHeaderView(ctx);
+        initHeaderView();
 
         this.addView(refreshheader,0);
         this.addView(scrollView,1);
@@ -466,6 +465,7 @@ public class RefreshScLinearLayout extends LinearLayout {
 
         }
     }
+
     public static void fun(){
         scrollView.scrollTo(0,0);
     }
