@@ -35,8 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.BreakfestActivity" />
-        <activity android:name=".reconmentbreaktfast.BreakfastActivity"></activity>
+        <activity android:name=".activity.BreakfastActivity"></activity>
     </application>
 
 </manifest>

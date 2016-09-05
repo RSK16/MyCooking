@@ -22,6 +22,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
+import com.example.mycooking.activity.BreakfastActivity;
 import com.example.mycooking.activity.MenuRankActivity;
 import com.example.mycooking.activity.MenuSortActivity;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -137,12 +138,12 @@ public class RefreshScLinearLayout extends LinearLayout {
         });
 
         //早餐页面
-        /*bt_suggestpage_breakfest.setOnClickListener(new OnClickListener() {
+        bt_suggestpage_breakfest.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, com.example.mycooking.reconmentbreaktfast.BreakfastActivity.class));
+                context.startActivity(new Intent(context,BreakfastActivity.class));
             }
-        });*/
+        });
 
         //排行榜页面
         Log.i(TAG, bt_suggestpage_rank.toString());
