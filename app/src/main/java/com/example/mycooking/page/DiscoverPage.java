@@ -1,6 +1,7 @@
 package com.example.mycooking.page;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Environment;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
+import com.example.mycooking.activity.BBVideoPlayer;
 import com.example.mycooking.bean.UserUploadInfo;
 import com.google.gson.Gson;
 
@@ -111,7 +113,7 @@ public class DiscoverPage extends BasePage {
          public int getCount() {
 //             Log.i(TAG, "getCount: "+videoListBeen.size());
 //             return videoListBeen.size();
-return 10;
+        return 1;
          }
 
          @Override
@@ -129,10 +131,23 @@ return 10;
              View inflate = View.inflate(mActivity, R.layout.discover_video_detail, null);
              TextView tv_discover_video_detail = (TextView) inflate.findViewById(R.id.tv_discover_video_detail);
              ImageView iv_discover_video_detail = (ImageView) inflate.findViewById(R.id.iv_discover_video_detail);
-             tv_discover_video_detail.setText(videoListBeen.get(position).getImg());
-            // iv_discover_video_detail.se(videoListBeen.get(position).getImg());
-
+             final String vurl = videoListBeen.get(position).getVurl();
+             String name = videoListBeen.get(position).getName();
+             tv_discover_video_detail.setText(name);
+                tv_discover_video_detail.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent();
+                        intent.setClass(mActivity, BBVideoPlayer.class);
+                        intent.putExtra("url", vurl);
+                        intent.putExtra("cache",
+                                Environment.getExternalStorageDirectory().getAbsolutePath()
+                                        + "/VideoCache/" + System.currentTimeMillis() + ".mp4");
+                       mActivity.startActivity(intent);
+                    }
+                });
              return inflate;
          }
      }
+
 }
