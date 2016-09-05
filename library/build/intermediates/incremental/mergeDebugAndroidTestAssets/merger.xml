@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="debug"><source path="D:\ShoppingMall\MyCooking\library\build\intermediates\bundles\debug\assets"/></dataSet><dataSet config="main"><source path="D:\ShoppingMall\MyCooking\library\src\androidTest\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="debug"><source path="F:\meishiApp\MyCooking\library\build\intermediates\bundles\debug\assets"/></dataSet><dataSet config="main"><source path="F:\meishiApp\MyCooking\library\src\androidTest\assets"/></dataSet></merger>

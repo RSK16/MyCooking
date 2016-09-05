@@ -12,8 +12,14 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!-- 获取sd卡写的权限，用于文件上传和下载 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 允许读取手机状态 用于创建BmobInstallation -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -23,19 +29,18 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name=".activity.Shopping_NewNotifaction" />
-        <activity android:name=".activity.Shopping_cart" />
-        <activity android:name=".activity.MenuRankActivity" />
-        <activity android:name=".activity.MenuSortActivity" />
-        <activity android:name=".activity.SplashActivity">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.BreakfastActivity"></activity>
+        <activity android:name=".activity.Shopping_NewNotifaction" />
+        <activity android:name=".activity.Shopping_cart" />
+        <activity android:name=".activity.MenuRankActivity" />
+        <activity android:name=".activity.MenuSortActivity"></activity>
+        <activity android:name=".activity.BBVideoPlayer"></activity>
     </application>
 
 </manifest>
