@@ -9,7 +9,7 @@
         android:layout_width ="370dp"
         android:layout_height="170dp"
         android:id="@+id/rl_vpMeal_topimage"
-        android:background="@drawable/fish1">
+        android:background="@mipmap/fish1">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:layout_width ="370dp"
         android:layout_height="170dp"
         android:id="@+id/rl_vpMeal_centerimage"
-        android:background="@drawable/cake1">
+        android:background="@mipmap/cake1">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
         android:layout_width ="370dp"
         android:layout_height="170dp"
         android:id="@+id/rl_vpMeal_bottomimage"
-        android:background="@drawable/gruel1">
+        android:background="@mipmap/gruel1">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,6 +1,7 @@
 package com.example.mycooking.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.RadioGroup;
 
 import com.example.mycooking.R;
+import com.example.mycooking.activity.shangchuangcaipu.LoadOneActivity;
 import com.example.mycooking.page.BasePage;
 import com.example.mycooking.page.SuggestPage;
 import com.example.mycooking.page.DiscoverPage;
@@ -84,6 +86,8 @@ public class MainActivity extends Activity {
             //  super.destroyItem(container, position, object);
         }
     }
-
+    public void load(View view) {
+        startActivity(new Intent(this,LoadOneActivity.class));
+    }
 
 }

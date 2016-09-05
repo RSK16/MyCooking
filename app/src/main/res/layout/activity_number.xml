@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mycooking.activity.shangchuangcaipu.NumberActivity">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="选择食用人数"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <GridView
+
+        android:numColumns="3"
+        android:id="@+id/gv_number_content"
+        android:padding="10dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </GridView>
+    <ImageButton
+        android:onClick="over"
+        android:id="@+id/ib_number_finish"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:src="@drawable/edittext_clear"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
