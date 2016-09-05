@@ -1,6 +1,7 @@
 package com.example.mycooking.activity;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -14,10 +15,11 @@ import android.widget.Toast;
 import com.example.mycooking.R;
 import com.example.mycooking.bean.Userinfo;
 
+import cn.bmob.v3.Bmob;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
-public class signNewUser extends AppCompatActivity {
+public class signNewUser extends Activity {
 
     private EditText username;
     private EditText password;
@@ -34,6 +36,7 @@ public class signNewUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_new_user);
+        Bmob.initialize(this,"2f78c11280ce16e4d17e9b7340caba38");
 
 
         getData();
