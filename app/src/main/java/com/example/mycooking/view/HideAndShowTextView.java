@@ -34,7 +34,7 @@ public class HideAndShowTextView extends TextView {
                     setEllipsize(null);//展开
                     setSingleLine(flag);
 
-                    Log.i(TAG,getLineCount()+"---"+getHeight());
+                    //Log.i(TAG,getLineCount()+"---"+getHeight());
 
                 }else{
 
@@ -43,7 +43,7 @@ public class HideAndShowTextView extends TextView {
                     setLines(2);//只显示两行行
                     setEllipsize(TextUtils.TruncateAt.END);//收缩
 
-                    Log.i(TAG,getLineCount()+"----"+getHeight());
+                   // Log.i(TAG,getLineCount()+"----"+getHeight());
                 }
             }
         });

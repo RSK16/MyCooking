@@ -64,13 +64,14 @@ public class SuggestPage extends BasePage {
             @Override
             public void doInBackground() {
 
-                Log.i(TAG,"doInBackground");
+                //刷新：在子线程
+                //Log.i(TAG,"doInBackground");
             }
 
             @Override
             public void complete() {
 
-                Log.i(TAG,"complete");
+                //Log.i(TAG,"complete");
             }
         });
 
