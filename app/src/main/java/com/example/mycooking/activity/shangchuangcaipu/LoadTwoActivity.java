@@ -1,6 +1,8 @@
 package com.example.mycooking.activity.shangchuangcaipu;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -13,15 +15,21 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mycooking.R;
+import com.example.mycooking.bean.Buzhou;
+import com.example.mycooking.bean.Cailiao;
 import com.example.mycooking.bean.Recipe;
 import com.example.mycooking.view.TakePhotoPopWin;
 
@@ -30,12 +38,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class LoadTwoActivity extends Activity {
 
     private static final String TAG = "LoadTwoActivity";
+    private static  int KONGJIAN = 0;
     //主料
     private RelativeLayout rl_load_tittlepic;
     private ImageButton ib_fengmianicon;
@@ -59,27 +70,141 @@ public class LoadTwoActivity extends Activity {
     private RelativeLayout buzhoupic_rl_dianji;
     private Button buzhou_btn_add;
     private Button buzhou_btn_edit;
+    private LinearLayout buzhou_ll_addll;
+    private int stepnumber;//步骤数量
+
+    private Cailiao cailiao;//菜谱材料
+    private Cailiao.ListBean zhuliaoBean;//主料
+    private Cailiao.ListTBean fuliaoBean;//辅料
+    private List<Cailiao.ListBean> zhuliaolist;//主料集合
+    private List<Cailiao.ListTBean> zfuliaolist;//辅料集合
+
+    private Buzhou buzhou;//步骤
+    private Buzhou.ZuofaBean zuofaBean;//做法
+    private List<Buzhou.ZuofaBean> zuofalist;//做法集合
+    private TakePhotoPopWin takePhotoPopWin;
+    private LinearLayout buzhou_ll_right;
+    private boolean isShow;//是否显示右边
+    private GridView buzhou_gv_reslutpics;
+    private ImageButton ib_addtupian;
+    int picsnumber=1;
+    private int RESULT_NUM=0;
+    private List<Bitmap> piclist;
+    private boolean isResult=false;
+    private MyAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load_two);
         recipe = (Recipe) getIntent().getSerializableExtra("recipe");
+        cailiao=new Cailiao();//材料
+        zhuliaolist = new ArrayList<Cailiao.ListBean>();
+        fuliaoBean = new Cailiao.ListTBean();//辅料
         Log.i(TAG, "onCreate: 8886e87368723"+recipe.getGongyi());
+        stepnumber=0;//步骤数量初始化为1
         initView();
         initZhuliaoData();
         initBuzhouData();
 
 
     }
-
     private void initBuzhouData() {
+        //步骤里图片点击事件
         buzhoupic_rl_dianji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                KONGJIAN=20;
+                showPopFormBottom();
             }
         });
+
+        //添加步骤点击事件
+        buzhou_btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stepnumber++;
+                View inflate = View.inflate(getApplicationContext(), R.layout.buzhou_content2, null);
+                TextView buzhou_tv_id2 = (TextView) inflate.findViewById(R.id.buzhou_tv_id2);
+                buzhou_tv_id2.setText("第"+(stepnumber+1)+"步");
+                EditText buzhou_et_name2 = (EditText) inflate.findViewById(R.id.buzhou_et_name2);
+                ImageButton up2 = (ImageButton) inflate.findViewById(R.id.up2);
+                ImageButton down2 = (ImageButton) inflate.findViewById(R.id.down2);
+                final ImageButton delete2 =  (ImageButton) inflate.findViewById(R.id.delete2);
+                //步骤里删除
+                delete2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        new AlertDialog.Builder(LoadTwoActivity.this)
+                                .setTitle("确认删除吗？")
+                                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        LinearLayout parent = (LinearLayout) delete2.getParent().getParent().getParent();
+                                        LinearLayout parent1 = (LinearLayout) parent.getParent();
+                                        parent1.removeView(parent);
+                                        Log.i(TAG, "onClick: 988887878");
+                                    }
+                                })
+                                .setNegativeButton("取消",null).show();
+
+                    }
+                });
+                LinearLayout buzhou_ll_right2 = (LinearLayout) inflate.findViewById(R.id.buzhou_ll_right2);
+                RelativeLayout buzhoupic_rl_dianji2 = (RelativeLayout) inflate.findViewById(R.id.buzhoupic_rl_dianji2);
+                //步骤里图片点击事件
+                buzhoupic_rl_dianji2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        KONGJIAN=stepnumber;
+                        showPopFormBottom();
+                    }
+                });
+
+                ImageButton buzhou_ib_icon2 = (ImageButton) inflate.findViewById(R.id.buzhou_ib_icon2);
+
+                buzhou_ll_addll.addView(inflate,stepnumber);
+            }
+        });
+        //编辑步骤点击事件
+        buzhou_btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isShow) {
+                    //buzhou_ll_right.setVisibility(View.GONE);
+                    int childCount = buzhou_ll_addll.getChildCount();
+                    Log.i(TAG, "onClick: 3333"+childCount);
+                    for (int i=0;i<buzhou_ll_addll.getChildCount();i++) {
+                        LinearLayout childAt = (LinearLayout) buzhou_ll_addll.getChildAt(i);
+                        LinearLayout childAt1 = (LinearLayout) childAt.getChildAt(0);
+                        childAt1.getChildAt(2).setVisibility(View.GONE);
+                    }
+                } else {
+                    int childCount = buzhou_ll_addll.getChildCount();
+                    Log.i(TAG, "onClick: 3333"+childCount);
+                    for (int i=0;i<buzhou_ll_addll.getChildCount();i++) {
+                        LinearLayout childAt = (LinearLayout) buzhou_ll_addll.getChildAt(i);
+                        LinearLayout childAt1 = (LinearLayout) childAt.getChildAt(0);
+                        childAt1.getChildAt(2).setVisibility(View.VISIBLE);
+                    }
+                }
+                isShow=!isShow;
+            }
+        });
+        //成品图的展示
+        piclist = new ArrayList<Bitmap>();
+        myAdapter = new MyAdapter();
+        buzhou_gv_reslutpics.setAdapter(myAdapter);
+        ib_addtupian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "onClick: 12121212121212121212121");
+                picsnumber++;
+                isResult=true;
+                showPopFormBottom();
+            }
+        });
+
     }
 
     private void initZhuliaoData() {
@@ -87,6 +212,7 @@ public class LoadTwoActivity extends Activity {
         rl_load_tittlepic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                KONGJIAN=10;
                 showPopFormBottom();
             }
         });
@@ -99,13 +225,19 @@ public class LoadTwoActivity extends Activity {
         rl_loadtwo_addbuttun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                isADD=true;
-                startActivity(new Intent(getApplicationContext(),EditliaoActivity.class));
-
-                View inflate = View.inflate(getApplicationContext(), R.layout.add_ll, null);
-                tv_add_zhuliao2 = (TextView) inflate.findViewById(R.id.tv_add_zhuliao2);
-                tv_add_liaonum2 = (TextView) inflate.findViewById(R.id.tv_add_liaonum2) ;
-                ll_loadtwo_addll.addView(inflate);
+                String string = tv_loadtwo_zhuliaoming.getText().toString();
+                Log.i(TAG, "onClick: "+string+zhuliaolist.size());
+                if (string.equals("添加主料")) {
+                    Toast.makeText(LoadTwoActivity.this, "请先填写主料", Toast.LENGTH_SHORT).show();
+                } else {
+                    startActivity(new Intent(getApplicationContext(),EditliaoActivity.class));
+                    isADD=true;
+                    View inflate = View.inflate(getApplicationContext(), R.layout.add_ll, null);
+                    tv_add_zhuliao2 = (TextView) inflate.findViewById(R.id.tv_add_zhuliao2);
+                    tv_add_liaonum2 = (TextView) inflate.findViewById(R.id.tv_add_liaonum2) ;
+                    ll_loadtwo_addll.addView(inflate);
+                    isADD=true;
+                }
             }
         });
     }
@@ -128,13 +260,33 @@ public class LoadTwoActivity extends Activity {
         buzhou_ib_icon = (ImageButton) findViewById(R.id.buzhou_ib_icon);
         et_buzhou_desc = (EditText) findViewById(R.id.et_buzhou_desc);
         buzhoupic_rl_dianji = (RelativeLayout) findViewById(R.id.buzhoupic_rl_dianji);
+
+
         buzhou_btn_add = (Button) findViewById(R.id.buzhou_btn_add);
         buzhou_btn_edit = (Button) findViewById(R.id.buzhou_btn_edit);
+        buzhou_ll_addll = (LinearLayout) findViewById(R.id.buzhou_ll_addll);
+
+        buzhou_ll_right = (LinearLayout) findViewById(R.id.buzhou_ll_right);
+
+        buzhou_gv_reslutpics = (GridView) findViewById(R.id.buzhou_gv_reslutpics);
+        ib_addtupian = (ImageButton) findViewById(R.id.ib_addtupian);
+
+
+
+        ImageButton up1 = (ImageButton) findViewById(R.id.up1);
+        ImageButton down1 = (ImageButton) findViewById(R.id.down1);
+        final ImageButton delete1 =  (ImageButton) findViewById(R.id.delete1);
+        delete1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoadTwoActivity.this, "不能没有步骤", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
     }
     public void showPopFormBottom() {
-        TakePhotoPopWin takePhotoPopWin = new TakePhotoPopWin(this, onClickListener);
+        takePhotoPopWin = new TakePhotoPopWin(this, onClickListener);
         //showAtLocation(View parent, int gravity, int x, int y)
         takePhotoPopWin.showAtLocation(findViewById(R.id.main_view), Gravity.CENTER, 0, 0);
     }
@@ -195,13 +347,37 @@ public class LoadTwoActivity extends Activity {
             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
             String picturePath = cursor.getString(columnIndex);
             cursor.close();
+
             Bitmap bitmap = BitmapFactory.decodeFile(picturePath);
-            ib_fengmianicon.setImageBitmap(bitmap);
-//            Drawable bitmapDrawable = new BitmapDrawable(bitmap);
-//            rl_load_tittlepic.setBackground(bitmapDrawable);
+            doBitmap(bitmap);
+            buzhou_gv_reslutpics.setAdapter(myAdapter);
+            takePhotoPopWin.dismiss();
         }
 
 
+
+    }
+
+    private void doBitmap(Bitmap bitmap) {
+        Log.i(TAG, "doBitmap: "+KONGJIAN+stepnumber+RESULT_NUM+picsnumber);
+        if (KONGJIAN==10&&isResult==false) {
+            ib_fengmianicon.setImageBitmap(bitmap);
+        } else if (KONGJIAN==20&&isResult==false) {
+            buzhou_ib_icon.setImageBitmap(bitmap);
+        }
+        if (KONGJIAN == stepnumber&&isResult==false) {
+            LinearLayout childAt = (LinearLayout) buzhou_ll_addll.getChildAt(stepnumber);
+            LinearLayout childAt1 = (LinearLayout) childAt.getChildAt(0);
+            LinearLayout childAt2 = (LinearLayout) childAt1.getChildAt(1);
+            RelativeLayout childAt3 = (RelativeLayout) childAt2.getChildAt(1);
+            ImageButton childAt4 = (ImageButton) childAt3.getChildAt(0);
+            childAt4.setImageBitmap(bitmap);
+        }
+        if (isResult) {
+            piclist.add(0,bitmap);
+            isResult=false;
+            Log.i(TAG, "doBitmap: reslut"+piclist.size());
+        }
 
     }
 
@@ -216,20 +392,22 @@ public class LoadTwoActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (isADD) {
-            Log.i(TAG, "onResume:add00 " + liao_name + liao_num);
-            tv_add_zhuliao2.setText(liao_name);
-            tv_add_liaonum2.setText(liao_num);
-        } else {
-            if (liao_name != null && liao_num != null) {
+        if (liao_name != null && liao_num != null) {
+            if (isADD) {
+                Log.i(TAG, "onResume:add00 " + liao_name + liao_num);
+                tv_add_zhuliao2.setText(liao_name);
+                tv_add_liaonum2.setText(liao_num);
+            } else {
                 Log.i(TAG, "onResume:first " + liao_name + liao_num);
                 tv_loadtwo_zhuliaoming.setText(liao_num);
                 tv_loadtwo_zhuliaonum.setText(liao_name);
             }
+            zhuliaoBean = new Cailiao.ListBean();//主料
+            zhuliaoBean.setTitle(liao_name);
+            zhuliaoBean.setNum(liao_num);
+            zhuliaolist.add(zhuliaoBean);
         }
-
-
-
+        zhuliaoBean=null;
     }
 
     public static void saveImage(Bitmap photo, String spath) {
@@ -250,8 +428,7 @@ public class LoadTwoActivity extends Activity {
      * @param
      * @return
      */
-    private String getCameraImage(Bundle bundle)
-    {
+    private String getCameraImage(Bundle bundle) {
         String strState = Environment.getExternalStorageState();
         if (!strState.equals(Environment.MEDIA_MOUNTED))
         {
@@ -302,8 +479,7 @@ public class LoadTwoActivity extends Activity {
      * @param
      * @return
      */
-    private String getPhoneImage(String uriString)
-    {
+    private String getPhoneImage(String uriString) {
 
         // Uri selectedImage = data.getData();
         Uri selectedImage = Uri.parse(uriString);
@@ -316,5 +492,38 @@ public class LoadTwoActivity extends Activity {
 
         // ((ImageView) findViewById(R.id.iv_temp)).setImageBitmap(BitmapFactory.decodeFile(picturePath));
         return fileName;
+    }
+    public void ib_previous2(View view) {
+        finish();
+    }
+    public void fabu(View view) {
+
+    }
+
+    class MyAdapter extends BaseAdapter {
+
+        @Override
+        public int getCount() {
+            return piclist.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return piclist.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View inflate = View.inflate(getApplicationContext(), R.layout.item_buzhouresultpics_gridview, null);
+            ImageView delete_pic = (ImageView) inflate.findViewById(R.id.delete_pic2);
+            ImageButton ib_tupian2 = (ImageButton) inflate.findViewById(R.id.ib_tupian2);
+            ib_tupian2.setImageBitmap(piclist.get(position));
+            return inflate;
+        }
     }
 }

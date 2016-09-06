@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:background="@drawable/tv_bg"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -13,12 +13,12 @@
             android:paddingLeft="5dp"
             android:textColor="#000"
             android:layout_weight="2"
-            android:id="@+id/buzhou_tv_id"
+            android:id="@+id/buzhou_tv_id2"
             android:gravity="center_vertical"
             android:textSize="18sp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="第1步"/>
+            android:text="第一步"/>
         <LinearLayout
             android:orientation="vertical"
             android:layout_margin="10dp"
@@ -27,53 +27,53 @@
             android:layout_height="match_parent">
             <EditText
                 android:paddingLeft="5dp"
+                android:textColorHint="#55000000"
                 android:textColor="#000"
-                android:id="@+id/buzhou_et_name"
+                android:id="@+id/buzhou_et_name2"
                 android:background="@drawable/tv_bg"
                 android:hint="添加名称，例如：洗菜"
                 android:layout_width="match_parent"
                 android:layout_height="40dp" />
             <RelativeLayout
-                android:id="@+id/buzhoupic_rl_dianji"
-                android:background="@drawable/tv_bg"
+                android:id="@+id/buzhoupic_rl_dianji2"
                 android:gravity="center"
+                android:background="@drawable/tv_bg"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageButton
-                    android:clickable="false"
                     android:background="@null"
-                    android:id="@+id/buzhou_ib_icon"
+                    android:clickable="false"
+                    android:id="@+id/buzhou_ib_icon2"
                     android:src="@drawable/rela_dish_upload_pic"
                     android:layout_width="match_parent"
                     android:layout_height="200dp" />
             </RelativeLayout>
         </LinearLayout>
-        //删除
         <LinearLayout
             android:visibility="gone"
-            android:id="@+id/buzhou_ll_right"
+            android:id="@+id/buzhou_ll_right2"
             android:gravity="center_horizontal"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent">
             <ImageButton
-                android:id="@+id/up1"
+                android:id="@+id/up2"
                 android:layout_weight="1"
                 android:src="@drawable/rela_dish_step_up"
                 android:background="@null"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <ImageButton
-                android:id="@+id/down1"
+                android:id="@+id/down2"
                 android:layout_weight="1"
                 android:src="@drawable/rela_dish_step_down"
                 android:background="@null"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <ImageButton
-                android:id="@+id/delete1"
+                android:id="@+id/delete2"
                 android:layout_weight="1"
                 android:src="@drawable/rela_dish_del"
                 android:background="@null"
@@ -81,8 +81,10 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
+    //简介
     <EditText
         android:paddingLeft="5dp"
+        android:textColorHint="#55000000"
         android:textColor="#000"
         android:id="@+id/et_buzhou_desc"
         android:background="@drawable/tv_bg"

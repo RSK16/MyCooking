@@ -69,6 +69,7 @@ public class GongyiActivity extends Activity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View inflate = View.inflate(getApplicationContext(), R.layout.item_gongyi_gridview, null);
             bt_choice = (Button) inflate.findViewById(R.id.bt_choice);
+            Log.i(TAG, "getView: "+bt_choice);
             bt_choice.setText(choices[position]);
             return inflate;
         }
