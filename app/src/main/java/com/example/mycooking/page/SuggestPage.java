@@ -1,24 +1,17 @@
 package com.example.mycooking.page;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
-import com.example.mycooking.activity.MenuRankActivity;
-import com.example.mycooking.activity.MenuSortActivity;
-import com.example.mycooking.page.BasePage;
+import com.example.mycooking.activity.shangchuangcaipu.LoadOneActivity;
 import com.example.mycooking.view.RefreshScLinearLayout;
-import com.viewpagerindicator.CirclePageIndicator;
 
 /**
  * Created by liaozhihua on 2016/9/3.
@@ -28,6 +21,7 @@ public class SuggestPage extends BasePage {
     private static final String TAG = "SuggestPage";
     public View suggestPageView;
     private ScrollView scrollView_suggestpage;
+    private ImageButton bt_suggestPagetitle_left;
 
     public SuggestPage(Activity activity) {
         super(activity);
@@ -57,6 +51,17 @@ public class SuggestPage extends BasePage {
         });
 
         RefreshScLinearLayout ll_refreshactivity_refresh = (RefreshScLinearLayout) suggestPageView.findViewById(R.id.ll_refreshactivity_refresh);
+        bt_suggestPagetitle_left = (ImageButton) suggestPageView.findViewById(R.id.bt_suggestPagetitle_left);
+        bt_suggestPagetitle_left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * 上传菜谱
+                 * @param view
+                 */
+                mActivity.startActivity(new Intent(mActivity, LoadOneActivity.class));
+            }
+        });
 
         ll_refreshactivity_refresh.setRefreshListener(new RefreshScLinearLayout.RefreshListener() {
             public static final String TAG = "RefreshCallBack";
@@ -64,13 +69,14 @@ public class SuggestPage extends BasePage {
             @Override
             public void doInBackground() {
 
-                Log.i(TAG,"doInBackground");
+                //刷新：在子线程
+                //Log.i(TAG,"doInBackground");
             }
 
             @Override
             public void complete() {
 
-                Log.i(TAG,"complete");
+                //Log.i(TAG,"complete");
             }
         });
 
@@ -144,4 +150,7 @@ public class SuggestPage extends BasePage {
 
         }
     }
+
+
+
 }

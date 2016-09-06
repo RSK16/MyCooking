@@ -29,7 +29,6 @@ public class SplashActivity extends AppCompatActivity {
             }
         }).start();
 
-
         CopyJsonUtils.copyJson(this,"category.json");
     }
 }

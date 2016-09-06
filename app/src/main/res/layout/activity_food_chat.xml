@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/ib_foodChat_leftPlus"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tj_left_icon"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="食话"
+            android:layout_centerInParent="true"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/add_friend"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ib_foodChat_addFriend"/>
+        <ImageButton
+            android:id="@+id/ib_foodChat_search"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/topic_search"
+            android:layout_toLeftOf="@id/ib_foodChat_addFriend"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_food_chat_activity">
+
+    </ListView>
+
+
+
+
+
+
+</LinearLayout>

@@ -17,4 +17,9 @@
         <item name="android:drawablePadding">3dp</item>
         <item name="android:textColor">@drawable/rb_text_color</item>
     </style>
+
+    <style name="take_photo_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
 </resources>

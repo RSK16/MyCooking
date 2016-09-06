@@ -4,8 +4,6 @@ import android.content.Context;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -105,8 +103,6 @@ public class MenuSortActivity extends AppCompatActivity {
                 stringBuilder.append(line);
             }
 
-            Log.i(TAG,stringBuilder.toString());
-
             Gson gson = new Gson();
             categories = gson.fromJson(stringBuilder.toString(), Categories.class);
 
@@ -187,8 +183,6 @@ public class MenuSortActivity extends AppCompatActivity {
             String url = d.get(position).getI();
             String title = d.get(position).getT();
             if (url!=null){
-                Log.i(TAG,title);
-                Log.i(TAG,url);
                 bitmapUtils.display(iv_menusort_gridview,url);
             }else{
                 //如果没有要显示的图片，就将ImageView去掉
