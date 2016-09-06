@@ -60,7 +60,7 @@ public class NetCacheUtils {
 					System.out.println("从网络缓存读取图片");
 
 					// 向本地保存图片文件
-					mLocalCacheUtils.putBitmapToLocal(url, result);
+//					mLocalCacheUtils.putBitmapToLocal(url, result);
 					// 向内存保存图片对象
 					//mMemoryCacheUtils.putBitmapToMemory(url, result);
 				}

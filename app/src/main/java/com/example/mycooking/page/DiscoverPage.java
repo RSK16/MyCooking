@@ -16,6 +16,7 @@ import com.example.mycooking.R;
 import com.example.mycooking.activity.BBVideoPlayer;
 import com.example.mycooking.bean.UserUploadInfo;
 import com.example.mycooking.utils.bitmap.LocalCacheUtils;
+import com.example.mycooking.utils.bitmap.MemoryCacheUtils;
 import com.example.mycooking.utils.bitmap.NetCacheUtils;
 import com.google.gson.Gson;
 
@@ -35,7 +36,8 @@ public class DiscoverPage extends BasePage {
     private static final String TAG = "DiscoverPage";
     private String result;
     private ArrayList<UserUploadInfo.FaxianListBean.VideoListBean> videoListBeen;
-
+    LocalCacheUtils mLocalCacheUtils;
+    MemoryCacheUtils mMemoryCacheUtils;
 
     public DiscoverPage(Activity activity) {
         super(activity);
@@ -143,8 +145,8 @@ public class DiscoverPage extends BasePage {
 //             final String vurl = "http://10.0.2.2:8080/myphoto.mp4";
             final String vurl = "http://static.zqgame.com/html/playvideo.html?name=http://lom.zqgame.com/v1/video/LOM_Promo~2.flv";
           final String urlImage= "http://admin.meishi.cc/article/upload/video_img/20160720/20160720100735_713.jpg";
-  /*          LocalCacheUtils mLocalCacheUtils;
-            NetCacheUtils netCacheUtils = new NetCacheUtils(mLocalCacheUtils, mMemoryCacheUtils);*/
+            NetCacheUtils netCacheUtils = new NetCacheUtils(mLocalCacheUtils, mMemoryCacheUtils);
+            netCacheUtils.getBitmapFromNet(iv_discover_video_detail,urlImage);
             String name = videoListBeen.get(position).getName();
             tv_discover_video_detail.setText(name);
             tv_discover_video_detail.setOnClickListener(new View.OnClickListener() {
