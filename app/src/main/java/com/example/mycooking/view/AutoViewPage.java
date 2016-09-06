@@ -1,12 +1,13 @@
 package com.example.mycooking.view;
 
-import android.app.Activity;
+
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.AdapterView;
 
-//import com.ToxicBakery.viewpager.transforms.*;
+
+import com.ToxicBakery.viewpager.transforms.ABaseTransformer;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.bigkoo.convenientbanner.ConvenientBanner;
@@ -78,7 +79,7 @@ public class AutoViewPage implements AdapterView.OnItemClickListener, ViewPager.
         //设置两个点图片作为翻页指示器，不设置则没有指示器，可以根据自己需求自行配合自己的指示器,不需要圆点指示器可用不设
         .setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused})
                 //设置指示器的方向
-                .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.ALIGN_PARENT_RIGHT)
+                .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL)
                 .setOnPageChangeListener(this)//监听翻页事件
                 .setOnItemClickListener(this);
 
@@ -86,18 +87,19 @@ public class AutoViewPage implements AdapterView.OnItemClickListener, ViewPager.
         convenientBanner.startTurning(5000);
 
 
-//        try {
-//            Class cls = Class.forName("com.ToxicBakery.viewpager.transforms." + transforemerName);
-//            ABaseTransformer transforemer=(ABaseTransformer)cls.newInstance();
-//
-//
-//            convenientBanner.getViewPager().setPageTransformer(true,transforemer);
-//        } catch (InstantiationException e) {
-//            e.printStackTrace();
-//        } catch (IllegalAccessException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Class cls = Class.forName("com.ToxicBakery.viewpager.transforms.CubeOutTransformer");
+            ABaseTransformer transforemer=(ABaseTransformer)cls.newInstance();
+            convenientBanner.getViewPager().setPageTransformer(true,transforemer);
+            convenientBanner.setScrollDuration(1200);
 
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
 
     }
