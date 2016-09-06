@@ -7,39 +7,54 @@
 
     <!--第一部分-->
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="#999">
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+                android:id="@+id/lv_stickyListHeaders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"/>
+
+        </LinearLayout>
+
+
+        <!--状态栏下面一行-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff">
+            android:background="#00ffffff"
+            android:id="@+id/rl_cookMenuDetail_leftTopBack">
             <ImageButton
+                android:id="@+id/ib_cookMenuDetail_leftTopBack"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_alignParentLeft="true"
                 android:background="@drawable/cook_detail_back"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="22dp"
                 android:layout_marginBottom="6dp"/>
 
         </RelativeLayout>
 
-        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
-            android:id="@+id/lv_stickyListHeaders"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#fff"/>
 
 
 
 
 
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
 
     <!--第二部分 底部-->
@@ -63,13 +78,15 @@
 
 
             <ImageButton
+                android:id="@+id/ib_cookMenuDetail_pl_icon"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:background="@drawable/cook_pl_icon_out"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="评论"/>
+                android:text="评论"
+                android:textColor="#000"/>
 
         </LinearLayout>
 
@@ -84,6 +101,7 @@
 
 
             <ImageButton
+                android:id="@+id/ib_cookMenuDetail_coll_icon"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:background="@drawable/cook_coll_icon_out"/>
@@ -107,6 +125,7 @@
 
 
             <ImageButton
+                android:id="@+id/ib_cookMenuDetail_share_icon"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:background="@drawable/cook_share_icon_out"/>
@@ -134,11 +153,13 @@
         android:orientation="vertical">
 
         <ImageButton
+            android:id="@+id/ib_cookMenuDetail_user_track_icon"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:background="@drawable/user_track_icon_selector"
             android:layout_marginBottom="5dp"/>
         <ImageButton
+            android:id="@+id/ib_cookMenuDetail_back_top_icon"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:background="@drawable/back_top_icon_selector"/>

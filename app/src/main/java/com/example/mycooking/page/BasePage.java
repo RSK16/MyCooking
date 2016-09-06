@@ -14,6 +14,7 @@ public abstract  class BasePage {
         mPageView=initView();
         initData(); //去修改当前这个page的tv_pageview_pageTitle等信息。
     }
+
     public abstract void initData() ;
     public abstract View initView() ;
 }
