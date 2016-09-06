@@ -1,6 +1,7 @@
 package com.example.mycooking.activity;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -14,10 +15,11 @@ import android.widget.Toast;
 import com.example.mycooking.R;
 import com.example.mycooking.bean.Userinfo;
 
+import cn.bmob.v3.Bmob;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
-public class signNewUser extends AppCompatActivity {
+public class signNewUser extends Activity {
 
     private EditText username;
     private EditText password;
@@ -111,8 +113,8 @@ public class signNewUser extends AppCompatActivity {
                                          builder.setView(view);
                                          Button submit = (Button) view.findViewById(R.id.btn_pswinput_submit);
                                          Button cancel = (Button) view.findViewById(R.id.btn_pswinput_cancel);
-                                         final EditText username = (EditText) findViewById(R.id.et_login_username);
-                                         final EditText password = (EditText) findViewById(R.id.et_login_password);
+                                         final EditText username = (EditText) view.findViewById(R.id.et_login_username);
+                                         final EditText password = (EditText) view.findViewById(R.id.et_login_password);
                                          final AlertDialog show = builder.show();
 
                                          submit.setOnClickListener(new View.OnClickListener() {

@@ -226,8 +226,8 @@
 
             <ImageView
                 android:id="@+id/wd_jfmall"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:background="@drawable/wd_jfmall" />
 
             <TextView
@@ -271,8 +271,8 @@
 
             <ImageView
                 android:id="@+id/iv_mine_wd_msg"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:background="@drawable/wd_msg" />
 
             <TextView
@@ -306,8 +306,8 @@
 
             <ImageView
                 android:id="@+id/iv_mine_wd_publish"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:background="@drawable/wd_publish" />
 
             <TextView
@@ -336,8 +336,8 @@
 
             <ImageView
                 android:id="@+id/iv_mine_wd_mycollect"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:background="@drawable/wd_mycollect" />
 
             <TextView
@@ -366,8 +366,8 @@
 
             <ImageView
                 android:id="@+id/iv_mine_wd_settings"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:background="@drawable/wd_settings" />
 
             <TextView

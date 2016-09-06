@@ -142,8 +142,8 @@ public class DiscoverPage extends BasePage {
             ImageView iv_discover_video_detail = (ImageView) inflate.findViewById(R.id.iv_discover_video_detail);
 //             final String vurl = videoListBeen.get(position).getVurl();
 //             final String vurl = "http://baidu.fun.tv/watch/2265281323655952750.html?page=videoMultiNeed";
-//             final String vurl = "http://10.0.2.2:8080/myphoto.mp4";
-            final String vurl = "http://static.zqgame.com/html/playvideo.html?name=http://lom.zqgame.com/v1/video/LOM_Promo~2.flv";
+             final String vurl = "http://10.0.2.2:8080/myphoto.mp4";
+//            final String vurl = "http://static.zqgame.com/html/playvideo.html?name=http://lom.zqgame.com/v1/video/LOM_Promo~2.flv";
           final String urlImage= "http://admin.meishi.cc/article/upload/video_img/20160720/20160720100735_713.jpg";
             NetCacheUtils netCacheUtils = new NetCacheUtils(mLocalCacheUtils, mMemoryCacheUtils);
             netCacheUtils.getBitmapFromNet(iv_discover_video_detail,urlImage);
