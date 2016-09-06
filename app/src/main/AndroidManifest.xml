@@ -30,15 +30,18 @@
         <activity
             android:name=".activity.MainActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity android:name=".activity.MenuRankActivity" />
+        <activity android:name=".activity.MenuSortActivity" />
+        <activity android:name=".activity.BBVideoPlayer" />
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MenuRankActivity" />
-        <activity android:name=".activity.MenuSortActivity" />
-        <activity android:name=".activity.BBVideoPlayer" />
         <activity
             android:name=".activity.shangchuangcaipu.LoadOneActivity"
             android:launchMode="singleTask" />
@@ -51,6 +54,7 @@
         <activity android:name=".activity.shangchuangcaipu.NumberActivity" />
         <activity android:name=".activity.shangchuangcaipu.Timeactivity" />
         <activity android:name=".activity.shangchuangcaipu.EditliaoActivity"></activity>
+        <activity android:name=".activity.BreakfastActivity"></activity>
     </application>
 
 </manifest>
