@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mycooking.activity.signNewUser"
-    android:background="@drawable/other_user_bg">
+    android:background="@mipmap/other_user_bg">
 
     <EditText
         android:id="@+id/et_sign_username"
@@ -83,7 +83,7 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:text="注册"
-            android:background="@drawable/other_user_bg"/>
+            android:background="@mipmap/other_user_bg"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:text="登录"
-            android:background="@drawable/other_user_bg"/>
+            android:background="@mipmap/other_user_bg"/>
 
 
     </LinearLayout>

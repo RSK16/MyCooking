@@ -16,7 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@drawable/wode_top"
+            android:background="@mipmap/wode_top"
             android:orientation="vertical"
             android:paddingLeft="10dp"
             android:paddingTop="20dp">

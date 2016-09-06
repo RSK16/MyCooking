@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mycooking.activity.shangchuangcaipu.LoadOneActivity">
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+        <ImageButton
+            android:onClick="previous"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:src="@drawable/btn_closed_red"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:text="上传菜谱"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="doclick"
+            android:id="@+id/bt_next"
+            android:text="下一步"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:padding="5dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/et_name"
+        android:layout_marginTop="20dp"
+        android:hint="请输入菜谱名字"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_gongyi"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="制作工艺"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_gongyi"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_kouwei"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="选择口味"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_kouwei"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_nandu"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="难度"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_nandu"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_dotime"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="烹饪时间"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_dotime"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_number"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="食用人数"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_number"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+</LinearLayout>
