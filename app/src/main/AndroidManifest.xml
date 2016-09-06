@@ -65,6 +65,7 @@
         <activity android:name=".activity.shangchuangcaipu.Timeactivity" />
         <activity android:name=".activity.shangchuangcaipu.EditliaoActivity"></activity>
         <activity android:name=".activity.BreakfastActivity"></activity>
+        <activity android:name=".activity.signNewUser"></activity>
     </application>
 
 </manifest>

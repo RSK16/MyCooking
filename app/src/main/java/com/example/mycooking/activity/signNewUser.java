@@ -36,7 +36,6 @@ public class signNewUser extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_new_user);
-        Bmob.initialize(this,"2f78c11280ce16e4d17e9b7340caba38");
 
 
         getData();
@@ -114,8 +113,8 @@ public class signNewUser extends Activity {
                                          builder.setView(view);
                                          Button submit = (Button) view.findViewById(R.id.btn_pswinput_submit);
                                          Button cancel = (Button) view.findViewById(R.id.btn_pswinput_cancel);
-                                         final EditText username = (EditText) findViewById(R.id.et_login_username);
-                                         final EditText password = (EditText) findViewById(R.id.et_login_password);
+                                         final EditText username = (EditText) view.findViewById(R.id.et_login_username);
+                                         final EditText password = (EditText) view.findViewById(R.id.et_login_password);
                                          final AlertDialog show = builder.show();
 
                                          submit.setOnClickListener(new View.OnClickListener() {
