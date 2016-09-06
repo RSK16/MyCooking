@@ -164,7 +164,28 @@
                 </RelativeLayout>
             </LinearLayout>
             //辅料
-
+            //步骤
+            <LinearLayout
+                android:scrollbars="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tv_bg"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                //步骤标题栏
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:layout_weight="0"
+                    android:gravity="left|center_vertical"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:text="添加步骤"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+                //步骤内容
+                <include layout="@layout/buzhou_content"/>
+                //步骤添加编辑
+            </LinearLayout>
         </LinearLayout>
         //底部动画的布局
         <FrameLayout

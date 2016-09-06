@@ -13,6 +13,8 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -34,6 +36,7 @@ import java.util.Locale;
 public class LoadTwoActivity extends Activity {
 
     private static final String TAG = "LoadTwoActivity";
+    //主料
     private RelativeLayout rl_load_tittlepic;
     private ImageButton ib_fengmianicon;
     private String liao_name;
@@ -48,6 +51,14 @@ public class LoadTwoActivity extends Activity {
     private TextView tv_loadtwo_zhuliaonum;
     private RelativeLayout rl_loadtwo_addbuttun;
     private LinearLayout ll_loadtwo_addll;
+    //步骤
+    private TextView buzhou_tv_id;
+    private EditText buzhou_et_name;
+    private ImageButton buzhou_ib_icon;
+    private EditText et_buzhou_desc;
+    private RelativeLayout buzhoupic_rl_dianji;
+    private Button buzhou_btn_add;
+    private Button buzhou_btn_edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +67,22 @@ public class LoadTwoActivity extends Activity {
         recipe = (Recipe) getIntent().getSerializableExtra("recipe");
         Log.i(TAG, "onCreate: 8886e87368723"+recipe.getGongyi());
         initView();
+        initZhuliaoData();
+        initBuzhouData();
+
+
+    }
+
+    private void initBuzhouData() {
+        buzhoupic_rl_dianji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+    }
+
+    private void initZhuliaoData() {
         tv_loadtwo_tittle.setText(recipe.getTitle());
         rl_load_tittlepic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,8 +108,6 @@ public class LoadTwoActivity extends Activity {
                 ll_loadtwo_addll.addView(inflate);
             }
         });
-
-
     }
 
     private void initView() {
@@ -91,11 +116,21 @@ public class LoadTwoActivity extends Activity {
         ll_loadtwo_editzhuliao = (LinearLayout) findViewById(R.id.ll_loadtwo_editzhuliao);
         rl_load_tittlepic = (RelativeLayout) findViewById(R.id.rl_load_tittlepic);
         ib_fengmianicon = (ImageButton) findViewById(R.id.ib_fengmianicon);
-
+        //主料
         tv_loadtwo_zhuliaoming = (TextView) findViewById(R.id.tv_loadtwo_zhuliaoming);
         tv_loadtwo_zhuliaonum = (TextView) findViewById(R.id.tv_loadtwo_zhuliaonum);
         rl_loadtwo_addbuttun = (RelativeLayout) findViewById(R.id.rl_loadtwo_addbuttun);
         ll_loadtwo_addll = (LinearLayout) findViewById(R.id.ll_loadtwo_addll);
+        //辅料
+        //步骤
+        buzhou_tv_id = (TextView) findViewById(R.id.buzhou_tv_id);
+        buzhou_et_name = (EditText) findViewById(R.id.buzhou_et_name);
+        buzhou_ib_icon = (ImageButton) findViewById(R.id.buzhou_ib_icon);
+        et_buzhou_desc = (EditText) findViewById(R.id.et_buzhou_desc);
+        buzhoupic_rl_dianji = (RelativeLayout) findViewById(R.id.buzhoupic_rl_dianji);
+        buzhou_btn_add = (Button) findViewById(R.id.buzhou_btn_add);
+        buzhou_btn_edit = (Button) findViewById(R.id.buzhou_btn_edit);
+
 
     }
     public void showPopFormBottom() {

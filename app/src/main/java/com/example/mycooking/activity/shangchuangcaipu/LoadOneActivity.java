@@ -80,6 +80,7 @@ public class LoadOneActivity extends Activity {
         if (timedata != null) {
             tv_dotime.setText(timedata);
             recipe.setMake_time(timedata);
+            recipe.setMake_pretime(timedata);
         }
         super.onResume();
     }
@@ -148,9 +149,10 @@ public class LoadOneActivity extends Activity {
         if (et_name.getText().toString().equals("")) {
             Toast.makeText(LoadOneActivity.this, "标题不能为空", Toast.LENGTH_SHORT).show();
         } else {
-            recipe.setTitle(tittle);
+            recipe.setTitle(et_name.getText().toString());
             Intent intent = new Intent(this, LoadTwoActivity.class);
             intent.putExtra("recipe", recipe);
+            Log.i(TAG, "donext: "+recipe.getTitle()+"ass"+recipe.getGongyi()+recipe.getKouwei()+recipe.getMake_pretime());
             startActivity(intent);
         }
     }
