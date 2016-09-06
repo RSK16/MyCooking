@@ -11,7 +11,6 @@ import android.widget.RadioGroup;
 import com.example.mycooking.R;
 import com.example.mycooking.activity.shangchuangcaipu.LoadOneActivity;
 import com.example.mycooking.page.BasePage;
-import com.example.mycooking.page.MallPage;
 import com.example.mycooking.page.SuggestPage;
 import com.example.mycooking.page.DiscoverPage;
 import com.example.mycooking.view.NoScrollViewPager;
@@ -36,7 +35,6 @@ public class MainActivity extends Activity {
         vp_main_shoppingmall =  (NoScrollViewPager) findViewById(R.id.vp_main_shoppingmall);
         pageList.add(new SuggestPage(this));
         pageList.add(new DiscoverPage(this));
-        pageList.add(new MallPage(this));
         pageList.add(new topicPage(this));
         pageList.add(new WodePage(this));
 
@@ -52,14 +50,11 @@ public class MainActivity extends Activity {
                      case R.id.rb_main_discover:
                         vp_main_shoppingmall.setCurrentItem(1,false);
                         break;
-                     case R.id.rb_main_shopping:
+                     case R.id.rb_main_topic:
                         vp_main_shoppingmall.setCurrentItem(2,false);
                         break;
-                     case R.id.rb_main_topic:
-                        vp_main_shoppingmall.setCurrentItem(3,false);
-                        break;
                      case R.id.rb_main_wode:
-                        vp_main_shoppingmall.setCurrentItem(4,false);
+                        vp_main_shoppingmall.setCurrentItem(3,false);
                         break;}
              }
         });
@@ -70,7 +65,7 @@ public class MainActivity extends Activity {
 
         @Override
         public int getCount() {
-            return 5;
+            return 4;
         }
 
         @Override

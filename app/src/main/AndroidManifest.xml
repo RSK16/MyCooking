@@ -36,8 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Shopping_NewNotifaction" />
-        <activity android:name=".activity.Shopping_cart" />
         <activity android:name=".activity.MenuRankActivity" />
         <activity android:name=".activity.MenuSortActivity" />
         <activity android:name=".activity.BBVideoPlayer" />
