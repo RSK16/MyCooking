@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--  展示栏&-->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="620dp">
+      <com.example.mycooking.view.SuggestViewpager
+          android:layout_width="match_parent"
+          android:layout_height="610dp"
+          android:id="@+id/vp_suggestPage_meal">
+      </com.example.mycooking.view.SuggestViewpager>
+      <com.viewpagerindicator.CirclePageIndicator
+          android:id="@+id/indicator_suggestmeal"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:padding="5dp"
+          app:radius="3dp"
+          app:fillColor="#FFff0000"
+          app:pageColor="#44000000"
+          app:strokeColor="#44000000"
+          app:strokeWidth="2dp" />
+    </RelativeLayout>
+    <!--功能栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cate_fenlei_5"
+                android:background="#fff"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/bt_suggestpage_sort"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                android:text="菜谱分类"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cate_zhushi_5"
+                android:background="#fff"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/bt_suggestpage_breakfest"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                android:text="早餐"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--排行榜 智能组菜-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:background="@drawable/tj_top"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/bt_suggestpage_Rank"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:background="@drawable/tj_zucai"
+            android:layout_marginRight="20dp"
+            android:id="@+id/bt_suggestpage_zucai"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,2383 @@
+{
+ "category":
+[
+    {
+        "t": "实用分类",
+        "im": 2,
+        "d": [
+            {
+                "t": "快手菜",
+                "dt": 10,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shiyongfenlei_1.png"
+            },
+            {
+                "t": "下饭菜",
+                "dt": 10,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shiyongfenlei_2_1.png"
+            },
+             {
+                "t": "肉食",
+                "dt": 10,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shiyongfenlei_5_1.png"
+            },
+            {
+                "t": "素食",
+                "dt": 10,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shiyongfenlei_4.png"
+            },
+            {
+                "t": "应季时蔬",
+                "dt": 10,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shiyongfenlei_3.png"
+            },
+            {
+                "t": "汤",
+                "dt": 10,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shiyongfenlei_6_1.png"
+            }
+        ]
+    },
+    {
+        "t": "场景",
+        "im": 7,
+        "dt": 13,
+        "st": 0,
+        "d": [
+            {
+                "t": "懒人专用",
+                "d": "20004",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_changjing_4.png"
+            },
+            {
+                "t": "朋友聚餐",
+                "d": "20005",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_changjing_5.png"
+            },
+            {
+                "t": "二人世界",
+                "d": "20001",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_changjing_1.png"
+            },
+            {
+                "t": "野餐",
+                "d": "20002",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_changjing_2.png"
+            },
+            {
+                "t": "大姨妈来了",
+                "d": "20003",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_changjing_3.png"
+            }
+        ]
+    },
+    {
+        "t": "每日三餐",
+        "im": 1,
+        "dt": 9,
+        "d": [
+            {
+                "t": "早餐",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_sancan_1.png"
+            },
+            {
+                "t": "午餐",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_sancan_2.png"
+            },
+            {
+                "t": "晚餐",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_sancan_4.png"
+            },
+            {
+                "t": "下午茶",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_sancan_3.png"
+            },
+            {
+                "t": "夜宵",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_sancan_5.png"
+            }
+        ],
+        "sft": 1
+    },
+    {
+        "t": "家常菜谱",
+        "ft": "菜谱大全",
+        "im": 0,
+        "dt": 12,
+        "st": 0,
+        "sft": 1,
+        "td": 13,
+        "d": [
+            {
+                "t": "热菜",
+                "d": "6",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_1.png"
+            },
+            {
+                "t": "凉菜",
+                "d": "5",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_2.png"
+            },
+            {
+                "t": "素菜",
+                "d": "74",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_3.png"
+            },
+            {
+                "t": "靓汤",
+                "d": "388",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_4.png"
+            },
+            {
+                "t": "粥品",
+                "d": "389",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_5.png"
+            },
+            {
+                "t": "主食",
+                "d": "390",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_6.png"
+            },
+            {
+                "t": "瘦身",
+                "d": "61",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_20.png"
+            },
+            {
+                "t": "美容",
+                "d": "58",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_19.png"
+            },
+            {
+                "t": "点心",
+                "d": "272",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_7.png"
+            },
+            {
+                "t": "卤味",
+                "d": "273",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_8.png"
+            },
+            {
+                "t": "微波炉",
+                "d": "11",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_9.png"
+            },
+            {
+                "t": "海鲜",
+                "d": "75",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_10.png"
+            },
+            {
+                "t": "火锅",
+                "d": "59",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_11.png"
+            },
+            {
+                "t": "酱料蘸料",
+                "d": "343",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_12.png"
+            },
+            {
+                "t": "干果零食",
+                "d": "77",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_13.png"
+            },
+            {
+                "t": "饮品",
+                "d": "57",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_14.png"
+            },
+            {
+                "t": "孕妇",
+                "d": "62",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_15.png"
+            },
+            {
+                "t": "产妇",
+                "d": "72",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_16.png"
+            },
+            {
+                "t": "宝宝",
+                "d": "12",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_17.png"
+            },
+            {
+                "t": "老人",
+                "d": "73",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jiachangcaipu_18.png"
+            }
+        ]
+    },
+    {
+        "t": "人群",
+        "im": 6,
+        "dt": 3,
+        "st": 0,
+        "sft": 1,
+        "td": 252,
+        "d": [
+            {
+                "t": "婴儿",
+                "d": "257",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_5.png"
+            },
+            {
+                "t": "幼儿",
+                "d": "255",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_3.png"
+            },
+            {
+                "t": "孕妇",
+                "d": "253",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_1.png"
+            },
+            {
+                "t": "产妇",
+                "d": "254",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_2.png"
+            },
+            {
+                "t": "哺乳期",
+                "d": "256",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_4.png"
+            },
+            {
+                "t": "围孕期",
+                "d": "267",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_9.png"
+            },
+            {
+                "t": "老人",
+                "d": "261",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_6.png"
+            },
+            {
+                "t": "学龄前儿童",
+                "d": "258",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_10.png"
+            },
+            {
+                "t": "学龄期儿童",
+                "d": "259",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_11.png"
+            },
+            {
+                "t": "青少年",
+                "d": "260",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_7.png"
+            },
+            {
+                "t": "运动员",
+                "d": "266",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_8.png"
+            },
+            {
+                "t": "高温环境作业人群",
+                "d": "262",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_12.png"
+            },
+            {
+                "t": "低温环境作业人群",
+                "d": "263",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_13.png"
+            },
+            {
+                "t": "接触电离辐射人员",
+                "d": "264",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_14.png"
+            },
+            {
+                "t": "接触化学毒素人员",
+                "d": "265",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_renqun_15.png"
+            }
+        ]
+    },
+    {
+        "t": "主食",
+        "im": 5,
+        "dt": 8,
+        "st": 0,
+        "d": [
+            {
+                "t": "饼",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_9.png"
+            },
+            {
+                "t": "面",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_8.png"
+            },
+            {
+                "t": "拌面",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_7.png"
+            },
+            {
+                "t": "方便面",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_5.png"
+            },
+            {
+                "t": "焖面",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_6.png"
+            },
+            {
+                "t": "饺子",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_11.png"
+            },
+            {
+                "t": "包子",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_10.png"
+            },
+            {
+                "t": "馄饨",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_12.png"
+            },
+            {
+                "t": "粥",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_13.png"
+            },
+            {
+                "t": "饭",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_4.png"
+            },
+            {
+                "t": "炒饭",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_1.png"
+            },
+            {
+                "t": "焖饭",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_2.png"
+            },
+            {
+                "t": "烩饭",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhushi_3.png"
+            }  
+        ]
+    },
+    {
+        "t": "烘焙",
+        "im": 3,
+        "ft": "烘焙",
+        "dt": 12,
+        "st": 0,
+        "sft": 1,
+        "td": 369,
+        "d": [
+            {
+                "t": "蛋糕面包",
+                "d": "373",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_hongbei_1.png"
+            },
+            {
+                "t": "饼干配方",
+                "d": "374",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_hongbei_2.png"
+            },
+            {
+                "t": "甜品点心",
+                "d": "375",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_hongbei_3.png"
+            },
+            {
+                "t": "烘焙工具",
+                "d": "371",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_hongbei_4.png"
+            },
+            {
+                "t": "烘焙常识",
+                "d": "370",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_hongbei_5.png"
+            },
+            {
+                "t": "烘焙原料",
+                "d": "372",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_hongbei_6.png"
+            }
+        ]
+    },
+    {
+        "t": "各地小吃",
+        "im": 10,
+        "ft": "中华小吃",
+        "dt": 12,
+        "st": 0,
+        "sft": 1,
+        "td": 3,
+        "d": [
+            {
+                "t": "北京小吃",
+                "d": "78",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_1.png"
+            },
+            {
+                "t": "天津小吃",
+                "d": "79",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_2.png"
+            },
+            {
+                "t": "河北小吃",
+                "d": "80",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_3.png"
+            },
+            {
+                "t": "山西小吃",
+                "d": "81",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_4.png"
+            },
+            {
+                "t": "蒙古小吃",
+                "d": "82",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_5.png"
+            },
+            {
+                "t": "上海小吃",
+                "d": "83",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_6.png"
+            },
+            {
+                "t": "山东小吃",
+                "d": "84",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_7.png"
+            },
+            {
+                "t": "江苏小吃",
+                "d": "85",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_8.png"
+            },
+            {
+                "t": "浙江小吃",
+                "d": "86",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_9.png"
+            },
+            {
+                "t": "安徽小吃",
+                "d": "87",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_10.png"
+            },
+            {
+                "t": "吉林小吃",
+                "d": "89",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_11.png"
+            },
+            {
+                "t": "辽宁小吃",
+                "d": "90",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_12.png"
+            },
+            {
+                "t": "陕西小吃",
+                "d": "91",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_13.png"
+            },
+            {
+                "t": "新疆小吃",
+                "d": "92",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_14.png"
+            },
+            {
+                "t": "宁夏小吃",
+                "d": "93",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_15.png"
+            },
+            {
+                "t": "甘肃小吃",
+                "d": "94",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_16.png"
+            },
+            {
+                "t": "青海小吃",
+                "d": "95",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_17.png"
+            },
+            {
+                "t": "湖北小吃",
+                "d": "96",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_18.png"
+            },
+            {
+                "t": "湖南小吃",
+                "d": "97",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_19.png"
+            },
+            {
+                "t": "河南小吃",
+                "d": "98",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_20.png"
+            },
+            {
+                "t": "江西小吃",
+                "d": "99",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_21.png"
+            },
+            {
+                "t": "重庆小吃",
+                "d": "100",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_22.png"
+            },
+            {
+                "t": "四川小吃",
+                "d": "101",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_23.png"
+            },
+            {
+                "t": "云南小吃",
+                "d": "102",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_24.png"
+            },
+            {
+                "t": "贵州小吃",
+                "d": "103",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_25.png"
+            },
+            {
+                "t": "西藏小吃",
+                "d": "104",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_26.png"
+            },
+            {
+                "t": "广东小吃",
+                "d": "105",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_27.png"
+            },
+            {
+                "t": "福建小吃",
+                "d": "106",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_28.png"
+            },
+            {
+                "t": "广西小吃",
+                "d": "107",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_29.png"
+            },
+            {
+                "t": "海南小吃",
+                "d": "108",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_30.png"
+            },
+            {
+                "t": "香港小吃",
+                "d": "109",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_31.png"
+            },
+            {
+                "t": "台湾小吃",
+                "d": "110",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_32.png"
+            },
+            {
+                "t": "成都小吃",
+                "d": "344",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_33.png"
+            },
+            {
+                "t": "黑龙江小吃",
+                "d": "88",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gedixiaochi_34.png"
+            }
+        ]
+    },
+    {
+        "t": "外国菜谱",
+        "im": 11,
+        "ft": "外国菜谱",
+        "dt": 12,
+        "st": 0,
+        "sft": 1,
+        "td": 10,
+        "d": [
+            {
+                "t": "日本料理",
+                "d": 63,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_1.png"
+            },
+            {
+                "t": "韩国料理",
+                "d": 64,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_2.png"
+            },
+            {
+                "t": "美国家常菜",
+                "d": 65,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_3.png"
+            },
+            {
+                "t": "意大利餐",
+                "d": 66,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_4.png"
+            },
+            {
+                "t": "法国菜",
+                "d": 67,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_5.png"
+            },
+            {
+                "t": "墨西哥菜",
+                "d": 68,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_6.png"
+            },
+            {
+                "t": "澳大利亚菜",
+                "d": 70,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_7.png"
+            },
+            {
+                "t": "东南亚菜",
+                "d": 69,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_8.png"
+            },
+            {
+                "t": "西餐面点",
+                "d": 156,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_9.png"
+            },
+            {
+                "t": "餐前小吃",
+                "d": 378,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_10.png"
+            },
+            {
+                "t": "汤品",
+                "d": 379,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_11.png"
+            },
+            {
+                "t": "主菜",
+                "d": 380,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_12.png"
+            },
+            {
+                "t": "主食",
+                "d": 381,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_13.png"
+            },
+            {
+                "t": "甜点",
+                "d": 382,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_14.png"
+            },
+            {
+                "t": "饮品",
+                "d": 383,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_15.png"
+            },
+            {
+                "t": "其他国家",
+                "d": 71,
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_waiguocaipu_16.png"
+            }
+        ]
+    },
+    {
+        "t": "中华菜系",
+        "im": 9,
+        "ft": "中华菜系",
+        "dt": 12,
+        "st": 0,
+        "sft": 1,
+        "td": 2,
+        "d": [
+            {
+                "t": "川菜",
+                "d": "41",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_1.png"
+            },
+            {
+                "t": "鲁菜",
+                "d": "42",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_2.png"
+            },
+            {
+                "t": "粤菜",
+                "d": "43",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_3.png"
+            },
+            {
+                "t": "湘菜",
+                "d": "44",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_4.png"
+            },
+            {
+                "t": "闽菜",
+                "d": "45",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_5.png"
+            },
+            {
+                "t": "浙菜",
+                "d": "46",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_6.png"
+            },
+            {
+                "t": "苏菜",
+                "d": "47",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_7.png"
+            },
+            {
+                "t": "徽菜",
+                "d": "48",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_8.png"
+            },
+            {
+                "t": "京菜",
+                "d": "49",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_9.png"
+            },
+            {
+                "t": "沪菜",
+                "d": "50",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_10.png"
+            },
+            {
+                "t": "豫菜",
+                "d": "51",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_11.png"
+            },
+            {
+                "t": "湖北菜",
+                "d": "52",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_12.png"
+            },
+            {
+                "t": "东北菜",
+                "d": "53",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_13.png"
+            },
+            {
+                "t": "西北菜",
+                "d": "54",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_14.png"
+            },
+            {
+                "t": "云贵菜",
+                "d": "55",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_15.png"
+            },
+            {
+                "t": "清真菜",
+                "d": "56",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_16.png"
+            },
+            {
+                "t": "山西菜",
+                "d": "268",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_17.png"
+            },
+            {
+                "t": "江西菜",
+                "d": "269",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_18.png"
+            },
+            {
+                "t": "广西菜",
+                "d": "385",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_19.png"
+            },
+            {
+                "t": "港台菜",
+                "d": "154",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_20.png"
+            },
+            {
+                "t": "其它菜",
+                "d": "155",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zhonghuacaixi_21.png"
+            }
+        ]
+    },    
+    {
+        "t": "食材",
+        "im": 4,
+        "dt": 2,
+        "d": [
+            {
+                "t": "蔬菜",
+                "dt": 2,
+                "st": 1,
+                "ds": [
+                    {
+                        "t": "茎、叶、花菜类",
+                        "d": [
+                            "白菜",
+                            "芹菜",
+                            "菠菜",
+                            "菜花",
+                            "西兰花",
+                            "酸白菜",
+                            "小白菜",
+                            "卷心菜",
+                            "莴笋",
+                            "娃娃菜",
+                            "油菜",
+                            "百合",
+                            "芥菜",
+                            "西芹",
+                            "冬笋",
+                            "茼蒿",
+                            "竹笋",
+                            "紫甘蓝",
+                            "油菜",
+                            "梅菜",
+                            "芦笋",
+                            "荠菜",
+                            "茴香",
+                            "梅干菜",
+                            "芹菜叶",
+                            "苦菊",
+                            "芦荟",
+                            "芥兰",
+                            "春笋",
+                            "空心菜",
+                            "橄榄菜",
+                            "木耳菜",
+                            "豌豆尖",
+                            "油麦菜",
+                            "萝卜苗",
+                            "圆生菜",
+                            "芥蓝",
+                            "香芹",
+                            "苋菜"
+                        ]
+                    },
+                    {
+                        "t": "茄果、瓜菜类",
+                        "d": [
+                            "茄子",
+                            "南瓜",
+                            "西红柿",
+                            "黄瓜",
+                            "冬瓜",
+                            "柿子椒",
+                            "彩椒",
+                            "西葫芦",
+                            "苦瓜",
+                            "丝瓜",
+                            "尖椒",
+                            "红椒"
+                        ]
+                    },
+                    {
+                        "t": "薯芋淀粉类",
+                        "d": [
+                            "土豆",
+                            "山药",
+                            "芋头",
+                            "紫薯",
+                            "红薯",
+                            "西米露",
+                            "魔芋"
+                        ]
+                    },
+                    {
+                        "t": "鲜豆类",
+                        "d": [
+                            "豆角",
+                            "四季豆",
+                            "荷兰豆",
+                            "绿豆芽",
+                            "黄豆芽",
+                            "毛豆",
+                            "扁豆",
+                            "豌豆苗",
+                            "豇豆",
+                            "刀豆",
+                            "芸豆",
+                            "豆荚"
+                        ]
+                    },
+                    {
+                        "t": "葱蒜类",
+                        "d": [
+                            "洋葱",
+                            "韭菜",
+                            "蒜苔",
+                            "韭黄",
+                            "大葱",
+                            "蒜"
+                        ]
+                    },
+                    {
+                        "t": "水生蔬菜",
+                        "d": [
+                            "荸荠",
+                            "藕",
+                            "茭白"
+                        ]
+                    }
+                ],
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shicai_4.png"
+            },
+            {
+                "t": "畜类",
+                "dt": 2,
+                "st": 1,
+                "ds": [
+                    {
+                        "t": "猪",
+                        "d": [
+                            "猪小排",
+                            "猪肉",
+                            "猪蹄",
+                            "香肠",
+                            "五花肉",
+                            "腊肉(培根)",
+                            "猪肝",
+                            "火腿",
+                            "猪肚",
+                            "猪血",
+                            "猪腰",
+                            "猪皮"
+                        ]
+                    },
+                    {
+                        "t": "牛",
+                        "d": [
+                            "牛肉",
+                            "牛排",
+                            "肥牛",
+                            "牛肚",
+                            "牛尾",
+                            "牛柳",
+                            "牛筋",
+                            "牛骨",
+                            "牛蹄筋",
+                            "牛仔骨"
+                        ]
+                    },
+                    {
+                        "t": "羊",
+                        "d": [
+                            "羊肉",
+                            "羊排",
+                            "羊腿",
+                            "羊蝎子",
+                            "羊肝",
+                            "羊肚"
+                        ]
+                    },
+                    {
+                        "t": "其他畜类",
+                        "d": [
+                            "牛蛙",
+                            "兔肉"
+                        ]
+                    }
+                ],
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shicai_1.png"
+            },
+            {
+                "t": "禽类",
+                "dt": 2,
+                "st": 1,
+                "ds": [
+                    {
+                        "t": "鸡",
+                        "d": [
+                            "鸡翅",
+                            "鸡腿",
+                            "鸡肉",
+                            "鸡爪",
+                            "鸡胗",
+                            "鸡翅根",
+                            "鸡心",
+                            "鸡肝",
+                            "鸡脖",
+                            "童子鸡",
+                            "乌骨鸡",
+                            "三黄鸡",
+                            "柴鸡"
+                        ]
+                    },
+                    {
+                        "t": "鸭",
+                        "d": [
+                            "鸭肉",
+                            "鸭腿",
+                            "鸭血",
+                            "鸭胗",
+                            "鸭翅",
+                            "鸭舌",
+                            "鸭掌",
+                            "鸭头",
+                            "鸭肠",
+                            "鸭肝"
+                        ]
+                    },
+                    {
+                        "t": "鹅",
+                        "d": [
+                            "鹅肉",
+                            "鹅肝",
+                            "鹅蛋"
+                        ]
+                    },
+                    {
+                        "t": "其他禽类",
+                        "d": [
+                            "鹌鹑",
+                            "鸽子",
+                            "火鸡"
+                        ]
+                    }
+                ],
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shicai_2.png"
+            },
+            {
+                "t": "水产",
+                "dt": 2,
+                "st": 1,
+                "ds": [
+                    {
+                        "t": "鱼",
+                        "d": [
+                            "带鱼",
+                            "鲫鱼",
+                            "鲤鱼",
+                            "鱼头",
+                            "鳕鱼",
+                            "三文鱼",
+                            "草鱼",
+                            "鲈鱼",
+                            "黄花鱼",
+                            "鲅鱼",
+                            "鲳鱼",
+                            "鲢鱼",
+                            "银鱼",
+                            "武昌鱼",
+                            "青鱼",
+                            "鳝鱼",
+                            "罗非鱼",
+                            "龙利鱼"
+                        ]
+                    },
+                    {
+                        "t": "虾",
+                        "d": [
+                            "虾",
+                            "对虾",
+                            "明虾",
+                            "河虾",
+                            "海虾",
+                            "基围虾",
+                            "皮皮虾",
+                            "龙虾",
+                            "北极虾",
+                            "虾仁",
+                            "虾皮",
+                            "海米"
+                        ]
+                    },
+                    {
+                        "t": "蟹",
+                        "d": [
+                            "螃蟹",
+                            "河蟹",
+                            "海蟹",
+                            "青蟹",
+                            "梭子蟹",
+                            "大闸蟹"
+                        ]
+                    },
+                    {
+                        "t": "贝",
+                        "d": [
+                            "鲍鱼",
+                            "蛤蜊",
+                            "文蛤",
+                            "蛏子",
+                            "海螺",
+                            "田螺",
+                            "干贝",
+                            "鲜贝",
+                            "扇贝",
+                            "贻贝(鲜)",
+                            "青口",
+                            "河蚌",
+                            "北极贝",
+                            "牡蛎",
+                            "花螺"
+                        ]
+                    },
+                    {
+                        "t": "其他水产",
+                        "d": [
+                            "海参",
+                            "鱿鱼",
+                            "墨鱼",
+                            "田鸡",
+                            "甲鱼",
+                            "海胆",
+                            "海蜇皮",
+                            "海带"
+                        ]
+                    }
+                ],
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shicai_3.png"
+            },
+            {
+                "t": "菌藻类",
+                "dt": 2,
+                "st": 1,
+                "ds": [
+                    {
+                        "t": "菌类",
+                        "d": [
+                            "香菇",
+                            "金针菇",
+                            "杏鲍菇",
+                            "平菇",
+                            "草菇",
+                            "口蘑",
+                            "茶树菇",
+                            "木耳",
+                            "银耳",
+                            "猴头菇",
+                            "白蘑菇(鲜)",
+                            "蟹味菇"
+                        ]
+                    },
+                    {
+                        "t": "藻类",
+                        "d": [
+                            "海带",
+                            "海藻",
+                            "紫菜",
+                            "海肠",
+                            "苔菜",
+                            "裙带菜"
+                        ]
+                    }
+                ],
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shicai_5.png"
+            },
+            {
+                "t": "豆类",
+                "dt": 2,
+                "st": 1,
+                "ds": [
+                    {
+                        "t": "豆类",
+                        "d": [
+                            "红豆",
+                            "绿豆",
+                            "黄豆",
+                            "黑豆",
+                            "蚕豆",
+                            "青豆",
+                            "红芸豆",
+                            "白芸豆",
+                            "豌豆"
+                        ]
+                    },
+                    {
+                        "t": "豆制品类",
+                        "d": [
+                            "豆腐",
+                            "腐竹",
+                            "豆腐干",
+                            "千张",
+                            "豆腐皮",
+                            "豆豉",
+                            "豆浆",
+                            "油豆腐",
+                            "冻豆腐",
+                            "豆渣",
+                            "素鸡",
+                            "红豆沙",
+                            "豆腐丝",
+                            "烤麸",
+                            "北豆腐",
+                            "豆腐渣",
+                            "豆腐卷",
+                            "鸡蛋豆腐",
+                            "内酯豆腐",
+                            "南豆腐"
+                        ]
+                    }
+                ],
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shicai_6.png"
+            },
+            {
+                "t": "五谷",
+                "dt": 2,
+                "st": 0,
+                "ds": [
+                    "糯米",
+                    "大米",
+                    "小米",
+                    "黑米",
+                    "红米",
+                    "紫米",
+                    "面粉",
+                    "低筋面粉",
+                    "高筋面粉",
+                    "芝麻",
+                    "薏米",
+                    "荞麦"
+                ],
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shicai_7.png"
+            },
+            {
+                "t": "水果",
+                "dt": 2,
+                "st": 0,
+                "ds": [
+                    {
+                        "t": "葡萄",
+                        "h": "1"
+                    },
+                    {
+                        "t": "哈密瓜",
+                        "h": "1"
+                    },
+                    {
+                        "t": "西瓜",
+                        "h": "1"
+                    },
+                    {
+                        "t": "香蕉",
+                        "h": "1"
+                    },
+                    {
+                        "t": "木瓜",
+                        "h": "1"
+                    },
+                    {
+                        "t": "李子",
+                        "h": "1"
+                    },
+                    {
+                        "t": "桃",
+                        "h": "1"
+                    },
+                    {
+                        "t": "榴莲",
+                        "h": "1"
+                    },
+                    {
+                        "t": "芒果",
+                        "h": "1"
+                    },
+                    {
+                        "t": "甜瓜",
+                        "h": "1"
+                    },
+                    {
+                        "t": "火龙果",
+                        "h": "1"
+                    },
+                    {
+                        "t": "苹果",
+                        "h": "1"
+                    },
+                    {
+                        "t": "猕猴桃",
+                        "h": "1"
+                    },
+                    {
+                        "t": "橙",
+                        "h": "1"
+                    },
+                    {
+                        "t": "梨",
+                        "h": "1"
+                    },
+                    {
+                        "t": "苹果",
+                        "h": "0"
+                    },
+                    {
+                        "t": "香蕉",
+                        "h": "0"
+                    },
+                    {
+                        "t": "栆",
+                        "h": "0"
+                    },
+                    {
+                        "t": "木瓜",
+                        "h": "0"
+                    },
+                    {
+                        "t": "葡萄",
+                        "h": "0"
+                    },
+                    {
+                        "t": "菠萝",
+                        "h": "0"
+                    },
+                    {
+                        "t": "柠檬",
+                        "h": "0"
+                    },
+                    {
+                        "t": "山楂",
+                        "h": "0"
+                    },
+                    {
+                        "t": "草莓",
+                        "h": "0"
+                    },
+                    {
+                        "t": "芒果",
+                        "h": "0"
+                    },
+                    {
+                        "t": "梨",
+                        "h": "0"
+                    },
+                    {
+                        "t": "桂圆",
+                        "h": "0"
+                    },
+                    {
+                        "t": "蓝莓",
+                        "h": "0"
+                    },
+                    {
+                        "t": "橙",
+                        "h": "0"
+                    },
+                    {
+                        "t": "葡萄干",
+                        "h": "0"
+                    },
+                    {
+                        "t": "柚子",
+                        "h": "0"
+                    },
+                    {
+                        "t": "樱桃",
+                        "h": "0"
+                    },
+                    {
+                        "t": "西瓜",
+                        "h": "0"
+                    },
+                    {
+                        "t": "椰汁",
+                        "h": "0"
+                    },
+                    {
+                        "t": "榴莲",
+                        "h": "0"
+                    },
+                    {
+                        "t": "荔枝",
+                        "h": "0"
+                    },
+                    {
+                        "t": "柿子",
+                        "h": "0"
+                    },
+                    {
+                        "t": "猕猴桃",
+                        "h": "0"
+                    },
+                    {
+                        "t": "火龙果",
+                        "h": "0"
+                    },
+                    {
+                        "t": "橘子",
+                        "h": "0"
+                    },
+                    {
+                        "t": "桃",
+                        "h": "0"
+                    },
+                    {
+                        "t": "百香果",
+                        "h": "0"
+                    },
+                    {
+                        "t": "金桔",
+                        "h": "0"
+                    },
+                    {
+                        "t": "牛油果",
+                        "h": "0"
+                    },
+                    {
+                        "t": "桑葚",
+                        "h": "0"
+                    }
+                ],
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_shicai_8.png"
+            }
+        ]
+    },
+    {
+        "t": "疾病调理",
+        "im": 12,
+        "dt": 3,
+        "st": 0,
+        "sft": 1,
+        "td": 159,
+        "d": [
+            {
+                "t": "糖尿病",
+                "d": "161",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_15.png"
+            },
+            {
+                "t": "高血压",
+                "d": "162",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_16.png"
+            },
+            {
+                "t": "高血脂",
+                "d": "163",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_17.png"
+            },
+            {
+                "t": "痛风",
+                "d": "172",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_4.png"
+            },
+            {
+                "t": "胃炎",
+                "d": "178",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_7.png"
+            },
+            {
+                "t": "贫血",
+                "d": "179",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_8.png"
+            },
+            {
+                "t": "月经不调",
+                "d": "181",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_28.png"
+            },
+            {
+                "t": "痛经",
+                "d": "183",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_10.png"
+            },
+            {
+                "t": "前列腺",
+                "d": "160",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_14.png"
+            },
+            {
+                "t": "中风",
+                "d": "165",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_1.png"
+            },
+            {
+                "t": "肠炎",
+                "d": "167",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_2.png"
+            },
+            {
+                "t": "肾炎",
+                "d": "171",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_3.png"
+            },
+            {
+                "t": "麻疹",
+                "d": "173",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_5.png"
+            },
+            {
+                "t": "肝炎",
+                "d": "175",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_6.png"
+            },
+            {
+                "t": "痔疮",
+                "d": "180",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_9.png"
+            },
+            {
+                "t": "咽炎",
+                "d": "187",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_11.png"
+            },
+            {
+                "t": "耳鸣",
+                "d": "191",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_12.png"
+            },
+            {
+                "t": "术后",
+                "d": "196",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_13.png"
+            },
+            {
+                "t": "冠心病",
+                "d": "164",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_18.png"
+            },
+            {
+                "t": "胆石症",
+                "d": "169",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_19.png"
+            },
+            {
+                "t": "肝硬化",
+                "d": "170",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_20.png"
+            },
+            {
+                "t": "结核病",
+                "d": "174",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_21.png"
+            },
+            {
+                "t": "甲状腺",
+                "d": "177",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_22.png"
+            },
+            {
+                "t": "更年期",
+                "d": "184",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_23.png"
+            },
+            {
+                "t": "关节炎",
+                "d": "188",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_24.png"
+            },
+            {
+                "t": "肺气肿",
+                "d": "192",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_25.png"
+            },
+            {
+                "t": "防癌抗癌",
+                "d": "168",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_26.png"
+            },
+            {
+                "t": "动脉硬化",
+                "d": "176",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_27.png"
+            },
+            {
+                "t": "子宫脱垂",
+                "d": "182",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_29.png"
+            },
+            {
+                "t": "小儿遗尿",
+                "d": "185",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_30.png"
+            },
+            {
+                "t": "营养不良",
+                "d": "186",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_31.png"
+            },
+            {
+                "t": "骨质疏松",
+                "d": "190",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_32.png"
+            },
+            {
+                "t": "口腔溃疡",
+                "d": "193",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_33.png"
+            },
+            {
+                "t": "尿路结石",
+                "d": "194",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_34.png"
+            },
+            {
+                "t": "支气管炎",
+                "d": "195",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_35.png"
+            },
+            {
+                "t": "消化性溃疡",
+                "d": "166",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_36.png"
+            },
+            {
+                "t": "跌打骨折损伤",
+                "d": "189",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_jibingtiaoli_37.png"
+            }
+        ]
+    },
+    {
+        "t": "功能性调理",
+        "im": 14,
+        "dt": 3,
+        "st": 0,
+        "sft": 1,
+        "td": 197,
+        "d": [
+            {
+                "t": "美容",
+                "d": "198",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_1.png"
+            },
+            {
+                "t": "减肥",
+                "d": "199",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_2.png"
+            },
+            {
+                "t": "乌发",
+                "d": "203",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_3.png"
+            },
+            {
+                "t": "明目",
+                "d": "212",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_4.png"
+            },
+            {
+                "t": "防暑",
+                "d": "214",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_5.png"
+            },
+            {
+                "t": "脚气",
+                "d": "215",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_6.png"
+            },
+            {
+                "t": "祛痰",
+                "d": "219",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_7.png"
+            },
+            {
+                "t": "通乳",
+                "d": "220",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_8.png"
+            },
+            {
+                "t": "头痛",
+                "d": "222",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_9.png"
+            },
+            {
+                "t": "解酒",
+                "d": "223",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_10.png"
+            },
+            {
+                "t": "增肥",
+                "d": "224",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_11.png"
+            },
+            {
+                "t": "夜尿多",
+                "d": "209",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_12.png"
+            },
+            {
+                "t": "延缓衰老",
+                "d": "200",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_13.png"
+            },
+            {
+                "t": "消化不良",
+                "d": "201",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_14.png"
+            },
+            {
+                "t": "神经衰弱",
+                "d": "202",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_15.png"
+            },
+            {
+                "t": "补虚养身",
+                "d": "204",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_16.png"
+            },
+            {
+                "t": "补阳壮阳",
+                "d": "205",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_17.png"
+            },
+            {
+                "t": "滋阴补肾",
+                "d": "206",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_18.png"
+            },
+            {
+                "t": "壮腰健肾",
+                "d": "207",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_19.png"
+            },
+            {
+                "t": "清热解毒",
+                "d": "208",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_20.png"
+            },
+            {
+                "t": "产后调理",
+                "d": "210",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_21.png"
+            },
+            {
+                "t": "不孕不育",
+                "d": "211",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_22.png"
+            },
+            {
+                "t": "健脾开胃",
+                "d": "213",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_23.png"
+            },
+            {
+                "t": "营养不良",
+                "d": "216",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_24.png"
+            },
+            {
+                "t": "益智补脑",
+                "d": "217",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_25.png"
+            },
+            {
+                "t": "肢寒畏冷",
+                "d": "218",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_26.png"
+            },
+            {
+                "t": "清热去火",
+                "d": "221",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_gongnengxingtiaoli_27.png"
+            }
+        ]
+    },
+    {
+        "t": "脏腑调理",
+        "im": 13,
+        "dt": 3,
+        "st": 0,
+        "sft": 1,
+        "td": 225,
+        "d": [
+            {
+                "t": "补心",
+                "d": "226",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_1.png"
+            },
+            {
+                "t": "养肝",
+                "d": "227",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_2.png"
+            },
+            {
+                "t": "补脾",
+                "d": "228",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_3.png"
+            },
+            {
+                "t": "养肺",
+                "d": "229",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_4.png"
+            },
+            {
+                "t": "补肾",
+                "d": "230",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_5.png"
+            },
+            {
+                "t": "补气",
+                "d": "231",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_6.png"
+            },
+            {
+                "t": "补血",
+                "d": "232",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_7.png"
+            },
+            {
+                "t": "哮喘",
+                "d": "234",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_8.png"
+            },
+            {
+                "t": "感冒",
+                "d": "235",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_9.png"
+            },
+            {
+                "t": "腹泻",
+                "d": "236",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_10.png"
+            },
+            {
+                "t": "癫痫",
+                "d": "237",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_11.png"
+            },
+            {
+                "t": "水肿",
+                "d": "238",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_12.png"
+            },
+            {
+                "t": "便秘",
+                "d": "239",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_13.png"
+            },
+            {
+                "t": "失眠",
+                "d": "240",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_14.png"
+            },
+            {
+                "t": "健忘",
+                "d": "241",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_15.png"
+            },
+            {
+                "t": "利尿",
+                "d": "242",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_16.png"
+            },
+            {
+                "t": "心悸",
+                "d": "246",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_17.png"
+            },
+            {
+                "t": "痢疾",
+                "d": "247",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_18.png"
+            },
+            {
+                "t": "呕吐",
+                "d": "248",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_19.png"
+            },
+            {
+                "t": "胃调养",
+                "d": "251",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_20.png"
+            },
+            {
+                "t": "咳喘",
+                "d": "275",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_21.png"
+            },
+            {
+                "t": "气血双补",
+                "d": "233",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_22.png"
+            },
+            {
+                "t": "活血化瘀",
+                "d": "243",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_23.png"
+            },
+            {
+                "t": "止血调理",
+                "d": "244",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_24.png"
+            },
+            {
+                "t": "疏肝理气",
+                "d": "245",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_25.png"
+            },
+            {
+                "t": "阳痿早泄",
+                "d": "249",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_26.png"
+            },
+            {
+                "t": "自汗盗汗",
+                "d": "250",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_zangfutiaoli_27.png"
+            }
+        ]
+    },
+    {
+        "t": "厨具",
+        "im": 17,
+        "dt": 14,
+        "st": 0,
+        "d": [
+            {
+                "t": "炒锅",
+                "d": "20007",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_1.png"
+            },
+            {
+                "t": "煎锅",
+                "d": "20008",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_2.png"
+            },
+            {
+                "t": "蒸锅",
+                "d": "20009",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_3.png"
+            },
+            {
+                "t": "汤锅",
+                "d": "20010",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_4.png"
+            },
+            {
+                "t": "砂锅",
+                "d": "20011",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_5.png"
+            },
+            {
+                "t": "炖锅",
+                "d": "20012",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_6.png"
+            },
+            {
+                "t": "塔吉锅",
+                "d": "20013",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_7.png"
+            },
+            {
+                "t": "高压锅",
+                "d": "20014",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_8.png"
+            },
+            {
+                "t": "空气炸锅",
+                "d": "20016",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_9.png"
+            },
+            {
+                "t": "电饭煲",
+                "d": "20017",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_10.png"
+            },
+            {
+                "t": "炖盅",
+                "d": "20018",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_11.png"
+            },
+            {
+                "t": "烤箱",
+                "d": "20019",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_12.png"
+            },
+            {
+                "t": "冰箱",
+                "d": "20020",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_13.png"
+            },
+            {
+                "t": "微波炉",
+                "d": "20021",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_14.png"
+            },
+            {
+                "t": "烧烤炉",
+                "d": "20022",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_15.png"
+            },
+            {
+                "t": "电饼铛",
+                "d": "20023",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_16.png"
+            },
+            {
+                "t": "面包机",
+                "d": "20024",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_17.png"
+            },
+            {
+                "t": "面条机",
+                "d": "20025",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_18.png"
+            },
+            {
+                "t": "榨汁机",
+                "d": "20026",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_19.png"
+            },
+            {
+                "t": "料理机",
+                "d": "20027",
+                "i": "http://static.meishij.net/images/get3/fenlei/fl_chuju_20.png"
+            }
+        ]
+    },
+    {
+        "t": "工艺",
+        "im": 15,
+        "dt": 6,
+        "st": 0,
+        "d": [
+            {
+                "t": "炒",
+                "d": 192,
+                "h": "1"
+            },
+            {
+                "t": "蒸",
+                "d": 156,
+                "h": "1"
+            },
+            {
+                "t": "煮",
+                "d": 194,
+                "h": "1"
+            },
+            {
+                "t": "炖",
+                "d": 124,
+                "h": "1"
+            },
+            {
+                "t": "拌",
+                "d": 141,
+                "h": "1"
+            },
+            {
+                "t": "烧",
+                "d": 149,
+                "h": "1"
+            },
+            {
+                "t": "煎",
+                "d": 129,
+                "h": "0"
+            },
+            {
+                "t": "炸",
+                "d": 153,
+                "h": "0"
+            },
+            {
+                "t": "烘焙",
+                "d": 220,
+                "h": "1"
+            },
+            {
+                "t": "微波",
+                "d": 251,
+                "h": "0"
+            },
+            {
+                "t": "烤",
+                "d": 130,
+                "h": "1"
+            },
+            {
+                "t": "煲",
+                "d": 147,
+                "h": "0"
+            },
+            {
+                "t": "焖",
+                "d": 144,
+                "h": "0"
+            },
+            {
+                "t": "冻",
+                "d": 136,
+                "h": "0"
+            },
+            {
+                "t": "烙",
+                "d": 252,
+                "h": "0"
+            },
+            {
+                "t": "砂锅",
+                "d": 148,
+                "h": "0"
+            },
+            {
+                "t": "腌",
+                "d": 134,
+                "h": "0"
+            },
+            {
+                "t": "卤",
+                "d": 138,
+                "h": "0"
+            },
+            {
+                "t": "酱",
+                "d": 132,
+                "h": "0"
+            },
+            {
+                "t": "烩",
+                "d": 127,
+                "h": "0"
+            },
+            {
+                "t": "扒",
+                "d": 112,
+                "h": "0"
+            },
+            {
+                "t": "爆",
+                "d": 114,
+                "h": "0"
+            },
+            {
+                "t": "炝",
+                "d": 140,
+                "h": "0"
+            },
+            {
+                "t": "熘",
+                "d": 142,
+                "h": "0"
+            },
+            {
+                "t": "熏",
+                "d": 139,
+                "h": "0"
+            },
+            {
+                "t": "汆",
+                "d": 123,
+                "h": "0"
+            },
+            {
+                "t": "拔丝",
+                "d": 113,
+                "h": "0"
+            },
+            {
+                "t": "榨汁",
+                "d": 253,
+                "h": "0"
+            },
+            {
+                "t": "灼",
+                "d": 193,
+                "h": "0"
+            },
+            {
+                "t": "泡",
+                "d": 256,
+                "h": "0"
+            },
+            {
+                "t": "腊",
+                "d": 133,
+                "h": "0"
+            },
+            {
+                "t": "糖蘸",
+                "d": 119,
+                "h": "0"
+            },
+            {
+                "t": "干锅",
+                "d": 255,
+                "h": "0"
+            },
+            {
+                "t": "焗",
+                "d": 262,
+                "h": "0"
+            },
+            {
+                "t": "干煸",
+                "d": 260,
+                "h": "0"
+            },
+            {
+                "t": "煨",
+                "d": 261,
+                "h": "0"
+            },
+            {
+                "t": "其他",
+                "d": 259,
+                "h": "0"
+            }
+        ]
+    },
+    {
+        "t": "口味",
+        "im": 8,
+        "dt": 7,
+        "st": 0,
+        "d": [
+            {
+                "t": "家常味",
+                "d": 168,
+                "h": "1"
+            },
+            {
+                "t": "香辣味",
+                "d": 187,
+                "h": "1"
+            },
+            {
+                "t": "咸鲜味",
+                "d": 160,
+                "h": "1"
+            },
+            {
+                "t": "甜味",
+                "d": 185,
+                "h": "1"
+            },
+            {
+                "t": "酸甜味",
+                "d": 182,
+                "h": "1"
+            },
+            {
+                "t": "酸辣味",
+                "d": 180,
+                "h": "1"
+            },
+            {
+                "t": "麻辣味",
+                "d": 177,
+                "h": "1"
+            },
+            {
+                "t": "酱香味",
+                "d": 170,
+                "h": "1"
+            },
+            {
+                "t": "奶香味",
+                "d": 257,
+                "h": "1"
+            },
+            {
+                "t": "蒜香味",
+                "d": 183,
+                "h": "0"
+            },
+            {
+                "t": "鱼香味",
+                "d": 188,
+                "h": "0"
+            },
+            {
+                "t": "葱香味",
+                "d": 162,
+                "h": "0"
+            },
+            {
+                "t": "果味",
+                "d": 166,
+                "h": "0"
+            },
+            {
+                "t": "五香味",
+                "d": 186,
+                "h": "0"
+            },
+            {
+                "t": "咖喱味",
+                "d": 173,
+                "h": "0"
+            },
+            {
+                "t": "椒麻味",
+                "d": 171,
+                "h": "0"
+            },
+            {
+                "t": "茄汁味",
+                "d": 179,
+                "h": "0"
+            },
+            {
+                "t": "酸味",
+                "d": 266,
+                "h": "0"
+            },
+            {
+                "t": "苦香味",
+                "d": 174,
+                "h": "0"
+            },
+            {
+                "t": "姜汁味",
+                "d": 169,
+                "h": "0"
+            },
+            {
+                "t": "怪味",
+                "d": 165,
+                "h": "0"
+            },
+            {
+                "t": "芥末味",
+                "d": 172,
+                "h": "0"
+            },
+            {
+                "t": "红油味",
+                "d": 167,
+                "h": "0"
+            },
+            {
+                "t": "豆瓣味",
+                "d": 164,
+                "h": "0"
+            },
+            {
+                "t": "麻酱味",
+                "d": 176,
+                "h": "0"
+            },
+            {
+                "t": "黑椒味",
+                "d": 264,
+                "h": "0"
+            },
+            {
+                "t": "糊辣味",
+                "d": 265,
+                "h": "0"
+            },
+            {
+                "t": "其他",
+                "d": 189,
+                "h": "0"
+            }
+        ]
+    },
+    {
+        "t": "时间",
+        "im": 16,
+        "dt": 4,
+        "st": 0,
+        "d": [
+            {
+                "t": "<5分钟",
+                "d": 1
+            },
+            {
+                "t": "<10分钟",
+                "d": 2
+            },
+            {
+                "t": "<15分钟",
+                "d": 3
+            },
+            {
+                "t": "<30分钟",
+                "d": 4
+            },
+            {
+                "t": "<60分钟",
+                "d": 5
+            },
+            {
+                "t": "<90分钟",
+                "d": 6
+            },
+            {
+                "t": "<2小时",
+                "d": 7
+            },
+            {
+                "t": "2小时以上",
+                "d": 8
+            }
+        ]
+    }
+]
+}

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/tj_left_icon"
+            android:id="@+id/bt_suggestPagetitle_left"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="#f5f5f5"
+                android:gravity="center_vertical"
+                android:textColor="#66000000"
+                android:drawableLeft="@mipmap/topsearch_icon"
+                android:text="\t搜索你感兴趣的"
+                />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/tj_msg"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/bt_suggestPagetitle_right"/>
+    </LinearLayout>
+
+   <!-- <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView_suggestpage">
+           <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            &lt;!&ndash;展示栏&ndash;&gt;
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="620dp">
+                <android.support.v4.view.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:id="@+id/vp_suggestPage_meal">
+                </android.support.v4.view.ViewPager>
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator_suggestmeal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    app:radius="3dp"
+                    app:fillColor="#FFff0000"
+                    app:pageColor="#44000000"
+                    app:strokeColor="#44000000"
+                    app:strokeWidth="2dp"
+                    />
+
+            </RelativeLayout>
+              &lt;!&ndash;功能栏&ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="菜谱分类"
+                    android:id="@+id/bt_suggestpage_sort"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="排行榜"
+                    android:id="@+id/bt_suggestpage_Rank"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/totopicon"
+            android:id="@+id/bt_suggestpage_totop"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="380dp"
+            />
+    </FrameLayout>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.mycooking.view.RefreshScLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_refreshactivity_refresh">
+
+        </com.example.mycooking.view.RefreshScLinearLayout>
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/totopicon"
+            android:id="@+id/bt_suggestpage_totop"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="410dp"
+            />
+    </FrameLayout>
+</LinearLayout>

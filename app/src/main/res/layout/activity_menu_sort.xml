@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.example.mycooking.activity.MenuSortActivity">
+
+    <!--搜索栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:onClick="back"
+            android:background="@drawable/back_red"/>
+        <!--
+空格：\t（一个空格）
+回车换行：\n\r（换行）
+-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:gravity="center_vertical"
+            android:textColor="#66000000"
+            android:layout_margin="3dp"
+            android:drawableLeft="@mipmap/topsearch_icon"
+            android:text="\t搜索任何你想要的"
+            />
+    </LinearLayout>
+
+    <!--显示栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ListView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv_menusortactivity_list"/>
+
+        <GridView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/gv_menuSortactivity_gridview"
+            android:numColumns="3"
+            android:verticalSpacing="7dp"
+            android:horizontalSpacing="7dp"
+            android:columnWidth="340dp"
+            android:stretchMode="columnWidth" />
+
+    </LinearLayout>
+</LinearLayout>
