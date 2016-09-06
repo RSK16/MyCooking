@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mycooking.activity.CookMenuDetailActivity">
+
+    <!--第一部分-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#999">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/cook_detail_back"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="6dp"/>
+
+        </RelativeLayout>
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/lv_stickyListHeaders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <!--第二部分 底部-->
+
+    <LinearLayout
+        android:id="@+id/ll_cookMenuDetail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        >
+        <!--评论。。。。。。。。。。-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/cook_pl_icon_out"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评论"/>
+
+        </LinearLayout>
+
+        <!--收藏。。。。。。。。。。。。。。。。。。。。。。-->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/cook_coll_icon_out"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏"/>
+
+        </LinearLayout>
+
+
+        <!--分享。。。。。。。。。。。。。。。。。。。。。。-->
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/cook_share_icon_out"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <!--第三部分 底部右边-->
+
+    <LinearLayout
+        android:layout_width="64dp"
+        android:layout_height="166dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/user_track_icon_selector"
+            android:layout_marginBottom="5dp"/>
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/back_top_icon_selector"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>
