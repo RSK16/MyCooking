@@ -1,11 +1,7 @@
 package com.example.mycooking.bean;
 
-import android.graphics.drawable.Drawable;
-
-import java.util.Date;
-
-import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.datatype.BmobFile;
 
 /**
  * Created by Administrator on 2016/9/4.
@@ -13,66 +9,23 @@ import cn.bmob.v3.BmobUser;
 
 //注册信息
 public class Userinfo extends BmobUser{
-    private String username;
-    private String password;
-    private Drawable icon;
+
+    private BmobFile icon;
     private String nickName;
 
     //当为true代表男性，false代表性别为女
-    private boolean sex;
+    private Boolean sex;
     private String address;
     private String job;
-    private String email;
-    private String brith;
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    private String birth;
 
 
 
-    public Userinfo() {
-    }
-
-    @Override
-    public String toString() {
-        return "Userinfo{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", icon=" + icon +
-                ", nickName='" + nickName + '\'' +
-                ", sex=" + sex +
-                ", brith=" + brith +
-                ", address='" + address + '\'' +
-                ", job='" + job + '\'' +
-                '}';
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Drawable getIcon() {
+    public BmobFile getIcon() {
         return icon;
     }
 
-    public void setIcon(Drawable icon) {
+    public void setIcon(BmobFile icon) {
         this.icon = icon;
     }
 
@@ -84,20 +37,12 @@ public class Userinfo extends BmobUser{
         this.nickName = nickName;
     }
 
-    public boolean isSex() {
+    public Boolean getSex() {
         return sex;
     }
 
-    public void setSex(boolean sex) {
+    public void setSex(Boolean sex) {
         this.sex = sex;
-    }
-
-    public String getBrith() {
-        return brith;
-    }
-
-    public void setBrith(String brith) {
-        this.brith = brith;
     }
 
     public String getAddress() {
@@ -114,5 +59,13 @@ public class Userinfo extends BmobUser{
 
     public void setJob(String job) {
         this.job = job;
+    }
+
+    public String getBirth() {
+        return birth;
+    }
+
+    public void setBirth(String birth) {
+        this.birth = birth;
     }
 }

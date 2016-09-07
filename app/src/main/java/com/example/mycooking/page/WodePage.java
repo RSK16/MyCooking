@@ -6,8 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
-import com.example.mycooking.activity.signNewUser;
-import com.example.mycooking.page.BasePage;
+import com.example.mycooking.activity.MyLoginActivity;
 
 /**
  * Created by liaozhihua on 2016/9/3.
@@ -35,7 +34,7 @@ public class WodePage extends BasePage implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.mine_login:
-                Intent intent = new Intent(mActivity, signNewUser.class);
+                Intent intent = new Intent(mActivity, MyLoginActivity.class);
                 mActivity.startActivity(intent);
                 break;
         }
