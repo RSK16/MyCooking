@@ -9,6 +9,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.webkit.URLUtil;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -39,6 +40,7 @@ public class BBVideoPlayer extends AppCompatActivity {
     private int curPosition = 0;
     private long mediaLength = 0;
     private long readSize = 0;
+    private TextView tv_playtime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +55,15 @@ public class BBVideoPlayer extends AppCompatActivity {
 
         this.mVideoView = (VideoView) findViewById(R.id.bbvideoview);
         this.tvcache = (TextView) findViewById(R.id.tvcache);
+        tv_playtime = (TextView) findViewById(R.id.tv_playtime);
     }
 
     private void init() {
         Intent intent = getIntent();
 
         this.remoteUrl = intent.getStringExtra("url");
+        String playtime = intent.getStringExtra("playtime");
+        tv_playtime.setText("播放"+playtime+"次");
         System.out.println("remoteUrl: " + remoteUrl);
 
         if (this.remoteUrl == null) {
@@ -68,7 +73,7 @@ public class BBVideoPlayer extends AppCompatActivity {
 
         this.localUrl = intent.getStringExtra("cache");
 
-        mVideoView.setMediaController(new MediaController(this));
+//        mVideoView.setMediaController(new MediaController(this));
 
         mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
@@ -93,7 +98,7 @@ public class BBVideoPlayer extends AppCompatActivity {
                 iserror = true;
                 errorCnt++;
                 mVideoView.pause();
-                showProgressDialog();
+                //   showProgressDialog();
                 return true;
             }
         });
@@ -126,10 +131,10 @@ public class BBVideoPlayer extends AppCompatActivity {
     }
 
     private void playvideo() {
-        if (!URLUtil.isNetworkUrl(this.remoteUrl)) {//我去掉了  ！
+        if (URLUtil.isNetworkUrl(this.remoteUrl)) {//我去掉了  ！
             mVideoView.setVideoPath(this.remoteUrl);
             mVideoView.start();
-            return;
+            dismissProgressDialog();
         }
 
         showProgressDialog();
@@ -290,6 +295,7 @@ public class BBVideoPlayer extends AppCompatActivity {
                         mVideoView.start();
                         iserror = false;
                     }
+                    dismissProgressDialog();
                     break;
             }
 
@@ -297,3 +303,4 @@ public class BBVideoPlayer extends AppCompatActivity {
         }
     };
 }
+
