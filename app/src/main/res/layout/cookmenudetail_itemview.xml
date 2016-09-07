@@ -11,13 +11,15 @@
         android:orientation="vertical"
         android:layout_width="400dp"
         android:layout_height="340dp"
-        android:padding="10dp"
+        android:padding="3dp"
         android:gravity="center"
         android:id="@+id/iv_cookMenuDetail_everyStep"/>
     <TextView
         android:layout_width="wrap_content"
-        android:padding="10dp"
+        android:padding="5dp"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_cookMenuDetail_everyStep"/>
+        android:textSize="15sp"
+        android:id="@+id/tv_cookMenuDetail_everyStep"
+        android:textColor="#000"/>
 
 </LinearLayout>

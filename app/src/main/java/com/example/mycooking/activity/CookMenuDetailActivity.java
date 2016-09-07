@@ -2,57 +2,85 @@ package com.example.mycooking.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.example.mycooking.R;
+import com.example.mycooking.view.AutoViewPage;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
+import java.util.ArrayList;
+
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
-public class CookMenuDetailActivity extends Activity {
+import static android.os.Build.*;
+
+public class CookMenuDetailActivity extends Activity implements View.OnClickListener {
 
     private  String[] theUrl;
+    private ArrayList<String> theHeadUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cook_menu_detail);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
 
+        //给几个键设置响应事件
+        setOnclickForCookMenu();
+
+        // Translucent status bar
+
+        // Translucent navigation bar
+//        window.setFlags(
+//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
+//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
 
-
-
-
-
-
-        //------------构建listView
+        //------------构建菜谱细节listView
         StickyListHeadersListView stickyList = (StickyListHeadersListView) findViewById(R.id.lv_stickyListHeaders);
         MyAdapter adapter = new MyAdapter(this);
         stickyList.setAdapter(adapter);
 
+        theHeadUrl=new ArrayList<>();
+        theHeadUrl.add("http://site.meishij.net/rs/118/144/6286118/n6286118_147185697042250.jpg");
+        theHeadUrl.add("http://site.meishij.net/rs/115/102/588115/n588115_144621532929555.jpg");
+        theHeadUrl.add("http://site.meishij.net/rs/115/102/588115/n588115_144621530211710.jpg");
 
-        ImageView imageView = new ImageView(this);
-        imageView.setImageResource(R.drawable.bottom_tab_bg);
+        AutoViewPage autoViewPage = new AutoViewPage(theHeadUrl, this);
+        ConvenientBanner convenientBanner = autoViewPage.getConvenientBanner();
 
-        stickyList.addHeaderView(imageView);
+        stickyList.addHeaderView(convenientBanner); //第一个headView
+//--------------------------------------------------------
+
+
 
 
     }
-
-
 
 
 
@@ -66,11 +94,12 @@ public class CookMenuDetailActivity extends Activity {
 
         public MyAdapter(Context context) {
             inflater = LayoutInflater.from(context);
-            theUrl=new String[]{"http://site.meishij.net/rs/131/154/4351131/n4351131_147252645278699.jpg",
-                    "http://site.meishij.net/rs/131/154/4351131/n4351131_147252646514219.jpg",
-                    "http://site.meishij.net/rs/131/154/4351131/n4351131_147252646694469.jpg",
-                    "http://site.meishij.net/rs/131/154/4351131/n4351131_147252646859303.jpg",
-                    "http://site.meishij.net/rs/131/154/4351131/n4351131_147252648031511.jpg",
+            theUrl=new String[]{"http://site.meishij.net/rs/115/102/588115/n588115_144621529830637.jpg",
+                    "http://site.meishij.net/rs/115/102/588115/n588115_144621529904084.jpg",
+                    "http://site.meishij.net/rs/115/102/588115/n588115_144621529944900.jpg",
+                    "http://site.meishij.net/rs/115/102/588115/n588115_144621530076652.jpg",
+                    "http://site.meishij.net/rs/115/102/588115/n588115_144621530211710.jpg",
+//-------------------------------------------------------------------------
                     "http://site.meishij.net/rs/131/154/4351131/n4351131_147252648945686.jpg",
                     "http://site.meishij.net/rs/131/154/4351131/n4351131_147252649684632.jpg",
                     "http://site.meishij.net/rs/131/154/4351131/n4351131_147252680138962.jpg",
@@ -81,11 +110,14 @@ public class CookMenuDetailActivity extends Activity {
 
             };
 
-            theDescription=new String[]{"先来自制一个酱。面条好不好吃，全看这个酱了。先准备2根杭椒切成圈，番茄用料理机打成汁。",
-                    "炒锅，适量油，小火把花椒爆香。待香味出来，花椒变黑。把花椒捞出不用。趁热把炸好的花椒油直接浇在杭椒圈上面。这样能去除杭椒的生涩味。使辣味更加温和点。还带点花椒的香味。",
-                    "倒入番茄汁，番茄酱，甜面酱提味。再来一点点酱油。适量的糖和盐。搅均匀了。这样酱就做好了",
-                    "接下来准备做饼。先来做一个油酥。用30克面粉，倒入25克热油，迅速搅开，稀稠度就像澥开的芝麻酱似的。再根据自己口味调入适量的椒盐。你也可以直接加盐就好。",
-                    "来和面，250克面粉，加入130克左右的水，10克食用油。和成较光滑的面团。放一边醒5分钟。",
+            theDescription=new String[]{
+                    "莲藕去皮、切段，泡入清水里以免氧化变黑",
+                    "猪腿肉去皮洗净沥干水分，切成均匀薄片，加入奥尔良烤料抓匀腌制1小时",
+                    "用莲藕段把猪肉片卷起，加一勺烤料加一勺蜂蜜，搅拌均匀",
+                    "华帝烤箱JKD611-01A预热，180度，上下火。将鸡肉卷放入烤箱，烤制25分钟",
+                    "烤制过程中均匀涂抹酱汁，滴上柠檬汁即可",
+
+
                     "醒好的面擀面杖擀成碗边厚的长方片。2/3刷上油酥。",
                     "煮面条。水开后，放入面条，水继续开后。马上捞出面条。过凉水。再捞出来，拌入提前做好的酱",
                     "煮面条。水开后，放入面条，水继续开后。马上捞出面条。过凉水。再捞出来，拌入提前做好的酱",
@@ -191,5 +223,56 @@ public class CookMenuDetailActivity extends Activity {
 
     }
 
+
+    //给几个键设置响应事件
+    private void setOnclickForCookMenu() {
+
+        ImageButton ib_cookMenuDetail_back_top_icon = (ImageButton) findViewById(R.id.ib_cookMenuDetail_back_top_icon );
+        ImageButton ib_cookMenuDetail_coll_icon     = (ImageButton) findViewById(R.id.ib_cookMenuDetail_coll_icon    );
+        ImageButton ib_cookMenuDetail_leftTopBack   = (ImageButton) findViewById(R.id.ib_cookMenuDetail_leftTopBack   );
+        ImageButton ib_cookMenuDetail_pl_icon       = (ImageButton) findViewById(R.id.ib_cookMenuDetail_pl_icon       );
+        ImageButton ib_cookMenuDetail_share_icon    = (ImageButton) findViewById(R.id.ib_cookMenuDetail_share_icon    );
+
+
+        ib_cookMenuDetail_back_top_icon.setOnClickListener(this);
+        ib_cookMenuDetail_coll_icon    .setOnClickListener(this);
+        ib_cookMenuDetail_leftTopBack  .setOnClickListener(this);
+        ib_cookMenuDetail_pl_icon      .setOnClickListener(this);
+        ib_cookMenuDetail_share_icon   .setOnClickListener(this);
+
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+
+            case  R.id.ib_cookMenuDetail_back_top_icon:
+
+                break;
+            case  R.id.ib_cookMenuDetail_coll_icon    :
+
+                break;
+            case  R.id.ib_cookMenuDetail_leftTopBack  :
+                finish();
+
+                break;
+            case  R.id.ib_cookMenuDetail_pl_icon      :
+
+//                startActivity(new Intent(this,));
+
+                break;
+            case  R.id.ib_cookMenuDetail_share_icon   :
+
+                break;
+
+
+
+
+        }
+
+    }
 
 }

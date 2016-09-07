@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="30dp">
             <ImageButton
-                android:onClick="ib_previous"
+                android:onClick="ib_previous2"
                 android:layout_marginLeft="10dp"
                 android:background="@null"
                 android:src="@drawable/btn_closed_red"
@@ -32,8 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Button
-                android:onClick="doclick"
-                android:id="@+id/bt_fabu"
+                android:onClick="fabu"
                 android:text="发布"
                 android:textSize="20sp"
                 android:layout_marginRight="5dp"
@@ -52,8 +51,9 @@
             android:weightSum="1">
             //标题
             <TextView
+                android:paddingLeft="5dp"
                 android:id="@+id/tv_loadtwo_tittle"
-                android:gravity="center"
+                android:gravity="left|center_horizontal"
                 android:padding="5dp"
                 android:layout_marginTop="20dp"
                 android:textSize="24sp"
@@ -70,8 +70,9 @@
                 android:layout_height="250dp">
                 <ImageButton
                     android:clickable="false"
+                    android:background="@null"
                     android:id="@+id/ib_fengmianicon"
-                    android:src="@drawable/btn_closed_red"
+                    android:src="@drawable/rela_upload_big_pic"
                     android:layout_width="match_parent"
                     android:layout_height="250dp" />
             </RelativeLayout>
@@ -183,16 +184,95 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp" />
                 //步骤内容
-                <include layout="@layout/buzhou_content"/>
-                //步骤添加编辑
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/buzhou_ll_addll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/buzhou_content"/>
+                </LinearLayout>
+                //底部
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <Button
+                        android:id="@+id/buzhou_btn_edit"
+                        android:text="编辑步骤"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/buzhou_btn_add"
+                        android:text="添加步骤"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
             </LinearLayout>
+            //烹饪小贴士
+            <TextView
+                android:textColor="#000"
+                android:paddingLeft="5dp"
+                android:gravity="left|center_horizontal"
+                android:padding="5dp"
+                android:layout_marginTop="20dp"
+                android:textSize="24sp"
+                android:text="烹饪小贴士"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/tv_bg"
+                android:layout_marginTop="10dp"
+                android:hint="分享你做这道菜的心得和小技巧"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:inputType="textMultiLine"
+                android:id="@+id/et_loadtwo_tieshi"
+                />
+            //成品图
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <GridView
+                    android:id="@+id/buzhou_gv_reslutpics"
+                    android:background="@drawable/tv_bg"
+                    android:gravity="center"
+                    android:numColumns="2"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </GridView>
+                <ImageButton
+                    android:id="@+id/ib_addtupian"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/rela_dish_upload_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+
         </LinearLayout>
+
         //底部动画的布局
         <FrameLayout
             android:id="@+id/main_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
         </FrameLayout>
+        <Button
+            android:textColor="#fff"
+            android:background="#f00"
+            android:text="发布"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
+
 </ScrollView>

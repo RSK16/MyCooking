@@ -16,11 +16,27 @@
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\color\\vpi__light_theme.xml"
     },
     {
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\color\\vpi__dark_theme.xml",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\color\\vpi__dark_theme.xml"
+    },
+    {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\color\\vpi__dark_theme.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\color\\vpi__dark_theme.xml"
     },
     {
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\color\\vpi__light_theme.xml",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\color\\vpi__light_theme.xml"
+    },
+    {
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\color\\vpi__dark_theme.xml",
+        "source": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\color\\vpi__dark_theme.xml"
+    },
+    {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\color\\vpi__light_theme.xml",
         "source": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\color\\vpi__light_theme.xml"
+    },
+    {
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\color\\vpi__light_theme.xml",
+        "source": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\color\\vpi__light_theme.xml"
     }
 ]

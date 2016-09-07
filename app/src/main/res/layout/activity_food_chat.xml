@@ -48,6 +48,12 @@
 
     </ListView>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="菜谱细节"
+        android:id="@+id/bt_shihuabutton"/>
+
 
 
 

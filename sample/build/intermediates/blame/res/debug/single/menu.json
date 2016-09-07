@@ -1,14 +1,22 @@
 [
     {
-        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
-        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\menu\\menu.xml"
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\menu\\menu.xml"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\menu\\menu.xml"
     },
     {
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
+        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\menu\\menu.xml"
     }
 ]
