@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 /**
- * Created by Administrator on 2016/9/4.
+ * Created by yutt on 2016/9/4.
  */
 public class SuggestViewpager extends ViewPager {
 

@@ -29,7 +29,7 @@ import java.util.Calendar;
 
 
 /**
- * Created by Administrator on 2016/9/2.
+ * Created by yutt on 2016/9/2.
  */
 // 由于ScrollView 只允许有一个 one direct ChildView,所以再用LinearLayout来做容器
 public class RefreshScLinearLayout extends LinearLayout {
