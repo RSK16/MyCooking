@@ -106,6 +106,19 @@ public class Cailiao {
         public void setIs_c(String is_c) {
             this.is_c = is_c;
         }
+
+
+        @Override
+        public String toString() {
+            return "ListBean{" +
+                    "title='" + title + '\'' +
+                    ", id='" + id + '\'' +
+                    ", icon='" + icon + '\'' +
+                    ", num='" + num + '\'' +
+                    ", category='" + category + '\'' +
+                    ", is_c='" + is_c + '\'' +
+                    '}';
+        }
     }
 
     public static class ListTBean {
@@ -144,6 +157,16 @@ public class Cailiao {
 
         public void setIs_c(String is_c) {
             this.is_c = is_c;
+        }
+
+        @Override
+        public String toString() {
+            return "ListTBean{" +
+                    "title='" + title + '\'' +
+                    ", unit='" + unit + '\'' +
+                    ", category='" + category + '\'' +
+                    ", is_c='" + is_c + '\'' +
+                    '}';
         }
     }
 }
