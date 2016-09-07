@@ -1,19 +1,19 @@
 [
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_lines.xml",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\themed_lines.xml"
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_titles_bottom.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\simple_titles_bottom.xml"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_titles_bottom.xml",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_titles_bottom.xml"
     },
     {
-        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_lines.xml",
-        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\themed_lines.xml"
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_circles.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\simple_circles.xml"
     },
     {
-        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_titles.xml",
-        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\themed_titles.xml"
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_lines.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\themed_lines.xml"
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_titles_bottom.xml",
@@ -24,48 +24,88 @@
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_circles_vertical.xml"
     },
     {
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_underlines.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_underlines.xml"
+    },
+    {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_titles.xml",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_titles.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_circles.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\themed_circles.xml"
+    },
+    {
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_lines.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\themed_lines.xml"
+    },
+    {
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_titles.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\themed_titles.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_circles_vertical.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\simple_circles_vertical.xml"
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_circles.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\themed_circles.xml"
     },
     {
-        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_underlines.xml",
-        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_underlines.xml"
-    },
-    {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_underlines.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\themed_underlines.xml"
     },
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_underlines.xml",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\themed_underlines.xml"
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_underlines.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\themed_underlines.xml"
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_titles.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_titles.xml"
     },
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_icons.xml",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_icons.xml"
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_underlines.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\themed_underlines.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_lines.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\themed_lines.xml"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_lines.xml",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_lines.xml"
     },
     {
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_icons.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_icons.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_underlines.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\simple_underlines.xml"
+    },
+    {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_lines.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_lines.xml"
+    },
+    {
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_tabs.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_tabs.xml"
+    },
+    {
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_underlines.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_underlines.xml"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_circles_vertical.xml",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_circles_vertical.xml"
     },
     {
-        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_tabs.xml",
-        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_tabs.xml"
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_tabs.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\simple_tabs.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_lines.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\simple_lines.xml"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_tabs.xml",
@@ -76,23 +116,31 @@
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\themed_circles.xml"
     },
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_underlines.xml",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_underlines.xml"
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_icons.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\simple_icons.xml"
     },
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_circles.xml",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_circles.xml"
-    },
-    {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_titles.xml",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\themed_titles.xml"
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_icons.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_icons.xml"
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_circles.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_circles.xml"
     },
     {
-        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_icons.xml",
-        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\layout\\simple_icons.xml"
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_titles.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\themed_titles.xml"
+    },
+    {
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_circles.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\layout\\simple_circles.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\simple_titles.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\simple_titles.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\themed_titles.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\layout\\themed_titles.xml"
     }
 ]
