@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
+import com.example.mycooking.activity.MsgNotifyActivity;
 import com.example.mycooking.activity.MyLoginActivity;
 import com.example.mycooking.activity.UpdateUserInfo;
 import com.example.mycooking.application.Constants;
@@ -57,7 +59,7 @@ public class WodePage extends BasePage implements View.OnClickListener {
         mine_qianming = (TextView) mine.findViewById(R.id.mine_qianming);
         login_sign.setOnClickListener(this);
 
-        Intent intent = mActivity.getIntent();
+        final Intent intent = mActivity.getIntent();
         String username = intent.getStringExtra("username");
         String jj = intent.getStringExtra("jj");
 
@@ -75,6 +77,17 @@ public class WodePage extends BasePage implements View.OnClickListener {
             BitmapUtils bitmapUtils = new BitmapUtils(mActivity);
             bitmapUtils.display(mine_icon,icon_url);
         }
+
+        RelativeLayout rl_wodeactivity_msgnotify = (RelativeLayout) mine.findViewById(R.id.rl_wodeactivity_msgnotify);
+        rl_wodeactivity_msgnotify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(mActivity, MsgNotifyActivity.class);
+                mActivity.startActivity(intent1);
+
+            }
+        });
+
         return mine;
     }
 
