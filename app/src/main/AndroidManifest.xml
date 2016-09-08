@@ -20,8 +20,6 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -33,37 +31,35 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-
-        </activity>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity android:name=".activity.MenuRankActivity" />
+        <activity android:name=".activity.MenuDetailActivity"/>
         <activity android:name=".activity.MenuSortActivity" />
         <activity android:name=".activity.BBVideoPlayer" />
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FoodChatActivity">
-
-        </activity>
-        <activity android:name=".activity.CookMenuDetailActivity">
-        </activity>
+        <activity android:name=".activity.FoodChatActivity" />
+        <activity android:name=".activity.CookMenuDetailActivity" />
         <activity
             android:name=".activity.shangchuangcaipu.LoadOneActivity"
             android:launchMode="singleTask" />
         <activity
-            android:launchMode="singleTask"
-            android:name=".activity.shangchuangcaipu.LoadTwoActivity" />
+            android:name=".activity.shangchuangcaipu.LoadTwoActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".activity.shangchuangcaipu.GongyiActivity" />
         <activity android:name=".activity.shangchuangcaipu.KouweiActivity" />
         <activity android:name=".activity.shangchuangcaipu.NanduActivity" />
         <activity android:name=".activity.shangchuangcaipu.NumberActivity" />
         <activity android:name=".activity.shangchuangcaipu.Timeactivity" />
-        <activity android:name=".activity.shangchuangcaipu.EditliaoActivity"></activity>
-        <activity android:name=".activity.BreakfastActivity"></activity>
-        <activity android:name=".activity.signNewUser"></activity>
+        <activity android:name=".activity.shangchuangcaipu.EditliaoActivity" />
+        <activity android:name=".activity.signNewUser" />
+        <activity android:name=".activity.MyLoginActivity" />
+        <activity android:name=".activity.UpdateUserInfo"></activity>
     </application>
 
 </manifest>

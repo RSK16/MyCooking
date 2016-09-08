@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mycooking.activity.UpdateUserInfo">
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <ImageButton
+            android:onClick="previous"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:src="@drawable/btn_closed_red"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="个人信息"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_icon"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="头像"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:background="@drawable/sy2"
+            android:id="@+id/update_ib_icon"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_username"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="用户名"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/update_tv_username"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_sex"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="性别"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/update_tv_sex"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_birth"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="生日"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/update_tv_birth"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_address"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="家乡"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/update_tv_address"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:onClick="doclick"
+            android:gravity="center_vertical"
+            android:id="@+id/bt_job"
+            android:drawableRight="@drawable/dish_ms_publis_recipe_r"
+            android:background="@null"
+            android:text="职业"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/update_tv_job"
+            android:textColor="#aaff0000"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+
+</LinearLayout>

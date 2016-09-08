@@ -1,9 +1,12 @@
 package com.example.mycooking.utils;
 
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 
 import com.example.mycooking.bean.Recipe;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
@@ -18,7 +21,6 @@ import cn.bmob.v3.listener.UpdateListener;
 public class BmobUtils {
 
     private static String TAG="BmobUtils";
-
     /**
      * 查询数据
      * @param key
@@ -43,6 +45,7 @@ public class BmobUtils {
         //query.whereEndsWith("username", "ile");
         //返回数据条数 默认10条
         bmobQuery.setLimit(20);
+
         //查询方法
         bmobQuery.findObjects(new FindListener<Recipe>() {
             @Override
@@ -50,11 +53,16 @@ public class BmobUtils {
                 if (e == null) {
                     Log.i(TAG, "done: 查询数据成功,共" + list.size() + "条数据。");
                     //查询后的业务逻辑
+
+
+
                 } else {
                     Log.i(TAG, "done: 查询数据失败" + e.getMessage());
+                    return;
                 }
             }
         });
+
     }
 
     /**

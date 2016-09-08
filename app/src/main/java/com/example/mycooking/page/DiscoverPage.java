@@ -38,6 +38,12 @@ public class DiscoverPage extends BasePage {
     private ArrayList<UserUploadInfo.FaxianListBean.VideoListBean> videoListBeen;
     LocalCacheUtils mLocalCacheUtils;
     MemoryCacheUtils mMemoryCacheUtils;
+    String[] urlImage={ "http://admin.meishi.cc/article/upload/video_img/20160720/20160720100735_713.jpg"
+            ,"http://site.meishij.net/article/video_img/20160726/20160726104613_450.jpg"
+            ,"http://images.meishij.net/p/20160518/94f00cf4d0d80dc8c917760f62588fdc.jpg"
+            ,"http://bmob-cdn-6039.b0.upaiyun.com/2016/09/02/7b3bd386406168c580fc408d60d26a70.jpg"};
+    String[] nameImage={"麻辣烫","最美的味道","当美食遇见520","1"};
+    int playtime=0;
 
     public DiscoverPage(Activity activity) {
         super(activity);
@@ -122,7 +128,7 @@ public class DiscoverPage extends BasePage {
         public int getCount() {
 //             Log.i(TAG, "getCount: "+videoListBeen.size());
 //             return videoListBeen.size();
-            return 1;
+            return 4;
         }
 
         @Override
@@ -140,21 +146,21 @@ public class DiscoverPage extends BasePage {
             View inflate = View.inflate(mActivity, R.layout.discover_video_detail, null);
             TextView tv_discover_video_detail = (TextView) inflate.findViewById(R.id.tv_discover_video_detail);
             ImageView iv_discover_video_detail = (ImageView) inflate.findViewById(R.id.iv_discover_video_detail);
-//             final String vurl = videoListBeen.get(position).getVurl();
-//             final String vurl = "http://baidu.fun.tv/watch/2265281323655952750.html?page=videoMultiNeed";
-             final String vurl = "http://10.0.2.2:8080/myphoto.mp4";
-//            final String vurl = "http://static.zqgame.com/html/playvideo.html?name=http://lom.zqgame.com/v1/video/LOM_Promo~2.flv";
-          final String urlImage= "http://admin.meishi.cc/article/upload/video_img/20160720/20160720100735_713.jpg";
+//             final String vurl = "http://10.0.2.2:8080/myphoto.mp4";
+//            final String vurl = "http://10.0.2.2:8080/myphoto2.avi";
+            final String vurl = "http://bmob-cdn-6039.b0.upaiyun.com/2016/09/06/e618866c405db19880b64bff34775150.mp4";
             NetCacheUtils netCacheUtils = new NetCacheUtils(mLocalCacheUtils, mMemoryCacheUtils);
-            netCacheUtils.getBitmapFromNet(iv_discover_video_detail,urlImage);
+            netCacheUtils.getBitmapFromNet(iv_discover_video_detail,urlImage[position]);
             String name = videoListBeen.get(position).getName();
-            tv_discover_video_detail.setText(name);
-            tv_discover_video_detail.setOnClickListener(new View.OnClickListener() {
+            tv_discover_video_detail.setText(nameImage[position]);
+            iv_discover_video_detail.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    playtime=playtime+1;
                     Intent intent = new Intent();
                     intent.setClass(mActivity, BBVideoPlayer.class);
                     intent.putExtra("url", vurl);
+                    intent.putExtra("playtime",playtime+"");
                     intent.putExtra("cache",
                             Environment.getExternalStorageDirectory().getAbsolutePath()
                                     + "/VideoCache/" + System.currentTimeMillis() + ".mp4");
