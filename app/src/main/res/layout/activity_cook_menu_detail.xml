@@ -9,52 +9,75 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="#999">
 
 
-        <LinearLayout
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/lv_stickyListHeaders"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-
-            <se.emilsjolander.stickylistheaders.StickyListHeadersListView
-                android:id="@+id/lv_stickyListHeaders"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#fff"/>
-
-        </LinearLayout>
+            android:background="#fff"/>
 
 
         <!--状态栏下面一行-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#00ffffff"
+            android:background="#00000000"
             android:id="@+id/rl_cookMenuDetail_leftTopBack">
+
+
             <ImageButton
                 android:id="@+id/ib_cookMenuDetail_leftTopBack"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
+                
                 android:background="@drawable/cook_detail_back"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="7dp"
                 android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tv_cookMenuDetail_TopTheCookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="你看不见我"
+
+
+
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/ib_cookMenuDetail_leftTopBack"
+                android:layout_alignBottom="@id/ib_cookMenuDetail_leftTopBack"
+                android:textSize="17sp"
+                android:paddingBottom="4dp"
+                android:textColor="#fff"/>
 
         </RelativeLayout>
 
 
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
 
+
+
+
+
+        <!--</LinearLayout>-->
 
 
 
 
 
     </RelativeLayout>
+
+
 
 
     <!--第二部分 底部-->

@@ -1,6 +1,7 @@
 package com.example.mycooking.application;
 
 import android.app.Application;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
@@ -18,6 +19,9 @@ import com.nostra13.universalimageloader.utils.StorageUtils;
  * Created by Administrator on 2016/9/5 0005.
  */
 public class MyApplication extends Application{
+
+    private SharedPreferences manager;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -59,7 +63,17 @@ public class MyApplication extends Application{
                         .build();
                 ImageLoader.getInstance().init(configuration);/*使用基本配置信息初始化ImageLoader*/
 
-            }
+
+
+
+
+
+
+
+    }
+
+
+
 
 
 
