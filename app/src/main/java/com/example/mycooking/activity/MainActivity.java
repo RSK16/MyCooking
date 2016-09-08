@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
@@ -25,6 +26,7 @@ import cn.bmob.v3.Bmob;
 
 public class MainActivity extends Activity {
 
+    private static final String TAG = "MainActivity";
     private RadioGroup rg_group;
     private NoScrollViewPager vp_main_shoppingmall;
     List<BasePage> pageList = new ArrayList<>();
@@ -64,7 +66,37 @@ public class MainActivity extends Activity {
                         break;}
              }
         });
+        //pageList.get(0).initView();
+        rg_group.check(R.id.rb_main_recommend);
 
+    }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (requestCode == 100) {
+//            Log.i(TAG, "onActivityResult: ");
+//            pageList.get(3).initView();
+//            rg_group.check(R.id.rb_main_wode);
+//            vp_main_shoppingmall.setCurrentItem(3, false);
+//        } else {
+//            Log.i(TAG, "onActivityResult: 失败");
+//        }
+//    }
+
+    @Override
+    protected void onResume() {
+        Intent intent = getIntent();
+        String jj = intent.getStringExtra("jj");
+        if ("jj".equals(jj)) {
+            Log.i(TAG, "onActivityResult: ");
+            pageList.get(3).initView();
+            rg_group.check(R.id.rb_main_wode);
+            vp_main_shoppingmall.setCurrentItem(3, false);
+        } else {
+            Log.i(TAG, "onActivityResult: 失败");
+        }
+
+        super.onResume();
     }
 
     class MyContentAdatper extends PagerAdapter{

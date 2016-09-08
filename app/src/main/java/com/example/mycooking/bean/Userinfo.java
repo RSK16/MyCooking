@@ -1,7 +1,6 @@
 package com.example.mycooking.bean;
 
 import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.datatype.BmobFile;
 
 /**
  * Created by Administrator on 2016/9/4.
@@ -10,7 +9,7 @@ import cn.bmob.v3.datatype.BmobFile;
 //注册信息
 public class Userinfo extends BmobUser{
 
-    private BmobFile icon;
+    private String icon_url;
     private String nickName;
 
     //当为true代表男性，false代表性别为女
@@ -20,13 +19,12 @@ public class Userinfo extends BmobUser{
     private String birth;
 
 
-
-    public BmobFile getIcon() {
-        return icon;
+    public String getIcon_url() {
+        return icon_url;
     }
 
-    public void setIcon(BmobFile icon) {
-        this.icon = icon;
+    public void setIcon_url(String icon_url) {
+        this.icon_url = icon_url;
     }
 
     public String getNickName() {

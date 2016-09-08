@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <!--五角星图案-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp">
+        <ImageView
+            android:id="@+id/iv_cookMenuDetail_star1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cook_detail_star_select"/>
+<ImageView
+            android:id="@+id/iv_cookMenuDetail_star2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cook_detail_star_select"/>
+<ImageView
+            android:id="@+id/iv_cookMenuDetail_star3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cook_detail_star_select"/>
+<ImageView
+            android:id="@+id/iv_cookMenuDetail_star4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cook_detail_star_select"/>
+<ImageView
+            android:id="@+id/iv_cookMenuDetail_star5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cook_detail_star_select"/>
+
+
+    </LinearLayout>
+
+
+    <!--浏览次数-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp">
+    <TextView
+        android:id="@+id/tv_cookMenuDetail_the_numOf_watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="999次浏览"/>
+
+    </LinearLayout>
+
+    <!--头像和名字-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+        
+        <ImageView
+            android:id="@+id/iv_cookMenuDetail_the_picOf_author"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:src="@drawable/cook_detail_star_select"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/tv_cookMenuDetail_the_nameOf_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的厨房"/>
+
+    </LinearLayout>
+
+
+    <!--描述-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        >
+        <TextView
+            android:id="@+id/tv_cookMenuDetail_the_descriptionOf_cook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="回锅肉源自于川菜，但因为实在是太具魅力广“泛流”传于中国家庭里。说到家常菜一定少不了回锅肉，也正是因为流传面如此之广，所以也衍生了不少版本的回锅肉。每个地方甚至每个家庭都根据各地和自己的喜好经过了改良。如此钟爱杏鲍菇的帅一定要改良融合一下，加入了杏鲍菇的“帅家回锅肉”有木有触动你的味蕾呢？试试就知道。"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

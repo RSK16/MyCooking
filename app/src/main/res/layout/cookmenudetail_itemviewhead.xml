@@ -4,6 +4,8 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:paddingTop="10dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_cookMenuDetail_everyStep_title"

@@ -3,6 +3,7 @@ package com.example.mycooking.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.mycooking.R;
 import com.example.mycooking.application.Constants;
-import com.example.mycooking.page.WodePage;
+import com.example.mycooking.bean.Userinfo;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
@@ -82,11 +83,16 @@ public class MyLoginActivity extends Activity implements View.OnClickListener{
                     @Override
                     public void done(BmobUser bmobUser, BmobException e) {
                         if (e == null) {
+                            Userinfo user1=BmobUser.getCurrentUser(Userinfo.class);
+                            Log.i(TAG, "done: "+user1.getUsername());
                             Intent intent = new Intent(MyLoginActivity.this, MainActivity.class);
+                            intent.putExtra("jj", "jj");
+                            intent.putExtra("username", user1.getUsername());
                             startActivity(intent);
                             finish();
                         } else {
-                            toast("登陆失败："+e);
+                            toast("登陆失败：");
+                            Log.i(TAG, "登陆失败: "+e);
                         }
                     }
                 });
