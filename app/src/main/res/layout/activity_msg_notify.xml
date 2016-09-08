@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mycooking.MsgNotifyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="70dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/back_red"/>
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="消息通知"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textSize="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:background="#00FFFFFF"
+            android:text="忽略"
+            android:onClick="ignore"
+            android:textColor="#66000000"
+            android:textSize="25dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/rl_msgnotifyactivity_news">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/iv_msgnotifyactivity_news"
+            android:layout_centerVertical="true"
+            android:background="@drawable/news_news" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_msgnotifyactivity_news"
+            android:layout_marginLeft="20dp"
+            android:text="消息"
+            android:textSize="25dp"
+            android:textColor="#b31c1c1c"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cook_share_dialog_arr" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/rl_msgnotifyactivity_comment">
+
+        <ImageView
+            android:id="@+id/iv_msgnotifyactivity_comment"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/news_comment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_msgnotifyactivity_comment"
+            android:layout_marginLeft="20dp"
+            android:text="评论"
+            android:textSize="25dp"
+            android:textColor="#b31c1c1c"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cook_share_dialog_arr" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/rl_msgnotifyactivity_praise">
+
+        <ImageView
+            android:id="@+id/iv_msgnotifyactivity_praise"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/news_praise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_msgnotifyactivity_praise"
+            android:layout_marginLeft="20dp"
+            android:text="点赞"
+            android:textSize="25dp"
+            android:textColor="#b31c1c1c"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cook_share_dialog_arr" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/rl_msgnotifyactivity_collection">
+
+        <ImageView
+            android:id="@+id/iv_msgnotifyactivity_collection"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/news_collection" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_msgnotifyactivity_collection"
+            android:layout_marginLeft="20dp"
+            android:text="收藏"
+            android:textSize="25dp"
+            android:textColor="#b31c1c1c"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cook_share_dialog_arr" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/rl_msgnotifyactivity_feedback">
+
+        <ImageView
+            android:id="@+id/iv_msgnotifyactivity_feedback"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/news_feedback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_msgnotifyactivity_feedback"
+            android:layout_marginLeft="20dp"
+            android:text="意见反馈"
+            android:textSize="25dp"
+            android:textColor="#b31c1c1c"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cook_share_dialog_arr" />
+
+    </RelativeLayout>
+</LinearLayout>
