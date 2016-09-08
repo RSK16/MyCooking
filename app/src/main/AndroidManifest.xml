@@ -31,7 +31,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity android:name=".activity.MenuRankActivity" />
         <activity android:name=".activity.MenuSortActivity" />
         <activity android:name=".activity.BBVideoPlayer" />
@@ -42,8 +42,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FoodChatActivity"></activity>
-        <activity android:name=".activity.CookMenuDetailActivity"></activity>
+        <activity android:name=".activity.FoodChatActivity" />
+        <activity android:name=".activity.CookMenuDetailActivity" />
         <activity
             android:name=".activity.shangchuangcaipu.LoadOneActivity"
             android:launchMode="singleTask" />
@@ -58,7 +58,8 @@
         <activity android:name=".activity.shangchuangcaipu.EditliaoActivity" />
         <activity android:name=".activity.BreakfastActivity" />
         <activity android:name=".activity.signNewUser" />
-        <activity android:name=".activity.MyLoginActivity"></activity>
+        <activity android:name=".activity.MyLoginActivity" />
+        <activity android:name=".activity.UpdateUserInfo"></activity>
     </application>
 
 </manifest>

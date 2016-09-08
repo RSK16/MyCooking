@@ -3,6 +3,7 @@ package com.example.mycooking.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ import cn.bmob.v3.listener.SaveListener;
 
 public class signNewUser extends Activity {
 
+    private static final String TAG = "signNewUser";
     private EditText username;
     private EditText password;
     private EditText email;
@@ -105,7 +107,8 @@ public class signNewUser extends Activity {
                             startActivity(intent);
                             finish();
                         } else {
-                            toast("注册失败："+e);
+                            toast("注册失败：");
+                            Log.i(TAG, "注册失败: "+e);
                         }
                     }
                 });
