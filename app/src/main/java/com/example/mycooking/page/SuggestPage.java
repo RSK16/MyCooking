@@ -1,6 +1,7 @@
 package com.example.mycooking.page;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
+import com.example.mycooking.activity.MsgNotifyActivity;
 import com.example.mycooking.activity.shangchuangcaipu.LoadOneActivity;
 import com.example.mycooking.view.RefreshScLinearLayout;
 
@@ -60,6 +62,14 @@ public class SuggestPage extends BasePage {
                  * @param view
                  */
                 mActivity.startActivity(new Intent(mActivity, LoadOneActivity.class));
+            }
+        });
+
+        ImageButton bt_suggestPagetitle_right = (ImageButton) suggestPageView.findViewById(R.id.bt_suggestPagetitle_right);
+        bt_suggestPagetitle_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mActivity.startActivity(new Intent(mActivity, MsgNotifyActivity.class));
             }
         });
 

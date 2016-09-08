@@ -8,12 +8,12 @@
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_normal.png"
     },
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_location_selected.png",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_location_selected.png"
-    },
-    {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
         "source": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_location_selected.png",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_location_selected.png"
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_calendar_normal.png",
@@ -24,32 +24,32 @@
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_calendar_normal.png"
     },
     {
-        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\icon.png",
-        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\icon.png"
-    },
-    {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_calendar_normal.png",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_calendar_normal.png"
+    },
+    {
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\icon.png",
+        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\icon.png"
     },
     {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_camera_selected.png",
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_selected.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected_focused.9.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_unselected_focused.9.png"
-    },
-    {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\icon.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\icon.png"
     },
     {
-        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected.9.png",
-        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected.9.png"
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected_focused.9.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_unselected_focused.9.png"
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected.9.png",
         "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected.9.png"
+    },
+    {
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected.9.png",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected.9.png"
     },
     {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_device_alarms_normal.png",
@@ -100,12 +100,12 @@
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
     },
     {
-        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_device_alarms_normal.png",
-        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_device_alarms_normal.png"
-    },
-    {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_camera_normal.png",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_normal.png"
+    },
+    {
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_device_alarms_normal.png",
+        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_device_alarms_normal.png"
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_focused.9.png",
@@ -140,12 +140,12 @@
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_pressed.9.png"
     },
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png"
-    },
-    {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_camera_selected.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_selected.png"
+    },
+    {
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png"
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_divider.9.png",
@@ -156,20 +156,20 @@
         "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_device_alarms_selected.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png"
-    },
-    {
-        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_calendar_selected.png",
-        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_calendar_selected.png"
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected_pressed.9.png",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_unselected_pressed.9.png"
     },
     {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected.9.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_unselected.9.png"
     },
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected_pressed.9.png",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_unselected_pressed.9.png"
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_calendar_selected.png",
+        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_calendar_selected.png"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_pressed.9.png",
@@ -220,28 +220,28 @@
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_calendar_selected.png"
     },
     {
-        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
-        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png",
+        "source": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_device_alarms_selected.png",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_device_alarms_selected.png"
     },
     {
-        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png",
-        "source": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
         "source": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_divider.9.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_divider.9.png"
-    },
-    {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_camera_selected.png",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_selected.png"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_divider.9.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_divider.9.png"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
@@ -264,12 +264,12 @@
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_camera_normal.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_normal.png"
-    },
-    {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_camera_normal.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_normal.png"
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected_pressed.9.png",
@@ -280,12 +280,12 @@
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected.9.png"
     },
     {
-        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_device_alarms_normal.png",
-        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_device_alarms_normal.png"
-    },
-    {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
+    },
+    {
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_device_alarms_normal.png",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_device_alarms_normal.png"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_divider.9.png",
@@ -304,12 +304,12 @@
         "source": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
-    },
-    {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected.9.png",
@@ -332,16 +332,16 @@
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_unselected_focused.9.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected_focused.9.png",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_unselected_focused.9.png"
     },
     {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_location_selected.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_location_selected.png"
     },
     {
-        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_unselected_focused.9.png",
-        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_unselected_focused.9.png"
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_focused.9.png",
@@ -356,12 +356,12 @@
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_selected.png"
     },
     {
-        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_camera_selected.png",
-        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_selected.png"
-    },
-    {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_pressed.9.png",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_pressed.9.png"
+    },
+    {
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_camera_selected.png",
+        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_selected.png"
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_divider.9.png",
@@ -372,12 +372,12 @@
         "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_camera_normal.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_location_selected.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_location_selected.png"
-    },
-    {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png",
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_location_selected.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_location_selected.png"
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_location_normal.png",
@@ -400,43 +400,43 @@
         "source": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
-        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
-        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png"
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_focused.9.png",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_focused.9.png"
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
     },
     {
-        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_focused.9.png",
-        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_focused.9.png"
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png"
     },
     {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\perm_group_calendar_normal.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\perm_group_calendar_normal.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_pressed.9.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_pressed.9.png"
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
+        "source": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
     },
     {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
     },
     {
-        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
-        "source": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_pressed.9.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_pressed.9.png"
     },
     {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_divider.9.png",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_divider.9.png"
     },
     {
-        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_focused.9.png",
-        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_focused.9.png"
-    },
-    {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\icon.png",
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_tab_indicator_selected_focused.9.png",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable-mdpi\\custom_tab_indicator_selected_focused.9.png"
     }
 ]
