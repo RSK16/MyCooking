@@ -1,10 +1,12 @@
-package com.example.mycooking;
+package com.example.mycooking.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import com.example.mycooking.R;
 
 public class MsgNotifyActivity extends AppCompatActivity {
 
