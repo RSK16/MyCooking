@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
+import com.bumptech.glide.Glide;
 import com.example.mycooking.R;
 import com.example.mycooking.bean.Buzhou;
 import com.example.mycooking.bean.Recipe;
@@ -33,6 +34,9 @@ import com.google.gson.Gson;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,6 +76,10 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
     private String[] theDescription0;
     private boolean chengpinstep;
     private ArrayList<String> theheadurl0;
+    private String title;
+    private String user_name;
+    private String avatar;//作者头像图像
+    private ImageView iv_cookMenuDetail_the_picOf_author;
 
 
     //--------------------------获取到的数据--------------------------------------------
@@ -104,93 +112,119 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
                  buzhou = recipe.getZuofa();
 //---------------得到数据后 非常happy----------------------
-                    getBuzhou();
+                 getBuzhou();
                  initTheMainListView();
 
-
-//
-//
-//                 View inflate = View.inflate(mActivity, R.layout.cook_menu_detail_title, null);
-//                 TextView tv_cookMenuDetail_bigTitle = (TextView) inflate.findViewById(R.id.tv_cookMenuDetail_bigTitle);
-//                 tv_cookMenuDetail_bigTitle.setText("蒜香小土豆");
-//                 stickyList.addHeaderView(inflate);//第二个headView 图片下的标题
-//
-//
-//                 View inflate2 = View.inflate(mActivity, R.layout.cook_menu_detail_how_to_make, null);
-//                 stickyList.addHeaderView(inflate2);//第三个headView 标题下的 作者 菜谱等信息
-//
-//
-////----------增加footView---------------------------------------------------
-//
-//
-//                 TextView textView = new TextView(mActivity);
-//                 textView.setText("3\n3\n3\n3\n3\n3\n3\n");
-//                 stickyList.addFooterView(textView);  //这边是分享的sdk 从上往下数第一个foot
-//
-//
-//                 ListView mypinlun_adapter_for_cookmenudetail = (ListView) View.inflate(mActivity, R.layout.mypinlun_adapter_for_cookmenudetail, null);
-//                 mypinlun_adapter_for_cookmenudetail.setAdapter(new MyPinLunAdapter());
-//                 View inflate1 = View.inflate(mActivity, R.layout.cook_menu_detail_user_comment_head_view, null);
-//                 mypinlun_adapter_for_cookmenudetail.addHeaderView(inflate1);
-//
-//                 stickyList.addFooterView(mypinlun_adapter_for_cookmenudetail);  //评论footView
-//
-//
-//                 TextView textView1 = new TextView(mActivity);
-//                 textView1.setText("2\n2\n2\n2\n2\n2\n2\n");
-//                 stickyList.addFooterView(textView1);//这个是最下面的
-//
-//
-//
-//
-//
-////--------------找到headView中的各个控件--------------------------------------------------
-//                 tv_cookMenuDetail_topTheCookName = (TextView) findViewById(R.id.tv_cookMenuDetail_TopTheCookName);
-//                 rl_cookMenuDetail_leftTopBack = (RelativeLayout) findViewById(R.id.rl_cookMenuDetail_leftTopBack);
-//
-//
-////----------------------添加 主 listView的 滑动事件----------------------------------
-//                 stickyList.setOnScrollListener(new AbsListView.OnScrollListener() {
-//                     @Override
-//                     public void onScrollStateChanged(AbsListView view, int scrollState) {
-//                         Log.e("oooo", scrollState + "");
-//
-//                     }
-//
-//                     @Override
-//                     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-//
-//                         if (firstVisibleItem == 3) {
-//                             tv_cookMenuDetail_topTheCookName.setVisibility(View.VISIBLE);
-//                             tv_cookMenuDetail_topTheCookName.setText("蒜香小土豆");
-////                rl_cookMenuDetail_leftTopBack.setBackgroundColor(Color.WHITE);
-//                             tv_cookMenuDetail_topTheCookName.setBackgroundColor(Color.WHITE);
-//
-//                             ib_cookMenuDetail_leftTopBack.setBackgroundColor(Color.WHITE);
-//                             ib_cookMenuDetail_leftTopBack.setBackgroundResource(R.drawable.cook_detail_back_red);
-//
-//                         }
-//                         if (firstVisibleItem == 1) {
-//                             tv_cookMenuDetail_topTheCookName.setVisibility(View.INVISIBLE);
-//
-//                             ib_cookMenuDetail_leftTopBack.setBackgroundColor(Color.WHITE);
-//                             ib_cookMenuDetail_leftTopBack.setBackgroundResource(R.drawable.cook_detail_back);
-//
-//
-//                         }
-//
-////                Log.e("oooo", "firstVisibleItem=" + firstVisibleItem);
-////                Log.e("oooo", "visibleItemCount=" + visibleItemCount);
-////                Log.e("oooo", "totalItemCount=" + totalItemCount);
-//                     }
-//                 });
+//------------------设置headView-----------------------------
+                 title = recipe.getTitle();//标题
+                 String onclick = recipe.getOnclick();
+                 String fav_num = recipe.getFav_num();
+                 String author = recipe.getAuthor();//作者的json
+                 String smalltext = recipe.getSmalltext();
 
 
+                 try {
+                     JSONObject jsonObject = new JSONObject(author);
+                     user_name = (String) jsonObject.get("user_name");
+                     avatar = (String) jsonObject.get("avatar");
+                 } catch (JSONException e) {
+                     e.printStackTrace();
+                 }
+
+
+                 View inflate = View.inflate(mActivity, R.layout.cook_menu_detail_title, null);
+                 TextView tv_cookMenuDetail_bigTitle = (TextView) inflate.findViewById(R.id.tv_cookMenuDetail_bigTitle);
+                 tv_cookMenuDetail_bigTitle.setText(title);
+                 stickyList.addHeaderView(inflate);//第二个headView 图片下的标题
+
+
+                 View inflate2 = View.inflate(mActivity, R.layout.cook_menu_detail_how_to_make, null);
+
+                 TextView tv_cookMenuDetail_the_numOf_watch = (TextView) inflate2.findViewById(R.id.tv_cookMenuDetail_the_numOf_watch);
+                 String onclickAndFav_num=fav_num+"人收藏 "+onclick+"次浏览";
+                 tv_cookMenuDetail_the_numOf_watch.setText(onclickAndFav_num);//有多少人收藏浏览
+
+
+                 TextView tv_cookMenuDetail_the_nameOf_author = (TextView) inflate2.findViewById(R.id.tv_cookMenuDetail_the_nameOf_author);
+                 TextView tv_cookMenuDetail_the_descriptionOf_cook = (TextView) inflate2.findViewById(R.id.tv_cookMenuDetail_the_descriptionOf_cook);
+
+                 iv_cookMenuDetail_the_picOf_author = (ImageView) inflate2.findViewById(R.id.iv_cookMenuDetail_the_picOf_author);
+
+                 tv_cookMenuDetail_the_nameOf_author.setText(user_name);
+                 tv_cookMenuDetail_the_descriptionOf_cook.setText(smalltext);
+
+
+
+
+                 stickyList.addHeaderView(inflate2);//第三个headView 标题下的 作者 菜谱等信息
+
+
+//----------增加footView---------------------------------------------------
+
+
+                 TextView textView = new TextView(mActivity);
+                 textView.setText("3\n3\n3\n3\n3\n3\n3\n");
+                 stickyList.addFooterView(textView);  //这边是分享的sdk 从上往下数第一个foot
+
+
+                 ListView mypinlun_adapter_for_cookmenudetail = (ListView) View.inflate(mActivity, R.layout.mypinlun_adapter_for_cookmenudetail, null);
+                 mypinlun_adapter_for_cookmenudetail.setAdapter(new MyPinLunAdapter());
+                 View inflate1 = View.inflate(mActivity, R.layout.cook_menu_detail_user_comment_head_view, null);
+                 mypinlun_adapter_for_cookmenudetail.addHeaderView(inflate1);
+
+                 stickyList.addFooterView(mypinlun_adapter_for_cookmenudetail);  //评论footView
+
+
+                 TextView textView1 = new TextView(mActivity);
+                 textView1.setText("2\n2\n2\n2\n2\n2\n2\n");
+                 stickyList.addFooterView(textView1);//这个是最下面的
+//
+//
+//
+//--------------找到headView中的各个控件--------------------------------------------------
+                 tv_cookMenuDetail_topTheCookName = (TextView) findViewById(R.id.tv_cookMenuDetail_TopTheCookName);
+                 rl_cookMenuDetail_leftTopBack = (RelativeLayout) findViewById(R.id.rl_cookMenuDetail_leftTopBack);
+
+
+//----------------------添加 主 listView的 滑动事件----------------------------------
+                 stickyList.setOnScrollListener(new AbsListView.OnScrollListener() {
+                     @Override
+                     public void onScrollStateChanged(AbsListView view, int scrollState) {
+                         Log.e("oooo", scrollState + "");
+
+                     }
+
+                     @Override
+                     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+                         if (firstVisibleItem == 3) {
+                             tv_cookMenuDetail_topTheCookName.setVisibility(View.VISIBLE);
+                             tv_cookMenuDetail_topTheCookName.setText(title);
+//                rl_cookMenuDetail_leftTopBack.setBackgroundColor(Color.WHITE);
+                             tv_cookMenuDetail_topTheCookName.setBackgroundResource(R.drawable.the_title_background);
+
+                             ib_cookMenuDetail_leftTopBack.setBackgroundColor(Color.WHITE);
+                             ib_cookMenuDetail_leftTopBack.setBackgroundResource(R.drawable.cook_detail_back_red);
+
+                         }
+                         if (firstVisibleItem == 1) {
+                             tv_cookMenuDetail_topTheCookName.setVisibility(View.INVISIBLE);
+
+                             ib_cookMenuDetail_leftTopBack.setBackgroundColor(Color.WHITE);
+                             ib_cookMenuDetail_leftTopBack.setBackgroundResource(R.drawable.cook_detail_back);
+
+
+                         }
+
+//                Log.e("oooo", "firstVisibleItem=" + firstVisibleItem);
+//                Log.e("oooo", "visibleItemCount=" + visibleItemCount);
+//                Log.e("oooo", "totalItemCount=" + totalItemCount);
+                     }
+                 });
 
 
              }
          };
-
 
 
                 BmobQuery<Recipe> bmobQuery = new BmobQuery<Recipe>();
@@ -378,7 +412,7 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
             theDescription0 = new String[steplast+1];
 
             for(int j=0;j<theDescription0.length;j++){
-                theDescription0[j]="8";
+                theDescription0[j]="";
             }
 
 
@@ -562,6 +596,11 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                         .cacheOnDisk(true)/*缓存值SDcard*/
                         .bitmapConfig(Bitmap.Config.RGB_565)
                         .build();
+
+
+              if(position==0){
+                imageLoader.displayImage(avatar, iv_cookMenuDetail_the_picOf_author, options);
+              }
                 imageLoader.displayImage(theUrl[position], holder.imageView, options);
 
 //            }
