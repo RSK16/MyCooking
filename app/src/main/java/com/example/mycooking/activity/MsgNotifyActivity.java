@@ -16,7 +16,7 @@ public class MsgNotifyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_msg_notify);
-
+        getSupportActionBar().hide();
 
         RelativeLayout rl_msgnotifyactivity_news = (RelativeLayout) findViewById(R.id.rl_msgnotifyactivity_news);
         RelativeLayout rl_msgnotifyactivity_comment = (RelativeLayout) findViewById(R.id.rl_msgnotifyactivity_comment);
@@ -60,10 +60,13 @@ public class MsgNotifyActivity extends AppCompatActivity {
         });
     }
     //忽略
-    private void ignore(View v){
+    public void ignore(View v){
 
         Log.i(TAG,"ignore");
     }
 
+    public void back2WodePage(View v){
+        finish();
+    }
 
 }

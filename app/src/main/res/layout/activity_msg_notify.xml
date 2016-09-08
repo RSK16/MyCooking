@@ -17,9 +17,11 @@
             android:layout_width="20dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
+            android:onClick="back2WodePage"
             android:background="@drawable/back_red"/>
         <TextView
-            android:layout_width="370dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="消息通知"
             android:textColor="#aa000000"
@@ -47,9 +49,9 @@
         android:id="@+id/rl_msgnotifyactivity_news">
 
         <ImageView
+            android:id="@+id/iv_msgnotifyactivity_news"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:id="@+id/iv_msgnotifyactivity_news"
             android:layout_centerVertical="true"
             android:background="@drawable/news_news" />
 
