@@ -49,11 +49,11 @@
         android:text="暂时没有数据............."
         android:gravity="center"
         />
-    <!--<ListView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lv_menudetailactivity_dishlist"></ListView>-->
-    <android.support.v4.view.ViewPager
+        android:id="@+id/lv_menudetailactivity_dishlist"></ListView>
+   <!-- <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -65,5 +65,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:id="@+id/indicator_menudetailList_sort">
-    </com.viewpagerindicator.TabPageIndicator>
+    </com.viewpagerindicator.TabPageIndicator>-->
 </LinearLayout>

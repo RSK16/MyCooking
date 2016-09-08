@@ -12,7 +12,7 @@ public class Recipe extends BmobObject {
     private String fav_num;
     private String photo_num;
     private String href;//分享链接
-    private String classname;//菜类 ：川菜。。
+    private String classname;//-----------------------菜类
     private String bclassname;//菜级别： 中华菜系。。
     private String fclassname;
     private String kouwei;//--------------------------口味

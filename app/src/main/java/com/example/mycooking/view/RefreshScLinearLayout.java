@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.example.mycooking.R;
 import com.example.mycooking.activity.BreakfastActivity;
+import com.example.mycooking.activity.MenuDetailActivity;
 import com.example.mycooking.activity.MenuRankActivity;
 import com.example.mycooking.activity.MenuSortActivity;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -119,7 +120,7 @@ public class RefreshScLinearLayout extends LinearLayout {
         bt_suggestpage_rank = (Button) scChildView.findViewById(R.id.bt_suggestpage_Rank);
 
 
-        CirclePageIndicator indicator_suggestmeal = (CirclePageIndicator) scChildView.findViewById(R.id.indicator_suggestmeal);
+        final CirclePageIndicator indicator_suggestmeal = (CirclePageIndicator) scChildView.findViewById(R.id.indicator_suggestmeal);
         ViewPager vp_suggestPage_meal = (ViewPager) scChildView.findViewById(R.id.vp_suggestPage_meal);
         vp_suggestPage_meal.setAdapter(new MysuggestmealPagerAdapter());
 
@@ -140,7 +141,10 @@ public class RefreshScLinearLayout extends LinearLayout {
         bt_suggestpage_breakfest.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context,BreakfastActivity.class));
+                Intent intent = new Intent(context,MenuDetailActivity.class);
+                intent.putExtra("key","classname");
+                intent.putExtra("sort","早餐");
+                context.startActivity(intent);
             }
         });
 

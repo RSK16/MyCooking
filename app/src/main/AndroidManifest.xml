@@ -33,6 +33,7 @@
             android:name=".activity.MainActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
         <activity android:name=".activity.MenuRankActivity" />
+        <activity android:name=".activity.MenuDetailActivity"/>
         <activity android:name=".activity.MenuSortActivity" />
         <activity android:name=".activity.BBVideoPlayer" />
         <activity android:name=".activity.SplashActivity">

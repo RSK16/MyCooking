@@ -112,7 +112,7 @@ public class MenuSortActivity extends AppCompatActivity {
                             pagetitlelist[i]=t;
                         }
                         //===========将这个分类下的所有类别带到下个页面
-                        intent.putExtra("pagetitlelist",pagetitlelist);
+                        //intent.putExtra("pagetitlelist",pagetitlelist);
 
                         if(currentPosition>=2&&currentPosition<=9){
                            intent.putExtra("key","classname");
