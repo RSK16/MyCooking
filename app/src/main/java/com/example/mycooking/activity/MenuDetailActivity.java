@@ -119,7 +119,7 @@ public class MenuDetailActivity extends AppCompatActivity {
 
     }
 
-    public  void selectrecipe(String key, String value) {
+    public   void selectrecipe(String key, String value) {
 
         //Log.i(TAG,which+"=which,selectrecipe");
         //初始化Bmob

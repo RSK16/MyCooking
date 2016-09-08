@@ -3,30 +3,43 @@ package com.example.mycooking.view;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Message;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
-import com.example.mycooking.activity.BreakfastActivity;
+import com.example.mycooking.activity.CookMenuDetailActivity;
 import com.example.mycooking.activity.MenuDetailActivity;
 import com.example.mycooking.activity.MenuRankActivity;
 import com.example.mycooking.activity.MenuSortActivity;
+import com.example.mycooking.bean.Recipe;
+import com.lidroid.xutils.BitmapUtils;
 import com.viewpagerindicator.CirclePageIndicator;
 import java.util.Calendar;
+import java.util.List;
+import java.util.logging.Handler;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 
 /**
@@ -65,6 +78,20 @@ public class RefreshScLinearLayout extends LinearLayout {
     private ImageButton bt_suggestpage_sort;
     private Button bt_suggestpage_rank;
     private ImageButton bt_suggestpage_breakfest;
+    private List<Recipe> meallist;
+    private ImageView iv_vpMeal_topimage;
+    private TextView tv_vpMeal_toptitle;
+    private TextView tv_vpMeal_topinfo;
+    private ImageView iv_vpMeal_centerimage;
+    private TextView tv_vpMeal_centertitle;
+    private TextView tv_vpMeal_centerinfo;
+    private ImageView iv_vpMeal_bottomimage;
+    private TextView tv_vpMeal_bottomtitle;
+    private TextView tv_vpMeal_bottominfo;
+    private FrameLayout fl_vpMeal_top;
+    private FrameLayout fl_vpMeal_center;
+    private FrameLayout fl_vpMeal_bottom;
+    private MysuggestmealPagerAdapter mysuggestmealPagerAdapter;
 
 
     public RefreshScLinearLayout(Context context) {
@@ -122,7 +149,8 @@ public class RefreshScLinearLayout extends LinearLayout {
 
         final CirclePageIndicator indicator_suggestmeal = (CirclePageIndicator) scChildView.findViewById(R.id.indicator_suggestmeal);
         ViewPager vp_suggestPage_meal = (ViewPager) scChildView.findViewById(R.id.vp_suggestPage_meal);
-        vp_suggestPage_meal.setAdapter(new MysuggestmealPagerAdapter());
+        mysuggestmealPagerAdapter = new MysuggestmealPagerAdapter();
+        vp_suggestPage_meal.setAdapter(mysuggestmealPagerAdapter);
 
         indicator_suggestmeal.setViewPager(vp_suggestPage_meal);
         //Log.i(TAG,indicator_suggestmeal.toString());
@@ -197,16 +225,171 @@ public class RefreshScLinearLayout extends LinearLayout {
 
     }
 
-    private void refreshanimation() {
-        //1、箭头旋转动画
-        rotateAnimation = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        rotateAnimation.setDuration(200);//动画持续时间
-        rotateAnimation.setFillAfter(true);//动画结束后保持动画的最后一帧
-        //2、箭头反转动画
-        reverseAnimation = new RotateAnimation(180, 0, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        reverseAnimation.setDuration(200);
-        reverseAnimation.setFillAfter(true);
+    public android.os.Handler handler = new android.os.Handler(){
+        public void handleMessage(Message msg){
+            if(msg.what==1){
+
+                meallist = (List<Recipe>) msg.obj;
+               // mysuggestmealPagerAdapter.notifyDataSetChanged();
+                Log.i(TAG,"list.size="+meallist.size());
+                BitmapUtils bitmapUtils = new BitmapUtils(context);
+                //---------------------------------
+                if(meallist.size()!=0) {
+
+                    Recipe recipe = meallist.get(0);
+                    String title = recipe.getTitle();
+                    String titlepic = recipe.getTitlepic();
+                    final String objectId = recipe.getObjectId();
+
+                    tv_vpMeal_toptitle.setText(title);
+                    bitmapUtils.display(iv_vpMeal_topimage, titlepic);
+                    fl_vpMeal_top.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context, CookMenuDetailActivity.class);
+                            intent.putExtra("objectId", objectId);
+                            context.startActivity(intent);
+                        }
+                    });
+
+                    //---------------------------------------
+                    Recipe recipe1 = meallist.get(1);
+                    String title1 = recipe1.getTitle();
+                    String titlepic1 = recipe1.getTitlepic();
+                    final String objectId1 = recipe1.getObjectId();
+
+                    tv_vpMeal_centertitle.setText(title1);
+                    bitmapUtils.display(iv_vpMeal_centerimage, titlepic1);
+                    fl_vpMeal_center.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context, CookMenuDetailActivity.class);
+                            intent.putExtra("objectId", objectId1);
+                            context.startActivity(intent);
+                        }
+                    });
+
+                    //----------------------------------------
+                    Recipe recipe2 = meallist.get(2);
+                    String title2 = recipe2.getTitle();
+                    String newsphoto2 = recipe2.getNewsphoto();
+                    final String objectId2 = recipe2.getObjectId();
+
+                    tv_vpMeal_bottomtitle.setText(title2);
+                    bitmapUtils.display(iv_vpMeal_bottomimage, newsphoto2);
+                    fl_vpMeal_bottom.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context, CookMenuDetailActivity.class);
+                            intent.putExtra("objectId", objectId2);
+                            context.startActivity(intent);
+                        }
+                    });
+                }
+
+            }
+        }
+    };
+
+    //给Viewpager设置Adapter
+    class MysuggestmealPagerAdapter extends PagerAdapter {
+
+
+
+        String[] Meals = new String[]{"早餐","午餐","下午茶","晚餐","夜宵"};
+
+        String[] mealInfo = new String[]{"早餐早餐早餐","午餐午餐午餐","下午茶下午茶下午茶","晚餐晚餐晚餐","夜宵夜宵夜宵"};
+
+        @Override
+        public int getCount() {
+            return 5;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            return view==object;
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+
+            View page = View.inflate(context, R.layout.viewpager_meal, null);
+
+            fl_vpMeal_top = (FrameLayout) page.findViewById(R.id.fl_vpMeal_top);
+            iv_vpMeal_topimage = (ImageView) page.findViewById(R.id.iv_vpMeal_topimage);
+            tv_vpMeal_toptitle = (TextView) page.findViewById(R.id.tv_vpMeal_toptitle);
+            tv_vpMeal_topinfo = (TextView) page.findViewById(R.id.tv_vpMeal_topinfo);
+
+            fl_vpMeal_center = (FrameLayout) page.findViewById(R.id.fl_vpMeal_center);
+            iv_vpMeal_centerimage = (ImageView) page.findViewById(R.id.iv_vpMeal_centerimage);
+            tv_vpMeal_centertitle = (TextView) page.findViewById(R.id.tv_vpMeal_centertitle);
+            tv_vpMeal_centerinfo = (TextView) page.findViewById(R.id.tv_vpMeal_centerinfo);
+
+            fl_vpMeal_bottom = (FrameLayout) page.findViewById(R.id.fl_vpMeal_bottom);
+            iv_vpMeal_bottomimage = (ImageView) page.findViewById(R.id.iv_vpMeal_bottomimage);
+            tv_vpMeal_bottomtitle = (TextView) page.findViewById(R.id.tv_vpMeal_bottomtitle);
+            tv_vpMeal_bottominfo = (TextView) page.findViewById(R.id.tv_vpMeal_bottominfo);
+
+            //拿服务器上的图片显示
+            String whichmeal = Meals[position];
+            selectrecipe_vp("classname",whichmeal);
+
+            //显示文字
+            TextView tv_vpMeal_meal = (TextView) page.findViewById(R.id.tv_vpMeal_meal);
+            TextView tv_vpMeal_info = (TextView) page.findViewById(R.id.tv_vpMeal_info);
+
+            tv_vpMeal_meal.setText(Meals[position]);
+            tv_vpMeal_info.setText(mealInfo[position]);//------要修改！！！---------------
+            //将view放入容器中
+            container.addView(page);
+            //将object返回
+            return page;//super.instantiateItem(container, position);
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+
+            container.removeView((View) object);
+        }
     }
+
+    public static void fun(){
+        scrollView.scrollTo(0,0);
+    }
+
+    //去服务器拿数据
+    public   void selectrecipe_vp(String key, String value) {
+
+        //初始化Bmob
+        //Bmob.initialize(context,APP_ID);
+        BmobQuery<Recipe> bmobQuery = new BmobQuery<>();
+        //查询条件 两种
+        bmobQuery.addWhereEqualTo(key, value);
+        bmobQuery.setLimit(3);
+
+        //查询方法
+        bmobQuery.findObjects(new FindListener<Recipe>() {
+            @Override
+            public void done(List<Recipe> list, BmobException e) {
+                if (e == null) {
+                    Log.i(TAG, "done: 查询数据成功,共" + list.size() + "条数据。");
+                    //查询后的业务逻辑
+
+
+                    //子线程，执行完发消息给主线程去处理
+                    Message message = new Message();
+                    message.what=1;
+                    message.obj=list;
+                    handler.sendMessage(message);
+                } else {
+                    Log.i(TAG, "done: 查询数据失败" + e.getMessage());
+                    return;
+                }
+            }
+        });
+
+    }
+
 
     //由于在onCreate()中拿不到refreshheader的高度，所以需要手动计算高度
     private void measureView(View childView){
@@ -232,8 +415,8 @@ public class RefreshScLinearLayout extends LinearLayout {
 
     float startX;
     float startY;
-   /* float endX;
-    float endY;*/
+    /* float endX;
+     float endY;*/
     //为ScrollView绑定滑动事件
     private void touchScrollView(){
 
@@ -331,16 +514,16 @@ public class RefreshScLinearLayout extends LinearLayout {
         });
     }
 
-//    @Override
-//    public void addView(View child, int index, ViewGroup.LayoutParams params) {
-//        //读取XML中的默认给 -1 自己添加的为0 和 1
-//
-//        if(index==-1){
-//            subLayout.addView(child,params);
-//            return;
-//        }
-//        super.addView(child, index, params);
-//    }
+    private void refreshanimation() {
+        //1、箭头旋转动画
+        rotateAnimation = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnimation.setDuration(200);//动画持续时间
+        rotateAnimation.setFillAfter(true);//动画结束后保持动画的最后一帧
+        //2、箭头反转动画
+        reverseAnimation = new RotateAnimation(180, 0, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        reverseAnimation.setDuration(200);
+        reverseAnimation.setFillAfter(true);
+    }
 
     //外界调用来重写 刷新时，要在后台子线程中做的事情
     public void setRefreshListener(RefreshListener listener){
@@ -349,7 +532,7 @@ public class RefreshScLinearLayout extends LinearLayout {
 
     private void changeHeaderViewByState(){
 
-    //三种状态 下拉刷新 松开刷新数据 正在加载
+        //三种状态 下拉刷新 松开刷新数据 正在加载
         switch (current_State){
             case PULL_To_REFRESH:
                 // 是由RELEASE_To_REFRESH状态转变来的
@@ -455,49 +638,5 @@ public class RefreshScLinearLayout extends LinearLayout {
         String timenow = year+"年"+month+"月"+day+"日"+hour1+":"+minute1+":"+second1;
         tv_refreshheader_lastupdate.setText("最近更新:" + timenow);
         changeHeaderViewByState();
-    }
-
-    //给Viewpager设置Adapter
-    class MysuggestmealPagerAdapter extends PagerAdapter {
-
-        String[] whichMeal = new String[]{"早餐","午餐","下午茶","晚餐","夜宵"};
-
-        String[] mealInfo = new String[]{"早餐早餐早餐","午餐午餐午餐","下午茶下午茶下午茶","晚餐晚餐晚餐","夜宵夜宵夜宵"};
-        @Override
-        public int getCount() {
-            return 5;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view==object;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-
-            View page = View.inflate(context, R.layout.viewpager_meal, null);
-            TextView tv_vpMeal_meal = (TextView) page.findViewById(R.id.tv_vpMeal_meal);
-            TextView tv_vpMeal_info = (TextView) page.findViewById(R.id.tv_vpMeal_info);
-
-            tv_vpMeal_meal.setText(whichMeal[position]);
-            tv_vpMeal_info.setText(mealInfo[position]);
-            //将view放入容器中
-            container.addView(page);
-            //将object返回
-            return page;//super.instantiateItem(container, position);
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-
-
-            container.removeView((View) object);
-
-        }
-    }
-
-    public static void fun(){
-        scrollView.scrollTo(0,0);
     }
 }

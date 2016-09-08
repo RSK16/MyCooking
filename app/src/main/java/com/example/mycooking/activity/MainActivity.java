@@ -20,6 +20,8 @@ import com.example.mycooking.page.topicPage;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.bmob.v3.Bmob;
+
 
 public class MainActivity extends Activity {
 
@@ -31,6 +33,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //初始化Bmob
+        Bmob.initialize(this,"2f78c11280ce16e4d17e9b7340caba38");
+
         rg_group = (RadioGroup) findViewById(R.id.rg_group);
         vp_main_shoppingmall =  (NoScrollViewPager) findViewById(R.id.vp_main_shoppingmall);
         pageList.add(new SuggestPage(this));

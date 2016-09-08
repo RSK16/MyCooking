@@ -57,7 +57,6 @@
         <activity android:name=".activity.shangchuangcaipu.NumberActivity" />
         <activity android:name=".activity.shangchuangcaipu.Timeactivity" />
         <activity android:name=".activity.shangchuangcaipu.EditliaoActivity" />
-        <activity android:name=".activity.BreakfastActivity" />
         <activity android:name=".activity.signNewUser" />
         <activity android:name=".activity.MyLoginActivity"></activity>
     </application>
