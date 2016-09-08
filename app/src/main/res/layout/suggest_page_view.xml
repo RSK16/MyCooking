@@ -9,17 +9,19 @@
 
     <!--标题栏-->
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp">
         <ImageButton
-            android:layout_width="40dp"
+
+            android:layout_width="30dp"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
             android:layout_centerVertical="true"
-            android:layout_gravity="center_vertical"
+
             android:background="@drawable/tj_left_icon"
             android:id="@+id/bt_suggestPagetitle_left"/>
 
@@ -27,7 +29,7 @@
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                android:layout_centerVertical="true"
+
                 android:layout_marginLeft="20dp"
                 android:background="#f5f5f5"
                 android:gravity="center_vertical"
@@ -39,7 +41,7 @@
         <ImageButton
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+
             android:layout_marginRight="7dp"
             android:layout_marginLeft="8dp"
             android:background="@drawable/tj_msg"

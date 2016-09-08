@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:padding="10dp"
     android:layout_width="match_parent"
     android:layout_height="590dp"
     >
-    <RelativeLayout
+    <!--第一张图片-->
+    <FrameLayout
         android:layout_gravity="center"
-        android:layout_width ="370dp"
+        android:layout_width ="match_parent"
         android:layout_height="170dp"
-        android:id="@+id/rl_vpMeal_topimage"
-        android:background="@mipmap/fish1">
+        android:id="@+id/fl_vpMeal_top">
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_vpMeal_topimage" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,18 +36,22 @@
             android:textSize="15dp"
             android:id="@+id/tv_vpMeal_topinfo"
             />
-    </RelativeLayout>
+    </FrameLayout>
     <View
         android:layout_width="370dp"
         android:layout_height="10dp"
         android:background="#fff"/>
-
-    <RelativeLayout
+    <!--第二张图片-->
+    <FrameLayout
         android:layout_gravity="center"
-        android:layout_width ="370dp"
+        android:layout_width ="match_parent"
         android:layout_height="170dp"
-        android:id="@+id/rl_vpMeal_centerimage"
-        android:background="@mipmap/cake1">
+        android:id="@+id/fl_vpMeal_center">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/iv_vpMeal_centerimage" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,17 +72,23 @@
             android:textSize="15dp"
             android:id="@+id/tv_vpMeal_centerinfo"
             />
-    </RelativeLayout>
+    </FrameLayout>
     <View
         android:layout_width="370dp"
         android:layout_height="10dp"
         android:background="#fff"/>
-    <RelativeLayout
+    <!--第三张图片-->
+    <FrameLayout
         android:layout_gravity="center"
-        android:layout_width ="370dp"
+        android:layout_width ="match_parent"
         android:layout_height="170dp"
-        android:id="@+id/rl_vpMeal_bottomimage"
-        android:background="@mipmap/gruel1">
+        android:id="@+id/fl_vpMeal_bottom">
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_vpMeal_bottomimage"
+            android:layout_gravity="center" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,7 +109,9 @@
             android:textSize="15dp"
             android:id="@+id/tv_vpMeal_bottominfo"
             />
-    </RelativeLayout>
+
+
+    </FrameLayout>
 
     <TextView
         android:layout_width="wrap_content"

@@ -1,9 +1,11 @@
 package com.example.mycooking.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -51,6 +53,7 @@ public class MenuSortActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_sort);
 
+
         getSupportActionBar().hide();
         lv_menusortactivity_list     = (ListView) findViewById(R.id.lv_menusortactivity_list);
         gv_menuSortactivity_gridview = (GridView) findViewById(R.id.gv_menuSortactivity_gridview);
@@ -65,6 +68,8 @@ public class MenuSortActivity extends AppCompatActivity {
         menuSortGridviewAdapter = new MenuSortGridviewAdapter();
         gv_menuSortactivity_gridview.setAdapter(menuSortGridviewAdapter);
 
+
+
         //-------给listview的item设点击事件
         lv_menusortactivity_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -76,13 +81,55 @@ public class MenuSortActivity extends AppCompatActivity {
             }
         });
 
-        //给GridView设item的点击事件，查看不同分类下的详细内容
-        gv_menuSortactivity_gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-            }
-        });
+
+            Log.i(TAG,currentPosition+"");
+
+
+            gv_menuSortactivity_gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Log.i(TAG,"click");
+                    //classname(每日三餐、家常菜谱、烘焙、各地小吃、外国菜谱、中华菜谱里的
+                    //给GridView设item的点击事件，查看不同分类下的详细内容
+                    if(currentPosition==2||currentPosition==3||currentPosition==6||currentPosition==7||currentPosition==8||currentPosition==9
+                            ||currentPosition==15||currentPosition==16||currentPosition==17){
+
+                       Intent intent = new Intent(MenuSortActivity.this,MenuDetailActivity.class);
+
+                       TextView tv_menusort_gridview= (TextView) view.findViewById(R.id.tv_menusort_gridview);
+                       String text = (String) tv_menusort_gridview.getText();
+                       //Log.i(TAG,text);
+                       //将菜谱类别带到下个页面
+                       intent.putExtra("sort",text);
+
+                       //====================================================
+                        int size = categoryBeanList.get(currentPosition).getD().size();
+                        String[] pagetitlelist = new String[size];
+                        for (int i=0;i<size;i++){
+                            String t = categoryBeanList.get(currentPosition).getD().get(i).getT();
+                            pagetitlelist[i]=t;
+                        }
+                        //===========将这个分类下的所有类别带到下个页面
+                        //intent.putExtra("pagetitlelist",pagetitlelist);
+
+                        if(currentPosition>=2&&currentPosition<=9){
+                           intent.putExtra("key","classname");
+                       }else if(currentPosition==15){
+                           intent.putExtra("key","gongyi");
+                       }else if(currentPosition==16){
+                           intent.putExtra("key","kouwei");
+                       }else if(currentPosition==17){
+                           intent.putExtra("key","make_time");
+                       }
+
+                       startActivity(intent);
+                    }
+                }
+            });
+
+
     }
 
     public void back(View v){

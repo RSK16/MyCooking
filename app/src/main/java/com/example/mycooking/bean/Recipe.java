@@ -7,23 +7,23 @@ import cn.bmob.v3.BmobObject;
  */
 public class Recipe extends BmobObject {
     private Integer id;
-    private String title;//标题
+    private String title;//----------------------------菜名
     private String onclick;
     private String fav_num;
     private String photo_num;
     private String href;//分享链接
-    private String classname;//菜类 ：川菜。。
+    private String classname;//-----------------------菜类
     private String bclassname;//菜级别： 中华菜系。。
     private String fclassname;
-    private String kouwei;//口味
-    private String gongyi;//工艺
-    private String make_time;//制作时间
+    private String kouwei;//--------------------------口味
+    private String gongyi;//----------------------------工艺
+    private String make_time;//-----------------------制作时间
     private String make_time_num;
     private String make_diff;//制作水平：初级 中级。。
     private String make_pretime;//准备时间
     private String make_amount;//制作人数
     private String step;//步骤
-    private String titlepic;//标题图片
+    private String titlepic;//--------------------每道菜的图片
     private String smalltext;
     private String is_recipe;
     private String author;//用户  Json数据
@@ -35,7 +35,7 @@ public class Recipe extends BmobObject {
     private String yyxx;//菜所含元素和功效  Json数据
     private String scene;//场景
     private String tools;//工具
-    private String rate;//打分  五个星星为满分
+    private String rate;//打分   五个星星为满分
     private String lastdotime;
     private String kitchen_ware;
     private String is_zan; //是否点赞
