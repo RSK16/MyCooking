@@ -71,7 +71,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"
+            app:civ_border_color="#FECA07"
             android:id="@+id/iv_cookMenuDetail_the_picOf_author"
             android:layout_width="77dp"
             android:layout_height="77dp"
@@ -95,12 +95,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
+        android:gravity="center"
         >
         <TextView
             android:id="@+id/tv_cookMenuDetail_the_descriptionOf_cook"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="回锅肉源自于川菜，但因为实在是太具魅力广“泛流”传于中国家庭里。说到家常菜一定少不了回锅肉，也正是因为流传面如此之广，所以也衍生了不少版本的回锅肉。每个地方甚至每个家庭都根据各地和自己的喜好经过了改良。如此钟爱杏鲍菇的帅一定要改良融合一下，加入了杏鲍菇的“帅家回锅肉”有木有触动你的味蕾呢？试试就知道。"/>
+            android:textSize="16sp"
+            android:text="菜谱介绍"/>
 
     </LinearLayout>
 
