@@ -62,6 +62,11 @@
         <activity android:name=".activity.signNewUser" />
         <activity android:name=".activity.MyLoginActivity" />
         <activity android:name=".activity.MsgNotifyActivity"></activity>
+        <activity android:name=".activity.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        </activity>
     </application>
 
 </manifest>
