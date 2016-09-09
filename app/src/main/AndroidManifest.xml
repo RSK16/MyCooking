@@ -30,10 +30,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
             android:name=".activity.MainActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity android:name=".activity.MenuRankActivity" />
-        <activity android:name=".activity.MenuDetailActivity"/>
+        <activity android:name=".activity.MenuDetailActivity" />
         <activity android:name=".activity.MenuSortActivity" />
         <activity android:name=".activity.BBVideoPlayer" />
         <activity android:name=".activity.SplashActivity">
@@ -59,7 +61,8 @@
         <activity android:name=".activity.shangchuangcaipu.EditliaoActivity" />
         <activity android:name=".activity.signNewUser" />
         <activity android:name=".activity.MyLoginActivity" />
-        <activity android:name=".activity.UpdateUserInfo"></activity>
+        <activity android:name=".activity.UpdateUserInfo" />
+        <activity android:name=".activity.VideoActivity"></activity>
     </application>
 
 </manifest>
