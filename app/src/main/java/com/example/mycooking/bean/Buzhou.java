@@ -8,6 +8,8 @@ import java.util.List;
 public class Buzhou {
 
 
+
+
     /**
      * d : 将粉丝提前浸泡三四个小时至心透
      * dt : 0
@@ -17,11 +19,13 @@ public class Buzhou {
      * i : 0
      */
 
+
     private List<ZuofaBean> zuofa;
 
     public List<ZuofaBean> getZuofa() {
         return zuofa;
     }
+
 
     public void setZuofa(List<ZuofaBean> zuofa) {
         this.zuofa = zuofa;
@@ -31,9 +35,21 @@ public class Buzhou {
         private String d;
         private String dt;
         private String st;
-        private String step;
+        private int step;
         private String showNum;
         private String i;
+
+        @Override
+        public String toString() {
+            return "ZuofaBean{" +
+                    "d='" + d + '\'' +
+                    ", dt='" + dt + '\'' +
+                    ", st='" + st + '\'' +
+                    ", step='" + step + '\'' +
+                    ", showNum='" + showNum + '\'' +
+                    ", i='" + i + '\'' +
+                    '}';
+        }
 
         public String getD() {
             return d;
@@ -59,11 +75,11 @@ public class Buzhou {
             this.st = st;
         }
 
-        public String getStep() {
+        public int getStep() {
             return step;
         }
 
-        public void setStep(String step) {
+        public void setStep(int step) {
             this.step = step;
         }
 

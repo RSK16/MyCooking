@@ -137,7 +137,7 @@ public class LoadTwoActivity extends Activity {
         if (!TextUtils.isEmpty(et_buzhou_desc.getText())) {
             zuofaBean.setDt(et_buzhou_desc.getText().toString());
         }
-        zuofaBean.setStep(1+"");
+        zuofaBean.setStep(1);
 
         //数据的封装到zuofaBean
         //步骤里图片点击事件
@@ -158,7 +158,7 @@ public class LoadTwoActivity extends Activity {
                 TextView buzhou_tv_id2 = (TextView) inflate.findViewById(R.id.buzhou_tv_id2);
                 int a=stepnumber+1;
                 buzhou_tv_id2.setText("第"+a+"步");
-                zuofaBean.setStep(a+"");
+                zuofaBean.setStep(a);
                 EditText buzhou_et_name2 = (EditText) inflate.findViewById(R.id.buzhou_et_name2);
                 zuofaBean.setD(buzhou_et_name2.getText().toString());
                 ImageButton up2 = (ImageButton) inflate.findViewById(R.id.up2);

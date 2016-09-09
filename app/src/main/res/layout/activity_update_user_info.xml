@@ -35,7 +35,6 @@
         <Button
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:onClick="doclick"
             android:gravity="center_vertical"
             android:id="@+id/bt_icon"
             android:drawableRight="@drawable/dish_ms_publis_recipe_r"
@@ -61,7 +60,7 @@
         <Button
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:onClick="doclick"
+
             android:gravity="center_vertical"
             android:id="@+id/bt_username"
             android:drawableRight="@drawable/dish_ms_publis_recipe_r"
@@ -77,7 +76,8 @@
             android:layout_marginRight="30dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="right|center_vertical" />
+            android:layout_gravity="right|center_vertical"
+            android:text="11111111"/>
     </FrameLayout>
     <FrameLayout
         android:layout_width="match_parent"
@@ -86,7 +86,6 @@
         <Button
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:onClick="doclick"
             android:gravity="center_vertical"
             android:id="@+id/bt_sex"
             android:drawableRight="@drawable/dish_ms_publis_recipe_r"
@@ -111,7 +110,6 @@
         <Button
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:onClick="doclick"
             android:gravity="center_vertical"
             android:id="@+id/bt_birth"
             android:drawableRight="@drawable/dish_ms_publis_recipe_r"
@@ -136,7 +134,6 @@
         <Button
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:onClick="doclick"
             android:gravity="center_vertical"
             android:id="@+id/bt_address"
             android:drawableRight="@drawable/dish_ms_publis_recipe_r"
@@ -161,7 +158,6 @@
         <Button
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:onClick="doclick"
             android:gravity="center_vertical"
             android:id="@+id/bt_job"
             android:drawableRight="@drawable/dish_ms_publis_recipe_r"
