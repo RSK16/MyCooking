@@ -2,6 +2,11 @@ package com.example.mycooking.page;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.IPackageStatsObserver;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageStats;
+import android.os.RemoteException;
+import android.text.format.Formatter;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -11,6 +16,7 @@ import android.widget.TextView;
 import com.example.mycooking.R;
 import com.example.mycooking.activity.MsgNotifyActivity;
 import com.example.mycooking.activity.MyLoginActivity;
+import com.example.mycooking.activity.SettingsActivity;
 import com.example.mycooking.activity.UpdateUserInfo;
 import com.example.mycooking.activity.shangchuangcaipu.PublishActivity;
 import com.example.mycooking.application.Constants;
@@ -18,6 +24,9 @@ import com.example.mycooking.bean.Userinfo;
 import com.lidroid.xutils.BitmapUtils;
 
 import org.json.JSONObject;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobRealTimeData;
@@ -33,6 +42,9 @@ public class WodePage extends BasePage implements View.OnClickListener {
     private TextView login_sign;
     private ImageButton mine_icon;
     private TextView mine_qianming;
+    private String cache;
+    private static  RelativeLayout rl_wodeactivity_settings;
+    private static Activity activity;
 
     public WodePage(Activity activity) {
         super(activity);
@@ -79,6 +91,7 @@ public class WodePage extends BasePage implements View.OnClickListener {
             bitmapUtils.display(mine_icon,icon_url);
         }
 
+        //----------------------------------
         RelativeLayout rl_wodeactivity_msgnotify = (RelativeLayout) mine.findViewById(R.id.rl_wodeactivity_msgnotify);
         rl_wodeactivity_msgnotify.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,9 +111,31 @@ public class WodePage extends BasePage implements View.OnClickListener {
             }
         });
 
+        //显示缓存
+        rl_wodeactivity_settings = (RelativeLayout) mine.findViewById(R.id.rl_wodeactivity_settings);
+        rl_wodeactivity_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(mActivity, SettingsActivity.class);
+
+                mActivity.startActivity(intent2);
+            }
+        });
+        //---------------------------------
         return mine;
     }
 
+    public static void setCache(){
+        /*rl_wodeactivity_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(activity, SettingsActivity.class);
+                getCache();
+                intent2.putExtra("cache",cache);
+                activity.startActivity(intent2);
+            }
+        });*/
+    }
     /**
      * 监听服务器数据变化回调
      */
@@ -131,4 +166,6 @@ public class WodePage extends BasePage implements View.OnClickListener {
                 break;
         }
     }
+
+
 }

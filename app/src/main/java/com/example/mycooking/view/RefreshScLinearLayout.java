@@ -2,6 +2,8 @@ package com.example.mycooking.view;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Message;
 import android.support.v4.view.PagerAdapter;
@@ -67,7 +69,7 @@ public class RefreshScLinearLayout extends LinearLayout {
     private RefreshListener listener;
 
     private ProgressBar pb_refreshheader_loading;
-    private ImageView iv_refreshheader_arrow;
+    private ImageView iv_refreshheader_gulugulu;
     private TextView tv_refreshheader_tips;
     private TextView tv_refreshheader_lastupdate;
     private RotateAnimation rotateAnimation;
@@ -92,6 +94,7 @@ public class RefreshScLinearLayout extends LinearLayout {
     private FrameLayout fl_vpMeal_center;
     private FrameLayout fl_vpMeal_bottom;
     private MysuggestmealPagerAdapter mysuggestmealPagerAdapter;
+    private AnimationDrawable drawable;
 
 
     public RefreshScLinearLayout(Context context) {
@@ -202,7 +205,8 @@ public class RefreshScLinearLayout extends LinearLayout {
 
         //-------------------------给refreshHeader设置下拉刷新动画
         pb_refreshheader_loading = (ProgressBar) refreshheader.findViewById(R.id.pb_refreshheader_loading);
-        iv_refreshheader_arrow = (ImageView) refreshheader.findViewById(R.id.iv_refreshheader_arrow);
+        iv_refreshheader_gulugulu = (ImageView) refreshheader.findViewById(R.id.iv_refreshheader_gulugulu);
+        drawable = (AnimationDrawable) iv_refreshheader_gulugulu.getDrawable();//拿到动画
 
         tv_refreshheader_tips = (TextView) refreshheader.findViewById(R.id.tv_refreshheader_tips);
         tv_refreshheader_lastupdate = (TextView)refreshheader.findViewById(R.id.tv_refreshheader_lastupdate);
@@ -538,18 +542,21 @@ public class RefreshScLinearLayout extends LinearLayout {
                 // 是由RELEASE_To_REFRESH状态转变来的
                 if (isBack) {
                     isBack = false;
-                    iv_refreshheader_arrow.startAnimation(reverseAnimation);
+
+                    //iv_refreshheader_gulugulu.startAnimation(reverseAnimation);
+                    //drawable.start();
                     //tv_refreshheader_tips.setText("下拉刷新");
                 }
                 tv_refreshheader_tips.setText("下拉刷新");
                 break;
             case RELEASE_To_REFRESH:
-                iv_refreshheader_arrow.setVisibility(View.VISIBLE);
+                iv_refreshheader_gulugulu.setVisibility(View.VISIBLE);
                 pb_refreshheader_loading.setVisibility(View.GONE);
                 tv_refreshheader_tips.setVisibility(View.VISIBLE);
                 tv_refreshheader_lastupdate.setVisibility(View.VISIBLE);
-                iv_refreshheader_arrow.clearAnimation();
-                iv_refreshheader_arrow.startAnimation(rotateAnimation);
+                iv_refreshheader_gulugulu.clearAnimation();
+                //iv_refreshheader_gulugulu.startAnimation(rotateAnimation);
+                drawable.start();
                 tv_refreshheader_tips.setText("松开刷新");
                 break;
             case REFRESHING:
@@ -557,9 +564,11 @@ public class RefreshScLinearLayout extends LinearLayout {
                 refreshheader.setPadding(0, lastHeaderPadding, 0, 0);
                 refreshheader.invalidate();
                 pb_refreshheader_loading.setVisibility(View.VISIBLE);
-                iv_refreshheader_arrow.clearAnimation();
-                iv_refreshheader_arrow.setVisibility(View.INVISIBLE);
+                iv_refreshheader_gulugulu.clearAnimation();
+                iv_refreshheader_gulugulu.setVisibility(View.INVISIBLE);
                 tv_refreshheader_tips.setText("正在刷新...");
+                drawable.start();
+
                 tv_refreshheader_lastupdate.setVisibility(View.VISIBLE);
                 break;
             case DONE:
@@ -567,8 +576,8 @@ public class RefreshScLinearLayout extends LinearLayout {
                 refreshheader.setPadding(0, lastHeaderPadding, 0, 0);
                 refreshheader.invalidate();
                 pb_refreshheader_loading.setVisibility(View.GONE);
-                iv_refreshheader_arrow.clearAnimation();
-                iv_refreshheader_arrow.setVisibility(View.VISIBLE);
+                iv_refreshheader_gulugulu.clearAnimation();
+                iv_refreshheader_gulugulu.setVisibility(View.VISIBLE);
                 tv_refreshheader_tips.setText("下拉刷新");
                 tv_refreshheader_lastupdate.setVisibility(View.VISIBLE);
                 break;
