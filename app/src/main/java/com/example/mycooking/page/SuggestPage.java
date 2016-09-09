@@ -79,16 +79,18 @@ public class SuggestPage extends BasePage {
             @Override
             public void doInBackground() {
 
-                new Thread(new Runnable() {
+                /*new Thread(new Runnable() {
                     @Override
                     public void run() {
                         try {
-                            Thread.currentThread().sleep(3000);
+                            Thread.currentThread().sleep(3000);//动画停留三秒
+
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
-                });
+                });*/
+
                 //刷新：在子线程
                 //Log.i(TAG,"doInBackground");
             }

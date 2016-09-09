@@ -568,7 +568,18 @@ public class RefreshScLinearLayout extends LinearLayout {
                 iv_refreshheader_gulugulu.setVisibility(View.INVISIBLE);
                 tv_refreshheader_tips.setText("正在刷新...");
                 drawable.start();
+                /*new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.currentThread().sleep(3000);//动画停留三秒
 
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+*/
                 tv_refreshheader_lastupdate.setVisibility(View.VISIBLE);
                 break;
             case DONE:
