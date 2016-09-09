@@ -1,6 +1,7 @@
 package com.example.mycooking.page;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.mycooking.R;
+import com.example.mycooking.activity.MsgNotifyActivity;
 import com.example.mycooking.activity.shangchuangcaipu.LoadOneActivity;
 import com.example.mycooking.view.RefreshScLinearLayout;
 
@@ -63,12 +65,30 @@ public class SuggestPage extends BasePage {
             }
         });
 
+        ImageButton bt_suggestPagetitle_right = (ImageButton) suggestPageView.findViewById(R.id.bt_suggestPagetitle_right);
+        bt_suggestPagetitle_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mActivity.startActivity(new Intent(mActivity, MsgNotifyActivity.class));
+            }
+        });
+
         ll_refreshactivity_refresh.setRefreshListener(new RefreshScLinearLayout.RefreshListener() {
             public static final String TAG = "RefreshCallBack";
 
             @Override
             public void doInBackground() {
 
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.currentThread().sleep(3000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
                 //刷新：在子线程
                 //Log.i(TAG,"doInBackground");
             }

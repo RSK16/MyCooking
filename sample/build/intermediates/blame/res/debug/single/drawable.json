@@ -4,6 +4,14 @@
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_device_alarms.xml"
     },
     {
+<<<<<<< HEAD
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_calendar.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
+    },
+    {
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_location.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_location.xml"
+=======
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_device_alarms.xml",
         "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_device_alarms.xml"
     },
@@ -14,22 +22,45 @@
     {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
+>>>>>>> origin/master
     },
     {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable\\custom_tab_indicator.xml"
     },
     {
+<<<<<<< HEAD
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
+=======
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_location.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_location.xml"
+>>>>>>> origin/master
     },
     {
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_camera.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_camera.xml"
     },
     {
+<<<<<<< HEAD
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
+        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable\\custom_tab_indicator.xml"
+    },
+    {
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable\\custom_tab_indicator.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_location.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_location.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\custom_tab_indicator.xml"
+=======
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_device_alarms.xml",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_device_alarms.xml"
+>>>>>>> origin/master
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
@@ -48,6 +79,18 @@
         "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_camera.xml"
     },
     {
+<<<<<<< HEAD
+        "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_camera.xml",
+        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_camera.xml"
+=======
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_calendar.xml",
         "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
     },
@@ -62,14 +105,24 @@
     {
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_calendar.xml",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
+>>>>>>> origin/master
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
         "source": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
     },
     {
+<<<<<<< HEAD
+        "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_calendar.xml",
+        "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
+    },
+    {
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_calendar.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
+=======
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_camera.xml",
         "source": "F:\\meishiApp\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_camera.xml"
+>>>>>>> origin/master
     },
     {
         "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_location.xml",
@@ -84,6 +137,18 @@
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
     },
     {
+<<<<<<< HEAD
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_device_alarms.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_device_alarms.xml"
+    },
+    {
+        "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
+        "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable\\custom_tab_indicator.xml"
+    },
+    {
+        "merged": "H:\\meishijie\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_calendar.xml",
+        "source": "H:\\meishijie\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
+=======
         "merged": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\src\\main\\res\\drawable\\custom_tab_indicator.xml"
     },
@@ -94,6 +159,7 @@
     {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_camera.xml",
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_camera.xml"
+>>>>>>> origin/master
     },
     {
         "merged": "F:\\meishiApp\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_location.xml",
@@ -108,6 +174,14 @@
         "source": "D:\\ShoppingMall\\MyCooking\\sample\\build\\intermediates\\exploded-aar\\MyCooking\\library\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
     },
     {
+<<<<<<< HEAD
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_calendar.xml",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_calendar.xml"
+    },
+    {
+        "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_camera.xml",
+        "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_camera.xml"
+=======
         "merged": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_camera.xml",
         "source": "D:\\workspace2\\AndroidStudio\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_camera.xml"
     },
@@ -118,5 +192,6 @@
     {
         "merged": "D:\\workspace\\Android\\MyCooking\\sample\\build\\intermediates\\res\\merged\\debug\\drawable\\perm_group_location.xml",
         "source": "D:\\workspace\\Android\\MyCooking\\sample\\src\\main\\res\\drawable\\perm_group_location.xml"
+>>>>>>> origin/master
     }
 ]

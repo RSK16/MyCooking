@@ -55,17 +55,39 @@
                 android:id="@+id/iv_menudetailList_star5"
                 android:src="@drawable/dish_rate_full_empty"/>
         </LinearLayout>
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/tv_menudetaillist_dishtime"
-            android:text="时间"/>
-        <TextView
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/time_icon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/tv_menudetaillist_dishtime"
+                android:text="时间"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_menudetaillist_dishinfo"
-            android:text="甜味/蒸"/>
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/kouwei_icon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_menudetaillist_dishinfo"
+                android:text="甜味/蒸"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 </LinearLayout>

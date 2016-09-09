@@ -41,7 +41,6 @@
         <ImageButton
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-
             android:layout_marginRight="7dp"
             android:layout_marginLeft="8dp"
             android:background="@drawable/tj_msg"

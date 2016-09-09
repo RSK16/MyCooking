@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
 
     android:layout_height="match_parent">
     <LinearLayout
@@ -58,10 +60,19 @@
             android:layout_height="15dp"
             android:layout_width="match_parent"/>
         </LinearLayout>
-    <ListView
-        android:layout_height="match_parent"
-        android:background="#f00"
-        android:id="@+id/lv_discover_video_cooking"
-        android:layout_width="match_parent"/>
-
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/shiping"
+                android:src="@drawable/video_play_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="热门视频"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 </LinearLayout>

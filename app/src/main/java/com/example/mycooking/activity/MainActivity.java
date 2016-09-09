@@ -44,7 +44,8 @@ public class MainActivity extends Activity {
         pageList.add(new SuggestPage(this));
         pageList.add(new DiscoverPage(this));
         pageList.add(new topicPage(this));
-        pageList.add(new WodePage(this));
+        final WodePage wodePage = new WodePage(this);
+        pageList.add(wodePage);
 
         vp_main_shoppingmall.setAdapter(new MyContentAdatper());
         rg_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -63,6 +64,7 @@ public class MainActivity extends Activity {
                         break;
                      case R.id.rb_main_wode:
                         vp_main_shoppingmall.setCurrentItem(3,false);
+                        //wodePage.setCache();
                         break;}
              }
         });
