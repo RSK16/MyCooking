@@ -43,12 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#11000000"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="暂时没有数据............."
-        android:gravity="center"
-        />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

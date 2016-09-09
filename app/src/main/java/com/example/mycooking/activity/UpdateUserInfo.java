@@ -20,6 +20,7 @@ import com.bigkoo.pickerview.model.IPickerViewData;
 import com.example.mycooking.R;
 import com.example.mycooking.bean.PickerViewData;
 import com.example.mycooking.bean.ProvinceBean;
+import com.example.mycooking.bean.Userinfo;
 
 import java.util.ArrayList;
 
@@ -67,6 +68,11 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_update_user_info);
         getSupportActionBar().hide();
         Bmob.initialize(this, "2f78c11280ce16e4d17e9b7340caba38");
+        update_tv_username = (TextView) findViewById(R.id.update_tv_username);
+        update_tv_sex = (TextView) findViewById(R.id.update_tv_sex);
+        update_tv_birth = (TextView) findViewById(R.id.update_tv_birth);
+        update_tv_address = (TextView) findViewById(R.id.update_tv_address);
+        update_tv_job = (TextView) findViewById(R.id.update_tv_job);
         initView();
         initDate();
 
@@ -89,7 +95,18 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
         bt_address.setOnClickListener(this);
         bt_job = (Button) findViewById(R.id.bt_job);
         bt_job.setOnClickListener(this);
-
+        Userinfo currentUser = BmobUser.getCurrentUser(Userinfo.class);
+        update_tv_username.setText(currentUser.getUsername());
+        Boolean sex = currentUser.getSex();
+        if (sex != null) {
+            if (sex){
+                update_tv_sex.setText("男");
+            }
+            else
+                update_tv_sex.setText("女");
+        }
+        update_tv_birth.setText(currentUser.getBirth());
+        update_tv_address.setText(currentUser.getAddress());
     }
 
     @Override
@@ -105,7 +122,6 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
                 et_dialog_name = (EditText) dialogView.findViewById(R.id.et_dialog_name);
                 Button bt_dialogsetname_confirm = (Button) dialogView.findViewById(R.id.bt_dialogsetname_confirm);
                 final Button bt_dialogsetname_cancle = (Button) dialogView.findViewById(R.id.bt_dialogsetname_cancle);
-                update_tv_username = (TextView) findViewById(R.id.update_tv_username);
 
                 builder1.setView(dialogView);
                 alertDialog = builder1.create();
@@ -162,7 +178,7 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
                 final View dialogView2 = View.inflate(this, R.layout.edit_sex, null);
                 ListView lv_edit_sex = (ListView) dialogView2.findViewById(R.id.lv_edit_sex);
                 tv_finish = (TextView) dialogView2.findViewById(R.id.tv_finish);
-                update_tv_sex = (TextView) findViewById(R.id.update_tv_sex);
+
                 lv_edit_sex.setAdapter(new MyAdapter());
                 builder2.setView(dialogView2);
                 alertDialog = builder2.create();
@@ -209,7 +225,7 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
                 final ListView lv_birth_month = (ListView) dialogView3.findViewById(R.id.lv_birth_month);
                 final ListView lv_birth_day = (ListView) dialogView3.findViewById(R.id.lv_birth_day);
                 tv_finish2 = (TextView) dialogView3.findViewById(R.id.tv_finish);
-                update_tv_birth = (TextView) findViewById(R.id.update_tv_birth);
+
                 lv_birth_year.setAdapter(new MyAdapterYear());
                 lv_birth_month.setAdapter(new MyAdapterMonth());
                 lv_birth_day.setAdapter(new MyAdapterDay());
@@ -300,7 +316,7 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
 
 
                 vMasker = findViewById(R.id.vMasker);
-                update_tv_address = (TextView) findViewById(R.id.update_tv_address);
+
                 //选项选择器
                 pvOptions = new OptionsPickerView(this);
                 //选项1
@@ -424,7 +440,7 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.bt_job:
 
-                update_tv_job = (TextView) findViewById(R.id.update_tv_job);
+
                 update_tv_job.setText("学生");
                 break;
 
