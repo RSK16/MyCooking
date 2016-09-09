@@ -1,36 +1,38 @@
 package com.example.mycooking.activity;
 
 import android.app.AlertDialog;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bigkoo.pickerview.OptionsPickerView;
+import com.bigkoo.pickerview.model.IPickerViewData;
 import com.example.mycooking.R;
-import com.example.mycooking.bean.UserUploadInfo;
-import com.example.mycooking.bean.Userinfo;
-import com.example.mycooking.utils.SharePreferenceUtils;
+import com.example.mycooking.bean.PickerViewData;
+import com.example.mycooking.bean.ProvinceBean;
+
+import java.util.ArrayList;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
 
 public class UpdateUserInfo extends AppCompatActivity implements View.OnClickListener {
+    private ArrayList<ProvinceBean> options1Items = new ArrayList<>();
+    private ArrayList<ArrayList<String>> options2Items = new ArrayList<>();
+    private ArrayList<ArrayList<ArrayList<IPickerViewData>>> options3Items = new ArrayList<>();
 
     private static final String TAG = "UpdateUserInfo";
     private Button bt_icon;
@@ -53,6 +55,10 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
     private TextView update_tv_birth;
     private String s;
     private int i=0;
+    private TextView update_tv_address;
+    private View vMasker;
+    private OptionsPickerView pvOptions;
+    private TextView update_tv_job;
 
 
     @Override
@@ -194,7 +200,6 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
                         });
                     }
                 });
-                Toast.makeText(this, "可以", Toast.LENGTH_LONG).show();
                 break;
             //修改出生年月日
             case R.id.bt_birth:
@@ -290,13 +295,137 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
                         }
                     }
                 });
-                Toast.makeText(this, "可以", Toast.LENGTH_LONG).show();
                 break;
             case R.id.bt_address:
-                Toast.makeText(this, "可以", Toast.LENGTH_LONG).show();
+
+
+                vMasker = findViewById(R.id.vMasker);
+                update_tv_address = (TextView) findViewById(R.id.update_tv_address);
+                //选项选择器
+                pvOptions = new OptionsPickerView(this);
+                //选项1
+                options1Items.add(new ProvinceBean(0,"广东","广东省，以岭南东道、广南东路得名","其他数据"));
+                options1Items.add(new ProvinceBean(1,"湖南","湖南省地处中国中部、长江中游，因大部分区域处于洞庭湖以南而得名湖南","芒果TV"));
+                options1Items.add(new ProvinceBean(3,"广西","嗯～～",""));
+
+                //选项2
+                ArrayList<String> options2Items_01=new ArrayList<>();
+                options2Items_01.add("广州");
+                options2Items_01.add("佛山");
+                options2Items_01.add("东莞");
+                options2Items_01.add("阳江");
+                options2Items_01.add("珠海");
+                ArrayList<String> options2Items_02=new ArrayList<>();
+                options2Items_02.add("长沙");
+                options2Items_02.add("岳阳");
+                ArrayList<String> options2Items_03=new ArrayList<>();
+                options2Items_03.add("桂林");
+                options2Items.add(options2Items_01);
+                options2Items.add(options2Items_02);
+                options2Items.add(options2Items_03);
+
+
+                //选项3
+                ArrayList<ArrayList<IPickerViewData>> options3Items_01 = new ArrayList<>();
+                ArrayList<ArrayList<IPickerViewData>> options3Items_02 = new ArrayList<>();
+                ArrayList<ArrayList<IPickerViewData>> options3Items_03 = new ArrayList<>();
+                ArrayList<IPickerViewData> options3Items_01_01=new ArrayList<>();
+                options3Items_01_01.add(new PickerViewData("天河"));
+                options3Items_01_01.add(new PickerViewData("黄埔"));
+                options3Items_01_01.add(new PickerViewData("海珠"));
+                options3Items_01_01.add(new PickerViewData("越秀"));
+                options3Items_01.add(options3Items_01_01);
+                ArrayList<IPickerViewData> options3Items_01_02=new ArrayList<>();
+                options3Items_01_02.add(new PickerViewData("南海"));
+                options3Items_01_02.add(new PickerViewData("高明"));
+                options3Items_01_02.add(new PickerViewData("禅城"));
+                options3Items_01_02.add(new PickerViewData("桂城"));
+                options3Items_01.add(options3Items_01_02);
+                ArrayList<IPickerViewData> options3Items_01_03=new ArrayList<>();
+                options3Items_01_03.add(new PickerViewData("其他"));
+                options3Items_01_03.add(new PickerViewData("常平"));
+                options3Items_01_03.add(new PickerViewData("虎门"));
+                options3Items_01.add(options3Items_01_03);
+                ArrayList<IPickerViewData> options3Items_01_04=new ArrayList<>();
+                options3Items_01_04.add(new PickerViewData("其他"));
+                options3Items_01_04.add(new PickerViewData("其他"));
+                options3Items_01_04.add(new PickerViewData("其他"));
+                options3Items_01.add(options3Items_01_04);
+                ArrayList<IPickerViewData> options3Items_01_05=new ArrayList<>();
+
+                options3Items_01_05.add(new PickerViewData("其他1"));
+                options3Items_01_05.add(new PickerViewData("其他2"));
+                options3Items_01.add(options3Items_01_05);
+
+                ArrayList<IPickerViewData> options3Items_02_01=new ArrayList<>();
+
+                options3Items_02_01.add(new PickerViewData("长沙1"));
+                options3Items_02_01.add(new PickerViewData("长沙2"));
+                options3Items_02_01.add(new PickerViewData("长沙3"));
+                options3Items_02_01.add(new PickerViewData("长沙4"));
+                options3Items_02_01.add(new PickerViewData("长沙5"));
+
+
+
+
+                options3Items_02.add(options3Items_02_01);
+                ArrayList<IPickerViewData> options3Items_02_02=new ArrayList<>();
+
+                options3Items_02_02.add(new PickerViewData("岳阳"));
+                options3Items_02_02.add(new PickerViewData("岳阳1"));
+                options3Items_02_02.add(new PickerViewData("岳阳2"));
+                options3Items_02_02.add(new PickerViewData("岳阳3"));
+                options3Items_02_02.add(new PickerViewData("岳阳4"));
+                options3Items_02_02.add(new PickerViewData("岳阳5"));
+
+                options3Items_02.add(options3Items_02_02);
+                ArrayList<IPickerViewData> options3Items_03_01=new ArrayList<>();
+                options3Items_03_01.add(new PickerViewData("好山水"));
+                options3Items_03.add(options3Items_03_01);
+
+                options3Items.add(options3Items_01);
+                options3Items.add(options3Items_02);
+                options3Items.add(options3Items_03);
+
+                //三级联动效果
+                pvOptions.setPicker(options1Items, options2Items, options3Items, true);
+                //设置选择的三级单位
+//        pwOptions.setLabels("省", "市", "区");
+                pvOptions.setTitle("选择城市");
+                pvOptions.setCyclic(false, true, true);
+                //设置默认选中的三级项目
+                //监听确定选择按钮
+                pvOptions.setSelectOptions(1, 1, 1);
+                //点击弹出选项选择器
+            /*    update_tv_address.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        Log.i(TAG, "onClick: 8处");
+                        pvOptions.show();
+                    }
+                });*/
+                pvOptions.show();//点击按钮设置的是整个textview
+
+                pvOptions.setOnoptionsSelectListener(new OptionsPickerView.OnOptionsSelectListener() {
+                    BmobUser currentUser = BmobUser.getCurrentUser();//找到服务器上当前用户
+                    @Override
+                    public void onOptionsSelect(int options1, int option2, int options3) {
+                        //返回的分别是三个级别的选中位置
+                        String tx = options1Items.get(options1).getPickerViewText()
+                                + options2Items.get(options1).get(option2)
+                                + options3Items.get(options1).get(option2).get(options3).getPickerViewText();
+                        update_tv_address.setText(tx);
+                        currentUser.setValue("address", tx);
+                        vMasker.setVisibility(View.GONE);
+                    }
+                });
+
                 break;
             case R.id.bt_job:
-                Toast.makeText(this, "可以", Toast.LENGTH_LONG).show();
+
+                update_tv_job = (TextView) findViewById(R.id.update_tv_job);
+                update_tv_job.setText("学生");
                 break;
 
         }
@@ -404,5 +533,17 @@ public class UpdateUserInfo extends AppCompatActivity implements View.OnClickLis
 
     public void previous(View v){
         finish();
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if(pvOptions.isShowing()){
+                pvOptions.dismiss();
+                Log.i(TAG, "onClick: 9处");
+                return true;
+            }
+
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
