@@ -29,8 +29,10 @@ import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bumptech.glide.Glide;
 import com.example.mycooking.R;
 import com.example.mycooking.bean.Buzhou;
+import com.example.mycooking.bean.Collect;
 import com.example.mycooking.bean.PinLun;
 import com.example.mycooking.bean.Recipe;
+import com.example.mycooking.bean.Userinfo;
 import com.example.mycooking.utils.SharePreferenceUtils;
 import com.example.mycooking.view.AutoViewPage;
 import com.google.gson.Gson;
@@ -47,8 +49,10 @@ import java.util.Date;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
+import cn.bmob.v3.listener.UpdateListener;
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -59,6 +63,7 @@ import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 public class CookMenuDetailActivity extends Activity implements View.OnClickListener {
 
     private static final String COOKMENUDETAIL = "CookMenuDetailActivity";
+    private static boolean COOKMENULOVE = false;
     private static  boolean DAPIC = true;
 
 
@@ -109,14 +114,18 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
     private MyPinLunAdapter myPinLunAdapter;
     private int steplast;
+    private BmobUser bmobUser;
+
+//-------------用户头像 名字---------------------------------------------
 
 
-    //----------------------------------------------------------------------
+//----------------------------------------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cook_menu_detail);
 
+        COOKMENULOVE=false;
         mActivity=this;
 
 
@@ -124,7 +133,9 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
         String objectId = intent.getStringExtra("objectId");
 
         if(objectId==null){
+
             toast("服务器错误");
+            finish();
         }else{
             MYDBID=objectId;
         }
@@ -136,11 +147,43 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
 
 
-        //设置是否收藏
-        boolean cookMenuLove = SharePreferenceUtils.getBoolean(this, "cookMenuLove", false);
-        if (cookMenuLove) {
-            ib_cookMenuDetail_coll_icon = (ImageButton) findViewById(R.id.ib_cookMenuDetail_coll_icon);
+
+
+
+//        boolean cookMenuLove = SharePreferenceUtils.getBoolean(this, "cookMenuLove", false);
+        //查看用户是否收藏了当前菜谱
+        bmobUser = BmobUser.getCurrentUser();
+        if(bmobUser != null){
+
+            String cookMenuLoves = (String) BmobUser.getObjectByKey("collect");
+            if(cookMenuLoves!=null&&((cookMenuLoves.length()>5))) {
+
+                Gson gson = new Gson();
+                Collect collect = gson.fromJson(cookMenuLoves, Collect.class);
+                ArrayList<Collect.ABean> a = collect.getA();
+
+                for (int i = 0; i < a.size(); i++) {
+
+                    Collect.ABean aBean = a.get(i);
+                    String id = aBean.getId();
+                    if (id.equals(MYDBID)) {
+                        COOKMENULOVE = true;
+                    }
+                }
+            }
+
+            // 允许用户使用应用
+
+        }
+
+        //回显收藏
+        ib_cookMenuDetail_coll_icon = (ImageButton) findViewById(R.id.ib_cookMenuDetail_coll_icon);
+        if (COOKMENULOVE) {
+
             ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out_red);
+            ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
+        }else {
+            ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out);
             ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
         }
 
@@ -487,7 +530,7 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 //            TextView childAt = (TextView) parent1.getChildAt(1);
 
 //            childAt.setText(dianZanNums.get(position));
-            tv_cookMenuDetail_dianZan_num.setText(dianZanNums[position]+"");
+            tv_cookMenuDetail_dianZan_num.setText(dianZanNums[position]+1+"");
 //            dianZanTextView.add(childAt);
 
 
@@ -636,8 +679,7 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
 
             theheadurl0 = new ArrayList<>();
-            theheadurl0.add("http://b.hiphotos.baidu.com/baike/w%3D26" +
-                    "8%3Bg%3D0/sign=2fe679ff0f7b02080cc938e75ae295ee/9d82d158ccbf6c81c1ea7db2b93eb13532fa408e.jpg");
+
 
 
             chengpinstep = false;
@@ -901,18 +943,119 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
                 break;
             case R.id.ib_cookMenuDetail_coll_icon://收藏按钮
-                boolean cookMenuLove = SharePreferenceUtils.getBoolean(this, "cookMenuLove", false);
-                if (cookMenuLove) {
-                    ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out);
-                    ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
-                    SharePreferenceUtils.putBoolean(this, "cookMenuLove", false);
-                    toast("已取消收藏");
+//                boolean cookMenuLove = SharePreferenceUtils.getBoolean(this, "cookMenuLove", false);
+
+                if (COOKMENULOVE) {
+
+
+                    Log.e(MYDBID,": 1");
+                    String cookMenuLoves = (String) BmobUser.getObjectByKey("collect");
+                    if(cookMenuLoves!=null&&((cookMenuLoves.length()>5))) {
+                        Log.e(MYDBID,": 2");
+                        Gson gson = new Gson();
+                        Collect collect = gson.fromJson(cookMenuLoves, Collect.class);
+                        ArrayList<Collect.ABean> a = collect.getA();
+
+                        for (int i = 0; i < a.size(); i++) {
+
+                            Log.e(MYDBID,": 3");
+                            Collect.ABean aBean = a.get(i);
+                            String id = aBean.getId();
+                            if (id.equals(MYDBID)) {
+                                Log.e(MYDBID,": 4");
+                                a.remove(i);
+                                String s;
+                                if(a.size()==0){
+                                    s="";
+                                }else {
+                                    s = gson.toJson(a);
+                                }
+
+
+                                Userinfo userinfo = new Userinfo();
+                                userinfo.setCollect(s);
+
+                                userinfo.update(bmobUser.getObjectId(),new UpdateListener() {
+                                    @Override
+                                    public void done(BmobException e) {
+                                        if(e==null){
+                                            Log.e(MYDBID,": 已取消收藏");
+                                            toast("已取消收藏");
+                                            ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out);
+                                            ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
+                                        }else{
+                                            Log.e(MYDBID,": 收藏失败");
+                                            toast("收藏失败");
+                                        }
+                                    }
+                                });
+
+                            }
+                        }
+                    }
+
 
                 } else {
-                    ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out_red);
-                    ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
-                    SharePreferenceUtils.putBoolean(this, "cookMenuLove", true);
-                    toast("收藏成功");
+
+                    if(bmobUser==null){
+                        Log.e(MYDBID,": 5");
+                        toast("请先登陆哦~");
+                    }else {
+
+
+                        Log.e(MYDBID,": 6");
+                        String cookMenuLoves = (String) BmobUser.getObjectByKey("collect");
+                        String s;
+                        Gson gson = new Gson();
+                        Collect.ABean aBean1;
+                        Collect collect;
+                        if(cookMenuLoves!=null&&(cookMenuLoves.length()>5)) {
+
+                            Log.e(MYDBID,": 7");
+                            collect = gson.fromJson(cookMenuLoves, Collect.class);
+                            ArrayList<Collect.ABean> a = collect.getA();
+
+                            aBean1 = new Collect.ABean(MYDBID);
+                            a.add(aBean1);
+
+
+
+                        }else {
+
+                            Log.e(MYDBID,": 8");
+                            aBean1 = new Collect.ABean(MYDBID);
+                            ArrayList<Collect.ABean> aBeen = new ArrayList<>();
+                            aBeen.add(aBean1);
+                            collect = new Collect(aBeen);
+
+
+                        }
+
+                            s = gson.toJson(collect);
+                            Userinfo userinfo = new Userinfo();
+                            userinfo.setCollect(s);
+
+
+                        Log.e(MYDBID,": 9");
+                            userinfo.update(bmobUser.getObjectId(),new UpdateListener() {
+                                @Override
+                                public void done(BmobException e) {
+                                    if(e==null){
+                                        Log.e(MYDBID,": 10");
+                                        toast("收藏成功~");
+                                        ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out_red);
+                                        ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
+                                    }else{
+                                        toast("收藏失败");
+                                        Log.e(MYDBID,": 11");
+                                    }
+                                }
+                            });
+
+
+                      //登录的用户的收藏
+
+                    }
                 }
 
                 break;
@@ -922,14 +1065,17 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                 break;
             case R.id.ib_cookMenuDetail_pl_icon:
 
+                if(bmobUser==null){
+                    toast("请先登陆哦~");
+                }else {
 
-                Intent intent = new Intent(this,PinLunActivity.class);
-                intent.putExtra("caipuID",MYDBID);
 
 
+                    Intent intent = new Intent(this, PinLunActivity.class);
+                    intent.putExtra("caipuID", MYDBID);
 
                 startActivity(intent);
-
+                }
                 break;
             case R.id.ib_cookMenuDetail_share_icon:
 

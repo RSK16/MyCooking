@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.UpdateListener;
@@ -98,15 +99,17 @@ public class PinLunActivity extends AppCompatActivity implements View.OnClickLis
 
                             if(msg.what==4){
 
+                                String username = (String) BmobUser.getObjectByKey("username");
+                                String icon_url = (String) BmobUser.getObjectByKey("icon_url");
+
+
                                 Gson gson = new Gson();
                                 PinLun pinLun = gson.fromJson(thecomment, PinLun.class);
-                                PinLun.ABean mycomment = new PinLun.ABean("http://bmob-cdn-6039.b0.upaiyun.com/2016/09/07/7d9153855a7c4a7da7a37adbc2b45ed5.png",
-                                        s, System.currentTimeMillis(), 0, "我");
+                                PinLun.ABean mycomment = new PinLun.ABean(icon_url,
+                                        s, System.currentTimeMillis(), 0, username);
 
                                 if(pinLun!=null){
                                     List<PinLun.ABean> a = pinLun.getA();
-
-
 
                                     a.add(mycomment);
 
@@ -135,6 +138,7 @@ public class PinLunActivity extends AppCompatActivity implements View.OnClickLis
 
                                             Toast.makeText(PinLunActivity.this,"评论成功",Toast.LENGTH_SHORT).show();
                                             Log.e(PINLUNACTIVITY,"更新成功");
+
                                             mActivity.finish();
 
                                         }else{
@@ -143,7 +147,6 @@ public class PinLunActivity extends AppCompatActivity implements View.OnClickLis
                                         }
                                     }
                                 });
-
 
 
 

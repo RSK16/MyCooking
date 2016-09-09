@@ -17,7 +17,11 @@ public class Userinfo extends BmobUser{
     private String address;
     private String job;
     private String birth;
+    private String collect;
 
+    public void setCollect(String collect) {
+        this.collect = collect;
+    }
 
     public String getIcon_url() {
         return icon_url;
