@@ -14,10 +14,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,6 +29,7 @@ import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bumptech.glide.Glide;
 import com.example.mycooking.R;
 import com.example.mycooking.bean.Buzhou;
+import com.example.mycooking.bean.PinLun;
 import com.example.mycooking.bean.Recipe;
 import com.example.mycooking.utils.SharePreferenceUtils;
 import com.example.mycooking.view.AutoViewPage;
@@ -38,12 +41,17 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.onekeyshare.OnekeyShare;
+import de.hdodenhof.circleimageview.CircleImageView;
 import rx.Subscription;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
@@ -51,6 +59,7 @@ import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 public class CookMenuDetailActivity extends Activity implements View.OnClickListener {
 
     private static final String COOKMENUDETAIL = "CookMenuDetailActivity";
+    private static  boolean DAPIC = true;
 
 
     Activity mActivity;
@@ -65,10 +74,14 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
     private ImageButton ib_cookMenuDetail_leftTopBack;
 
 
-    private static final String MYDBID ="b891dc7e1e";
+    private static  String MYDBID ="b2b9a1e42d";
     private static  boolean GETDATAFROMSERVER  ;
 
-//--------------------------获取到的数据--------------------------------------------
+
+    private static boolean ISTHEFIRSTDIANZAN=false;
+
+//--------------------------获取到的数据-其他-------------------------------------------
+    private int buzhoudediyibu;
 
     Recipe recipe;
     String buzhou;
@@ -78,11 +91,27 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
     private ArrayList<String> theheadurl0;
     private String title;
     private String user_name;
-    private String avatar;//作者头像图像
+    private String avatar;//作者头像图像网址
     private ImageView iv_cookMenuDetail_the_picOf_author;
+   // ------------------------获取到的数据 评论-------------------------------------------
+    private String thecomment;
+    private int thecommentssize;//评论数
+    private List<PinLun.ABean> a;
+    private String comment_num;//
+    private ArrayList<ImageView> dianZanImage;//点赞的image
+
+    private int[] dianZanNums=new int[500];//点赞的Nums
+
+     private ArrayList<TextView> dianZanTextView;//点赞的Nums
 
 
-    //--------------------------获取到的数据--------------------------------------------
+
+
+    private MyPinLunAdapter myPinLunAdapter;
+    private int steplast;
+
+
+    //----------------------------------------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,8 +120,39 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
         mActivity=this;
 
 
+        Intent intent = getIntent();
+        String objectId = intent.getStringExtra("objectId");
+
+        if(objectId==null){
+            toast("服务器错误");
+        }else{
+            MYDBID=objectId;
+        }
+
+
 
         stickyList = (StickyListHeadersListView)mActivity. findViewById(R.id.lv_stickyListHeaders);
+
+
+
+
+        //设置是否收藏
+        boolean cookMenuLove = SharePreferenceUtils.getBoolean(this, "cookMenuLove", false);
+        if (cookMenuLove) {
+            ib_cookMenuDetail_coll_icon = (ImageButton) findViewById(R.id.ib_cookMenuDetail_coll_icon);
+            ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out_red);
+            ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
+        }
+
+        //给几个键设置响应事件
+        setOnclickForCookMenu();
+
+        // Translucent status bar
+
+        // Translucent navigation bar
+//        window.setFlags(
+//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
+//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 //--------------------------获取数据--------------------------------------------
 
 
@@ -115,12 +175,14 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                  getBuzhou();
                  initTheMainListView();
 
-//------------------设置headView-----------------------------
+//-----------获取数据咯-------设置headView-----------------------------
                  title = recipe.getTitle();//标题
                  String onclick = recipe.getOnclick();
                  String fav_num = recipe.getFav_num();
                  String author = recipe.getAuthor();//作者的json
                  String smalltext = recipe.getSmalltext();
+                 comment_num = recipe.getComment_num();
+                 thecomment = recipe.getThecomment();
 
 
                  try {
@@ -151,7 +213,7 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                  iv_cookMenuDetail_the_picOf_author = (ImageView) inflate2.findViewById(R.id.iv_cookMenuDetail_the_picOf_author);
 
                  tv_cookMenuDetail_the_nameOf_author.setText(user_name);
-                 tv_cookMenuDetail_the_descriptionOf_cook.setText(smalltext);
+//                 tv_cookMenuDetail_the_descriptionOf_cook.setText(smalltext); 乱码放弃
 
 
 
@@ -159,25 +221,15 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                  stickyList.addHeaderView(inflate2);//第三个headView 标题下的 作者 菜谱等信息
 
 
-//----------增加footView---------------------------------------------------
+//----------增加第一个footView---------------------------------------------------
 
 
                  TextView textView = new TextView(mActivity);
-                 textView.setText("3\n3\n3\n3\n3\n3\n3\n");
+                 textView.setText("\n\n\n\n\n\n");
                  stickyList.addFooterView(textView);  //这边是分享的sdk 从上往下数第一个foot
 
 
-                 ListView mypinlun_adapter_for_cookmenudetail = (ListView) View.inflate(mActivity, R.layout.mypinlun_adapter_for_cookmenudetail, null);
-                 mypinlun_adapter_for_cookmenudetail.setAdapter(new MyPinLunAdapter());
-                 View inflate1 = View.inflate(mActivity, R.layout.cook_menu_detail_user_comment_head_view, null);
-                 mypinlun_adapter_for_cookmenudetail.addHeaderView(inflate1);
 
-                 stickyList.addFooterView(mypinlun_adapter_for_cookmenudetail);  //评论footView
-
-
-                 TextView textView1 = new TextView(mActivity);
-                 textView1.setText("2\n2\n2\n2\n2\n2\n2\n");
-                 stickyList.addFooterView(textView1);//这个是最下面的
 //
 //
 //
@@ -222,9 +274,58 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                      }
                  });
 
+//---------------------//处理评论------------------------------------------
+                 Gson gson = new Gson();
+                 PinLun pinLun = gson.fromJson(thecomment, PinLun.class);
 
-             }
-         };
+                 if(pinLun==null){
+
+                     thecommentssize=0;
+
+                 }else if(pinLun!=null){
+
+                     Log.e("pinln",pinLun.toString());
+
+                     a = pinLun.getA();
+                     thecommentssize = a.size();
+                 }
+
+
+//----------增加第二个第三个footView---------------------------------------------------
+
+
+                 dianZanImage=new ArrayList<>();
+                 dianZanTextView=new ArrayList<>();
+
+                 ListView mypinlun_adapter_for_cookmenudetail = (ListView) View.inflate(mActivity, R.layout.mypinlun_adapter_for_cookmenudetail, null);
+                 myPinLunAdapter = new MyPinLunAdapter();
+                 mypinlun_adapter_for_cookmenudetail.setAdapter(myPinLunAdapter);
+                 View inflate1 = View.inflate(mActivity, R.layout.cook_menu_detail_user_comment_head_view, null);
+                 TextView tv_cookMenuDetail_list2_theHeadView = (TextView) inflate1.findViewById(R.id.tv_cookMenuDetail_list2_theHeadView);
+                 tv_cookMenuDetail_list2_theHeadView.setText(comment_num+" 个评论");
+                 mypinlun_adapter_for_cookmenudetail.addHeaderView(inflate1);
+
+                 stickyList.addFooterView(mypinlun_adapter_for_cookmenudetail);  //评论footView
+
+
+
+
+
+                 TextView textView1 = new TextView(mActivity);
+                 textView1.setText("\n\n\n\n\n\n");
+                 stickyList.addFooterView(textView1);//这个是最下面的
+
+
+
+
+
+
+             }//handle message
+         };//handler结束
+
+
+
+
 
 
                 BmobQuery<Recipe> bmobQuery = new BmobQuery<Recipe>();
@@ -255,74 +356,22 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
 
 
-
-//-----------------查找Person表里面id为MYDBID的数据---------------------------
-//        BmobQuery<Recipe> bmobQuery = new BmobQuery<>();
-//        bmobQuery.getObject(MYDBID, new QueryListener<Recipe>() {
-//            @Override
-//            public void done(Recipe recipe, BmobException e) {
-//
-//                if (e == null) {
-//                    Log.e("5555555555",recipe.getTitle()+"——"+recipe.getTitlepic()+"——"+ buzhou);
-//
-////                    SharePreferenceUtils.putString(CookMenuDetailActivity.this,"shexieroufeng",recipe.getZuofa());
-//
-//                    buzhou="00";
-//
-//                    buzhou = recipe.getZuofa();
-//                    getBuzhou();
-//
-//                    Log.e("55",recipe.getTitle()+"——"+recipe.getTitlepic()+"——"+ buzhou);
-//
-//
-//
-////--------------------------获取步骤--------------------------------------------
-//
-//
-//
-//
-//
-//                } else {
-//
-//                    Log.e("444444444444","获取服务器数据失败");
-//
-//                }
-//            }
-//        });
-
-
-
-
-
 //--------------------------获取数据--------------------------------------------
 
 
+    }//onCreate 结束on//onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束
+    //onCreate 结束on//onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束
+    //onCreate 结束on//onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束
 
 
-        //设置是否收藏
-        boolean cookMenuLove = SharePreferenceUtils.getBoolean(this, "cookMenuLove", false);
-        if (cookMenuLove) {
-            ib_cookMenuDetail_coll_icon = (ImageButton) findViewById(R.id.ib_cookMenuDetail_coll_icon);
-            ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out_red);
-            ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
-        }
-
-//            getWindow().setFlags(
-//                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
-//                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-        //给几个键设置响应事件
-        setOnclickForCookMenu();
-
-        // Translucent status bar
-
-        // Translucent navigation bar
-//        window.setFlags(
-//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
-//                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
 
-    }//onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束onCreate 结束
+
+
+
+
+
+
 
     private void initTheMainListView() {
         //------------构建菜谱细节listView--------------------------------------------
@@ -347,16 +396,25 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
     private void toast(String sr) {
 
-        Toast.makeText(this,sr,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,sr,Toast.LENGTH_SHORT).show();
 
     }
 
 
     //--------------评论list的适配器-----------------------------------------------------
     private class MyPinLunAdapter extends BaseAdapter {
+
+        private CircleImageView iv_cookMenuDetail_user_icon;
+        private TextView tv_cookMenuDetail_theCommenter_name;
+        private TextView tv_cookMenuDetail_theEveryComment;
+        private TextView tv_cookMenuDetail_theCommentTime;
+        private TextView tv_cookMenuDetail_dianZan_num;
+        private ImageView iv_cookMenuDetail_dianZan;
+
+
         @Override
         public int getCount() {
-            return 5;
+            return thecommentssize;
         }
 
         @Override
@@ -370,10 +428,159 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
 
 
             View inflate = View.inflate(CookMenuDetailActivity.this, R.layout.cook_menu_detail_user_comment_adapter, null);
+
+            iv_cookMenuDetail_user_icon = (CircleImageView) inflate.findViewById(R.id.iv_cookMenuDetail_user_icon           );
+            tv_cookMenuDetail_theCommenter_name = (TextView) inflate.findViewById(R.id.tv_cookMenuDetail_theCommenter_name   );
+            tv_cookMenuDetail_theEveryComment = (TextView) inflate.findViewById(R.id.tv_cookMenuDetail_theEveryComment     );
+            tv_cookMenuDetail_theCommentTime = (TextView) inflate.findViewById(R.id.tv_cookMenuDetail_theCommentTime   );
+            tv_cookMenuDetail_dianZan_num = (TextView) inflate.findViewById(R.id.tv_cookMenuDetail_dianZan_num         );
+            iv_cookMenuDetail_dianZan = (ImageView) inflate.findViewById(R.id.iv_cookMenuDetail_dianZan         );
+
+            dianZanImage.add(iv_cookMenuDetail_dianZan);//记住每个点赞图标在哪里
+//            dianZanTextView.add(tv_cookMenuDetail_dianZan_num);//记住每个点赞textView】
+
+
+            ImageLoaderConfiguration imageLoaderConfiguration = new ImageLoaderConfiguration
+                    .Builder(CookMenuDetailActivity.this)
+                    .memoryCacheExtraOptions(480, 800)/*解析图片时候使用的最大尺寸，默认为屏幕设备宽高*/
+                    .diskCacheExtraOptions(480, 800, null)/*从网络下载图片后保存到磁盘时使用的图片尺寸及压缩方法，如果不设置则保存原始图片*/
+                    .threadPoolSize(3)/*线程池的大小，默认值为3,注意不要设置的过大，过大之后会有OOM问题*/
+                    .threadPriority(Thread.NORM_PRIORITY - 1)/*设置线程的优先级别：5-1*/
+
+                    .build();
+            ImageLoader imageLoader = ImageLoader.getInstance();
+            imageLoader.init(imageLoaderConfiguration);
+            DisplayImageOptions options = new DisplayImageOptions.Builder()
+
+                    .cacheInMemory(true)/*缓存至内存*/
+                    .cacheOnDisk(true)/*缓存值SDcard*/
+                    .bitmapConfig(Bitmap.Config.RGB_565)
+                    .build();
+
+            imageLoader.displayImage(a.get(position).getAvatar(), iv_cookMenuDetail_user_icon, options);
+            tv_cookMenuDetail_theCommenter_name.setText(a.get(position).getUser_name());
+            tv_cookMenuDetail_theEveryComment.setText(a.get(position).getSays());
+
+            //处理获取时间
+
+            final long time = a.get(position).getTime();
+            Date date = new Date(time);
+            SimpleDateFormat timeFormater = new SimpleDateFormat("yyyy-MM-dd");
+            String str = timeFormater.format(date);
+            tv_cookMenuDetail_theCommentTime.setText(str);
+
+
+
+            if(!ISTHEFIRSTDIANZAN){
+                int dianzan_num = a.get(position).getDianzan_num();
+//            String dianzannum=dianzan_num+"";
+                dianZanNums[position]=dianzan_num;//记住每个点赞num
+            }
+
+
+
+//            RelativeLayout parent1 = (RelativeLayout) iv_cookMenuDetail_dianZan.getParent();
+//            TextView childAt = (TextView) parent1.getChildAt(1);
+
+//            childAt.setText(dianZanNums.get(position));
+            tv_cookMenuDetail_dianZan_num.setText(dianZanNums[position]+"");
+//            dianZanTextView.add(childAt);
+
+
+
+            //点赞的回显
+            if(SharePreferenceUtils.getBoolean(mActivity, "dz" + MYDBID + position, false)){
+                iv_cookMenuDetail_dianZan.setImageResource(R.drawable.dish_comment_zan_5);
+            }else {
+                iv_cookMenuDetail_dianZan.setImageResource(R.drawable.dish_comment_unzan_5);
+            }
+
+
+
+
+
+
+            //--------------------------------设置点赞------------------------------------
+            iv_cookMenuDetail_dianZan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    String dianzanstring = (String) tv_cookMenuDetail_dianZan_num.getText();
+//                    int dinazanint = Integer.parseInt(dianzanstring);
+
+                    boolean aBoolean = SharePreferenceUtils.getBoolean(mActivity, "dz" + MYDBID + position, false);
+                    if(!aBoolean) {
+
+//                        iv_cookMenuDetail_dianZan.setImageResource(R.drawable.dish_comment_zan_5);
+                        SharePreferenceUtils.putBoolean(mActivity, "dz" + MYDBID + position, true);//00
+//                        String dianzanstring2=(dinazanint+1)+"";
+
+//                        Log.e("11111",dianzanstring2);
+
+
+                        dianZanNums[position]+=1;
+
+//                        Integer integer = dianZanNums.get(position);
+//                        Integer integer1 =Integer.valueOf(integer + 1);
+//                        dianZanNums.set(position,integer1);
+//                        String dianZan_num_tv=integer1+"";
+
+//                        dianZanTextView.get(position).setText("ppp");
+
+//                        RelativeLayout parent1 = (RelativeLayout) iv_cookMenuDetail_dianZan.getParent();
+//                        TextView childAt = (TextView) parent1.getChildAt(1);
+//                        childAt.setText(dianZan_num_tv);
+
+//                        dianZanTextView.get(position).setText(dianZan_num_tv);
+
+
+                        myPinLunAdapter.notifyDataSetChanged();//00
+//                        Log.e("222222",dianZan_num_tv);//00
+
+
+
+                    }if(aBoolean){
+
+//                        iv_cookMenuDetail_dianZan.setImageResource(R.drawable.dish_comment_unzan_5);
+                        SharePreferenceUtils.putBoolean(mActivity, "dz" + MYDBID + position, false);//00
+
+                        dianZanNums[position]-=1;
+
+
+
+//                        Integer integer = dianZanNums.get(position);
+//                        Integer integer1 =Integer.valueOf(integer -1);
+//                        dianZanNums.set(position,integer1);
+
+
+
+//                        String dianZan_num_tv=integer1+"";
+
+
+//                        dianZanTextView.get(position).setText("888");
+//                        RelativeLayout parent1 = (RelativeLayout) iv_cookMenuDetail_dianZan.getParent();
+//                        TextView childAt = (TextView) parent1.getChildAt(1);
+//                        childAt.setText(dianZan_num_tv);
+
+//                        dianZanTextView.get(position).setText(dianZan_num_tv);
+
+                        myPinLunAdapter.notifyDataSetChanged();//00
+//                        Log.e("33333",dianZan_num_tv);//00
+//                        String dianzanstring3=(dinazanint-1)+"";
+//                        tv_cookMenuDetail_dianZan_num.setText(dianzanstring3);
+//                        dianZanNums.get(position).setText(dianzanstring3);
+//                        myPinLunAdapter.notifyDataSetChanged();
+//                        Log.e("11111",dianzanstring3);
+                    }
+
+                    ISTHEFIRSTDIANZAN=true;
+                }
+            });
+
+
 
 
             return inflate;
@@ -395,21 +602,33 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
             List<Buzhou.ZuofaBean> zuofaBeanList = buzhou1.getZuofa();
             int size = zuofaBeanList.size();//做法总长度 非步骤
 
-            int steplast = zuofaBeanList.get(size - 1).getStep();//获取最后一个的step
+            //获取最后一个的step
+            steplast = zuofaBeanList.get(size - 1).getStep();
+
+            int stepfirst= zuofaBeanList.get(0).getStep();//获取第一个step
+            Log.e("getbuzhou", steplast +"");
 
 
-            Log.e("getbuzhou",steplast+"");
 
             //步骤图片网址集合
-            theurl0 = new String[steplast+1];
+            //步骤描述集合
+
+            //判断 有没有第0步
+            if(stepfirst==0){
+                theurl0 = new String[steplast +1];
+                theDescription0 = new String[steplast +1];
+                buzhoudediyibu=0;
+            }else if(stepfirst==1){
+
+                theurl0 = new String[steplast];
+                theDescription0 = new String[steplast];
+                buzhoudediyibu=1;
+            }
+
 
             for(int j=0;j<theurl0.length;j++){
                 theurl0[j]="";
             }
-
-
-            //步骤描述集合
-            theDescription0 = new String[steplast+1];
 
             for(int j=0;j<theDescription0.length;j++){
                 theDescription0[j]="";
@@ -427,12 +646,12 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
                 Buzhou.ZuofaBean zuofaBean = zuofaBeanList.get(j);
 
-                int step1 = zuofaBean.getStep();//当前的步骤标题就是第几部
+                int step1 = zuofaBean.getStep()-buzhoudediyibu;//当前的步骤标题就是第几部
                 String d = zuofaBean.getD();//当前网址或者描述
 
                 if(zuofaBean.getDt().equals("1")){//数组成员是网址
 
-                    if(step1==steplast){
+                    if((step1+buzhoudediyibu)== steplast){
                         if(!chengpinstep){
                             theurl0[step1]=d;
                             chengpinstep =true;
@@ -512,13 +731,7 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 //                    "http://site.meishij.net/rs/115/102/588115/n588115_144621529904084.jpg",
 //                    "http://site.meishij.net/rs/115/102/588115/n588115_144621529944900.jpg",
 //                    "http://site.meishij.net/rs/115/102/588115/n588115_144621530076652.jpg",
-//                    "http://site.meishij.net/rs/115/102/588115/n588115_144621530211710.jpg",
-////-------------------------------------------------------------------------
-//                    "http://site.meishij.net/rs/131/154/4351131/n4351131_147252648945686.jpg",
-//                    "http://site.meishij.net/rs/131/154/4351131/n4351131_147252649684632.jpg",
-//                    "http://site.meishij.net/rs/131/154/4351131/n4351131_147252680138962.jpg",
-//                    "http://site.meishij.net/rs/131/154/4351131/n4351131_147252680933892.jpg",
-//                    "",
+
 //            };
 
             theDescription = theDescription0;
@@ -529,12 +742,6 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 //                    "用莲藕段把猪肉片卷起，加一勺烤料加一勺蜂蜜，搅拌均匀",
 //                    "华帝烤箱JKD611-01A预热，180度，上下火。将鸡肉卷放入烤箱，烤制25分钟",
 //                    "烤制过程中均匀涂抹酱汁，滴上柠檬汁即可",
-//
-//                    "醒好的面擀面杖擀成碗边厚的长方片。2/3刷上油酥。",
-//                    "煮面条。水开后，放入面条，水继续开后。马上捞出面条。过凉水。再捞出来，拌入提前做好的酱",
-//                    "煮面条。水开后，放入面条，水继续开后。马上捞出面条。过凉水。再捞出来，拌入提前做好的酱",
-//                    "把做好的面饼盖在面条上面。送入烤箱，中层，170度，烤30分钟左右。",
-//                    "把做好的面饼盖在面条上面。送入烤箱，中层，170度，烤30分钟左右."};
         }
 
         @Override
@@ -544,6 +751,7 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 
             return theUrl.length;
         }
+
 
         @Override
         public Object getItem(int position) {
@@ -562,6 +770,7 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                 holder = new ViewHolder();
                 convertView = inflater.inflate(R.layout.cookmenudetail_itemview, parent, false);
 
+
                 holder.text = (TextView) convertView.findViewById(R.id.tv_cookMenuDetail_everyStep);
                 holder.imageView = (ImageView) convertView.findViewById(R.id.iv_cookMenuDetail_everyStep);
                 convertView.setTag(holder);
@@ -577,6 +786,7 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
 //                holder.imageView.setVisibility(View.GONE);
 //
 //            }else {
+
 
                 ImageLoaderConfiguration imageLoaderConfiguration = new ImageLoaderConfiguration
                         .Builder(CookMenuDetailActivity.this)
@@ -598,19 +808,32 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                         .build();
 
 
+
+
+
               if(position==0){
                 imageLoader.displayImage(avatar, iv_cookMenuDetail_the_picOf_author, options);
               }
+
                 imageLoader.displayImage(theUrl[position], holder.imageView, options);
 
 //            }
 //            ImageLoader.getInstance().displayImage(theUrl[position],holder.imageView,options);
 //            holder.imageView.setImageResource(R.drawable.a22);
 
-//            if(theUrl[position].equals("8")){  //判断是否要图片
+//            if(theUrl[position].length()>8){  //判断是否要图片
 ////
 //                holder.imageView.setVisibility(View.GONE);
+//            if(!(theUrl[position].length()>15)&&DAPIC) {
+//                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(11, 11);
+//                holder.imageView.setLayoutParams(layoutParams);
 //
+//                if(position==steplast-1){
+//                    DAPIC=false;
+//                }
+//
+//            }
+
 //            }
             return convertView;
         }
@@ -683,11 +906,13 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
                     ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out);
                     ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
                     SharePreferenceUtils.putBoolean(this, "cookMenuLove", false);
+                    toast("已取消收藏");
 
                 } else {
                     ib_cookMenuDetail_coll_icon.setImageResource(R.drawable.cook_coll_icon_out_red);
                     ib_cookMenuDetail_coll_icon.setBackgroundColor(Color.WHITE);
                     SharePreferenceUtils.putBoolean(this, "cookMenuLove", true);
+                    toast("收藏成功");
                 }
 
                 break;
@@ -698,19 +923,56 @@ public class CookMenuDetailActivity extends Activity implements View.OnClickList
             case R.id.ib_cookMenuDetail_pl_icon:
 
 
+                Intent intent = new Intent(this,PinLunActivity.class);
+                intent.putExtra("caipuID",MYDBID);
 
 
 
-//                startActivity(new Intent(this,));
+                startActivity(intent);
 
                 break;
             case R.id.ib_cookMenuDetail_share_icon:
+
+
+                showShare();
+
 
                 break;
 
 
         }
 
+    }
+
+    private void showShare() {
+        ShareSDK.initSDK(this);
+        OnekeyShare oks = new OnekeyShare();
+        //关闭sso授权
+        oks.disableSSOWhenAuthorize();
+
+// 分享时Notification的图标和文字  2.5.9以后的版本不调用此方法
+        //oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
+        // title标题，印象笔记、邮箱、信息、微信、人人网和QQ空间使用
+        oks.setTitle("分享到：");
+        // titleUrl是标题的网络链接，仅在人人网和QQ空间使用
+        oks.setTitleUrl("http://sharesdk.cn");
+        // text是分享文本，所有平台都需要这个字段
+        oks.setText("我是分享文本");
+        //分享网络图片，新浪微博分享网络图片需要通过审核后申请高级写入接口，否则请注释掉测试新浪微博
+        oks.setImageUrl("http://f1.sharesdk.cn/imgs/2014/02/26/owWpLZo_638x960.jpg");
+        // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
+        //oks.setImagePath("/sdcard/test.jpg");//确保SDcard下面存在此张图片
+        // url仅在微信（包括好友和朋友圈）中使用
+        oks.setUrl("http://sharesdk.cn");
+        // comment是我对这条分享的评论，仅在人人网和QQ空间使用
+        oks.setComment("我是测试评论文本");
+        // site是分享此内容的网站名称，仅在QQ空间使用
+        oks.setSite(getString(R.string.app_name));
+        // siteUrl是分享此内容的网站地址，仅在QQ空间使用
+        oks.setSiteUrl("http://sharesdk.cn");
+
+// 启动分享GUI
+        oks.show(this);
     }
 
 

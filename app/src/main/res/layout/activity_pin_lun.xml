@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mycooking.activity.PinLunActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        >
+
+
+        <ImageButton
+            android:id="@+id/ib_pinLun_leftTopBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:background="@drawable/cook_detail_back_red"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="6dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="发布评论"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"/>
+
+
+        <Button
+            android:id="@+id/ib_pinLun_righttijiao"
+            android:layout_width="42dp"
+            android:gravity="center"
+            android:layout_height="35dp"
+            android:textColor="#f00"
+            android:text="提交"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/buttonwhite"/>
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/et_pinLun_write"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="有什么想说的" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

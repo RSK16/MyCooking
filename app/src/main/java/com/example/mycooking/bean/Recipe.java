@@ -6,6 +6,10 @@ import cn.bmob.v3.BmobObject;
  * Created by apple on 16/9/3.
  */
 public class Recipe extends BmobObject {
+    public void setThecomment(String thecomment) {
+        this.thecomment = thecomment;
+    }
+
     private Integer id;
     private String title;//----------------------------菜名
     private String onclick;
@@ -44,6 +48,11 @@ public class Recipe extends BmobObject {
     private String comment_num;//评论人数
     private String share_image_url;//分享图片的URL
     private String share_image_url_p;
+    private String thecomment;
+
+    public String getThecomment() {
+        return thecomment;
+    }
 
     public Integer getId() {
         return id;

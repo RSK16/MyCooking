@@ -84,7 +84,6 @@ public class topicPage extends BasePage {
         ArrayList<String> images=new ArrayList<String>();
         images.add("http://images.meishij.net/p/20160901/e71cd6bcff2aa33e1f5425837b834e90.jpg");
         images.add("http://images.meishij.net/p/20160901/1bc2e29c668ad20586669e72a2a42a52.jpg");
-        images.add("http://images.meishij.net/p/20160902/38182c1cb6b4563e6dd31ab306ef943f.jpg");
         images.add("http://images.meishij.net/p/20160902/847783852b26fca93aeb7a9e3fa4c1d5.jpg");
 
         AutoViewPage autoViewPage = new AutoViewPage(images, mActivity);
@@ -134,7 +133,7 @@ public class topicPage extends BasePage {
     private class MyAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
 
         @Override
@@ -149,11 +148,45 @@ public class topicPage extends BasePage {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+            ArrayList<String> images=new ArrayList<String>();
 
-            TextView textView=new TextView(mActivity);
-            textView.setText("ooo");
+            switch (position){
+                case 0:
 
-            return textView;
+                    images.clear();
+                    images.add("http://site.meishij.net/rs/58/07/2939308/n2939308_147242594918240.jpg");
+                    images.add("http://site.meishij.net/rs/47/93/1210797/n1210797_147273388001004.jpg");
+                    images.add("http://site.meishij.net/rs/184/180/4420184/n4420184_147254677507119.jpg");
+
+                    break;
+                case 1:
+
+                    images.clear();
+                    images.add("http://site.meishij.net/rs/116/168/6542116/n6542116_147194569350842.jpg");
+                    images.add("http://site.meishij.net/rs/69/207/2801819/n2801819_147321103995212.jpg");
+
+
+
+                    break;
+                case 2:
+
+                    images.clear();
+                    images.add("http://images.meishij.net/p/20160906/1e926d6cb6c5c30c1235412e9083e1d6.jpg");
+                    images.add("http://site.meishij.net/rs/246/109/4089996/n4089996_146096687777450.jpg");
+                    break;
+
+            }
+
+
+            AutoViewPage autoViewPage = new AutoViewPage(images, mActivity);
+            ConvenientBanner view = autoViewPage.getConvenientBanner();
+
+
+
+
+
+
+            return view;
         }
     }
 
