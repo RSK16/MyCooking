@@ -12,6 +12,7 @@ import com.example.mycooking.R;
 import com.example.mycooking.activity.MsgNotifyActivity;
 import com.example.mycooking.activity.MyLoginActivity;
 import com.example.mycooking.activity.UpdateUserInfo;
+import com.example.mycooking.activity.shangchuangcaipu.PublishActivity;
 import com.example.mycooking.application.Constants;
 import com.example.mycooking.bean.Userinfo;
 import com.lidroid.xutils.BitmapUtils;
@@ -83,6 +84,15 @@ public class WodePage extends BasePage implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(mActivity, MsgNotifyActivity.class);
+                mActivity.startActivity(intent1);
+
+            }
+        });
+        RelativeLayout rl_wodeactivity_publish = (RelativeLayout) mine.findViewById(R.id.rl_wodeactivity_publish);
+        rl_wodeactivity_publish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(mActivity, PublishActivity.class);
                 mActivity.startActivity(intent1);
 
             }

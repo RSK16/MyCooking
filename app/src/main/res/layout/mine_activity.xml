@@ -302,6 +302,7 @@
         /我的发布
 
         <RelativeLayout
+            android:id="@+id/rl_wodeactivity_publish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 

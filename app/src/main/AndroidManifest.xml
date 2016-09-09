@@ -61,7 +61,7 @@
         <activity android:name=".activity.shangchuangcaipu.EditliaoActivity" />
         <activity android:name=".activity.signNewUser" />
         <activity android:name=".activity.MyLoginActivity" />
-        <activity android:name=".activity.UpdateUserInfo"></activity>
+        <activity android:name=".activity.MsgNotifyActivity"></activity>
     </application>
 
 </manifest>
