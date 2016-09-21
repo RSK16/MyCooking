@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //初始化Bmob
+        //初始化Bmob//修改一下
         Bmob.initialize(this,"2f78c11280ce16e4d17e9b7340caba38");
 
         rg_group = (RadioGroup) findViewById(R.id.rg_group);
