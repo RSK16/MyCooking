@@ -16,3 +16,4 @@ dynatrace    lidong43@huawei.com     Rengxing2
 
 人家的源码分析  http://0x1.im/blog/python/tingyun-probe-for-python.html
 
+2016 我在腾讯这一年  http://0x1.im/blog/life/goodbye-2016.html
