@@ -19,3 +19,5 @@ dynatrace    lidong43@huawei.com     Rengxing2
 2016 我在腾讯这一年  http://0x1.im/blog/life/goodbye-2016.html
 
 https://www.ibm.com/developerworks/cn/java/j-lo-gwt-intro/  gwt开发入门
+
+http://archive.eclipse.org/eclipse/downloads/drops4/R-4.5.2-201602121500/  eclipse下载
